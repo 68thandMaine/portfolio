@@ -1,0 +1,62 @@
+.sidebar {
+  position: fixed;
+  width: 25%;
+  height: 100%;
+  font-size: 1.5rem;
+  z-index: 1;
+}
+
+.sidebar_nav {
+  position: relative;
+  margin: 0 15%;
+  text-align: left;
+  width: 25rem;
+  top: 40%;
+  transform: translateY(-50%);
+  /* font-weight: bold; */
+}
+.sidebar_nav ul {
+  list-style: none;
+}
+.active {
+  color: #fff;
+}
+li a {
+  font-family: Moon-Light;
+  font-size: 2rem;
+  text-transform: uppercase;
+  line-height: 6rem;
+  color: #C5C5C5;
+  text-decoration: none;
+  animation-name: shrink;
+  animation-duration: 1s;
+}
+a:hover {
+  cursor: pointer;
+  color: #fff;
+  font-size: 2.5rem;
+  animation-name: enlarge;
+  animation-duration: 1s;
+  letter-spacing: 0.4rem;
+}
+@keyframes enlarge {
+  from {
+    font-size: 2rem;
+    letter-spacing: 0;
+  }
+  to {
+    font-size: 2.5rem;
+    letter-spacing:0.4rem;
+    color: #fff;
+  }
+}
+@keyframes shrink {
+  from {
+    font-size:2.5rem;
+    letter-spacing: 0.4rem;
+  }
+  to {
+    font-size: 2rem;
+    letter-spacing: 0;
+  }
+}

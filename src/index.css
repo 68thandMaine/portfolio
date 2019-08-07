@@ -13,5 +13,27 @@ code {
 }
 
 html {
-  background-color: #423233
+  background-color: #252423
+}
+
+/* Moon Font Family by Jack Harvatt */
+@font-face{
+  font-family: "Moon-Light";
+  src: local(Moon-Light), url('./assets/fonts/Moon-Light.woff')format("woff");
+}
+@font-face{
+  font-family: "Moon-Regular";
+  src: local(Regular), url('./assets/fonts/Moon-Regular.woff')format("woff");
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.content {
+  z-index: 100;
 }

@@ -1,15 +1,26 @@
 import React from 'react';
-import logo from './assets/logo.svg';
+// STYLES
 import './App.css';
+import MenuButton from './assets/images/menu.png';
+// COMPONENTS
+import Sidebar from './components/Sidebar';
+import Home from './views/home/Home.js';
+// MIDDLEWARE
+import {Switch, Route} from 'react-router-dom';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-       Hello I'm Chris Rudnicky
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+
+            <img src={MenuButton} alt='menuButton' className='menu_icon' id='menuButton' />
+
+          <Sidebar/>
+          <Switch>
+            <Route exact path ='/' component = {Home} />
+          </Switch>
+          
+        </div>
+    );
 }
 
 export default App;
