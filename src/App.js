@@ -5,9 +5,10 @@ import MenuButton from './assets/images/menu.png';
 // COMPONENTS
 import Sidebar from './components/Sidebar';
 import Home from './views/home/Home.js';
+import About from './views/about/About.js';
 // MIDDLEWARE
 import {Switch, Route, withRouter} from 'react-router-dom';
-import sidebar from './components/Sidebar';
+
 
 class App extends React.Component {
 
@@ -40,6 +41,7 @@ class App extends React.Component {
             <div className='views'>
             <Switch>
               <Route exact path ='/' component = {Home} />
+              <Route path='/bio' component = {About} />
             </Switch>
             </div>
           </div>

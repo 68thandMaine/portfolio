@@ -8,7 +8,7 @@ function Home() {
     <div className='home-view' data-cy='home-view'></div>
         <div className='home-container'>
         <div className='home-header'>
-          <h1>HELLO</h1>
+          <h1>HEL~ LO</h1>
         </div>
         <div className='home-content'>
           <h3>My name is Chris</h3>
