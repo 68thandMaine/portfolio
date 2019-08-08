@@ -1,19 +1,13 @@
-.sidebar {
-  position: fixed;
-  width: 25%;
-  height: 100%;
-  font-size: 1.5rem;
-  z-index: 1;
-}
+
 
 .sidebar_nav {
-  position: relative;
+  /* position: relative; */
   margin: 0 15%;
   text-align: left;
-  width: 25rem;
+  width: 20rem;
+  margin: 0;
   top: 40%;
   transform: translateY(-50%);
-  /* font-weight: bold; */
 }
 .sidebar_nav ul {
   list-style: none;

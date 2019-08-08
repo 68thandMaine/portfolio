@@ -1,0 +1,36 @@
+.home-view {
+  background: url('../../assets/images/bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 110%;
+  width: 100%;
+  border: 1px dashed yellow;
+  position: absolute;
+  z-index: 0;
+}
+
+.home-container {
+  border: solid 1px red;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+.sidebar + .home-container {
+  margin-left: 25%;
+}
+
+.home-header {
+  border: solid 1px blue;
+  /* margin: 10% 0 10% 0; */
+}
+
+.home-content {
+  border: solid 1px green;
+  margin: 10% 0 10% 0;
+}
+
+.titleLetter {
+  font-family: Olegos;
+  font-size: 8rem;
+}
