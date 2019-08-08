@@ -1,0 +1,18 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-header {
+  display: flex;
+  justify-content: center;
+  align-content: stretch;
+}
+.about-picture {
+  border: 2px solid #c5c5c5;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+}
