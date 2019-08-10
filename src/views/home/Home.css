@@ -4,13 +4,11 @@
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
-  border: 1px dashed yellow;
   position: absolute;
   z-index: 0;
 }
 
 .home-container {
-  border: solid 1px red;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -21,12 +19,11 @@
 }
 
 .home-header {
-  border: solid 1px blue;
-  /* margin: 10% 0 10% 0; */
+  
+  
 }
 
 .home-content {
-  border: solid 1px green;
   margin: 10% 0 10% 0;
 }
 

@@ -1,0 +1,52 @@
+/* ANIMATIONS ON THE APP COMPONENT */
+@keyframes show-sidebar {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shrink-views {
+  from {
+    margin: 0;
+  }
+  to {
+    margin: 0 5% 0 10%;
+  }
+}
+@keyframes enlarge-views {
+  from {
+    margin: 0 5% 0 10%;
+  }
+  to {
+    margin: 0;
+  }
+}
+
+/* ANIMATIONS ON THE SIDEBAR COMPONENT */
+
+@keyframes enlarge {
+  from {
+    font-size: 2rem;
+    letter-spacing: 0;
+  }
+  to {
+    font-size: 2.5rem;
+    letter-spacing:0.4rem;
+    color: #fff;
+  }
+}
+@keyframes shrink {
+  from {
+    font-size:2.5rem;
+    letter-spacing: 0.4rem;
+  }
+  to {
+    font-size: 2rem;
+    letter-spacing: 0;
+  }
+}
+
+
