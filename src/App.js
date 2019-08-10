@@ -4,10 +4,12 @@ import './App.css';
 import MenuButton from './assets/images/menu.png';
 // COMPONENTS
 import Sidebar from './components/Sidebar';
-import Home from './views/home/Home.js';
-// MIDDLEWARE
-import {Switch, Route, withRouter} from 'react-router-dom';
-import sidebar from './components/Sidebar';
+
+// Routes
+import Views from './routes/Routes';
+import { BrowserRouter as Router } from "react-router-dom";
+
+
 
 class App extends React.Component {
 
@@ -31,6 +33,7 @@ class App extends React.Component {
 
 
     return (
+      <Router>
         <div className="App">
           <img src={MenuButton} alt='menuButton' className='menu_icon' id='menuButton' onClick={this.handleViewSidebar}/>
           <div className='container'>
@@ -38,14 +41,13 @@ class App extends React.Component {
             {showSidebar}
           
             <div className='views'>
-            <Switch>
-              <Route exact path ='/' component = {Home} />
-            </Switch>
+              <Views />
             </div>
           </div>
         </div>
+        </Router>
     );
   }
 }
 
-export default withRouter(App);
+export default App;

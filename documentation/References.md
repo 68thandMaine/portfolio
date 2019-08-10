@@ -10,3 +10,10 @@
 | **Olegos** | Wassim Awadallah | https://www.behance.net/blugraphic |
 
 ---
+
+## Technologies 
+
+| Name | Designer | Source | Purpose |
+|---|---|---|---|
+| **React-Transition-Group | React Transition Group | https://reactcommunity.org/react-transition-group/ | Provide animations between routes |
+
