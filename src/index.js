@@ -7,6 +7,7 @@ import * as serviceWorker from './serviceWorker';
 // Global Styles
 import './styles/index.css';
 import './styles/fonts.css';
+import './styles/animations.css';
 
 ReactDOM.render(
   

@@ -2,12 +2,16 @@ import React from 'react';
 // STYLES
 import './App.css';
 import MenuButton from './assets/images/menu.png';
+import HomeBackground from './assets/images/bg.png';
+import Error404Background from './assets/images/notfound.png';
+import BioBackground from './assets/images/biobackground.png';
 // COMPONENTS
 import Sidebar from './components/Sidebar';
-import Home from './views/home/Home.js';
-import About from './views/about/About.js';
-// MIDDLEWARE
-import {Switch, Route, withRouter} from 'react-router-dom';
+
+// Routes
+import Views from './routes/Routes';
+import { BrowserRouter as Router } from "react-router-dom";
+
 
 
 class App extends React.Component {
@@ -16,9 +20,12 @@ class App extends React.Component {
     super(props);
     this.state= {
       sidebar_visible: false,
+      background: HomeBackground
     };
     this.handleViewSidebar = this.handleViewSidebar.bind(this)
+    this.handleChangeBackground = this.handleChangeBackground.bind(this)
   }
+
 
   handleViewSidebar() {
     this.setState(state => ({
@@ -26,28 +33,50 @@ class App extends React.Component {
     }));
   }
 
+  handleChangeBackground(location) {
+    console.log(location);
+    switch(location) {
+      case 'home':
+       return this.setState({ background:HomeBackground});
+       break;
+      case 'bio':
+        return this.setState({ background: BioBackground});
+        break;
+      case 'projects':
+        return this.setState({ background: null});
+        break;
+      case 'contact':
+        return this.setState({ background: null});
+        break;
+      default:
+        return this.setState({ background: Error404Background});;
+    }
+}
+
   render() {
     let showSidebar = null;
-    (this.state.sidebar_visible) ? showSidebar = <Sidebar className='sidebar' /> : showSidebar =null;
-
+    (this.state.sidebar_visible) ? showSidebar = <Sidebar  className='sidebar' changeBackground={this.handleChangeBackground}/> : showSidebar = null;
 
     return (
+      <Router>
         <div className="App">
           <img src={MenuButton} alt='menuButton' className='menu_icon' id='menuButton' onClick={this.handleViewSidebar}/>
+          <img src={this.state.background} alt='home background' className='background' />
           <div className='container'>
+          
           
             {showSidebar}
           
+            
+          
             <div className='views'>
-            <Switch>
-              <Route exact path ='/' component = {Home} />
-              <Route path='/bio' component = {About} />
-            </Switch>
+              <Views />
             </div>
           </div>
         </div>
+        </Router>
     );
   }
 }
 
-export default withRouter(App);
+export default App;

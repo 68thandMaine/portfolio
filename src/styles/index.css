@@ -42,9 +42,12 @@ h5 {
 h6 {
   font-size: 3rem;
 }
-
+ul {
+  list-style: none;
+}
 li {
-  color: #d9d9d9
+  color: #d9d9d9;
+  text-decoration: none;
 }
 
 p {
@@ -53,3 +56,5 @@ p {
   font-size: 1.25rem;
   color: #c5c5c5;
 }
+
+
