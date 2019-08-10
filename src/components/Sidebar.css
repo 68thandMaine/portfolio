@@ -1,7 +1,5 @@
-
-
 .sidebar_nav {
-  /* position: relative; */
+  position: fixed;
   margin: 0 15%;
   text-align: left;
   width: 20rem;
@@ -23,34 +21,13 @@ li a {
   color: #C5C5C5;
   text-decoration: none;
   animation-name: shrink;
-  animation-duration: 1s;
+  animation-duration: 2s;
 }
-a:hover {
+li a:hover {
   cursor: pointer;
   color: #fff;
   font-size: 2.5rem;
   animation-name: enlarge;
   animation-duration: 1s;
   letter-spacing: 0.4rem;
-}
-@keyframes enlarge {
-  from {
-    font-size: 2rem;
-    letter-spacing: 0;
-  }
-  to {
-    font-size: 2.5rem;
-    letter-spacing:0.4rem;
-    color: #fff;
-  }
-}
-@keyframes shrink {
-  from {
-    font-size:2.5rem;
-    letter-spacing: 0.4rem;
-  }
-  to {
-    font-size: 2rem;
-    letter-spacing: 0;
-  }
 }

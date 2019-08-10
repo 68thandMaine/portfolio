@@ -2,19 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Sidebar.css';
 
-function sidebar() {
+function sidebar(props) {
 
   return (
-    <aside className='sidebar'>
+    <div className='sidebar'>
       <nav className='sidebar_nav'>
         <ul> 
-          <li><Link to ='/'>Home</Link></li>
-          <li><Link to='/bio'>About Me</Link></li>
-          <li><a href='./'>Work</a></li>
-          <li><a href='./'>Contact</a></li>
+          <li onClick={(e) => props.changeBackground('home', e)}><Link to ='/' >Home</Link></li>
+          <li onClick={(e) => props.changeBackground('bio', e)}><Link to='/bio' >About Me</Link></li>
+          <li onClick={(e) => props.changeBackground('projects',e)}><a href='./' >Work</a></li>
+          <li onClick={(e) => props.changeBackground('contact', e)}><a href='./' >Contact</a></li>
         </ul>
       </nav>
-    </aside>
+    </div>
   )
 }
 
