@@ -1,0 +1,44 @@
+.linkbar-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon {
+  float: left;
+  text-align: center;
+  display: flex;
+  align-items: center
+}
+.icon:before {
+  content: '';
+  display: block;
+  width: 4em;
+  height: 4em;
+  float: left;
+  margin-right: 6px;
+  
+}
+.icon:first-child {
+  background: url('../assets/icons/Github.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+    
+}
+.icon:nth-child(2) {
+  background: url('../assets/icons/linkedin.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.icon:nth-child(3) {
+  background: url('../assets/icons/instagram.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.icon:hover {
+  cursor: pointer;
+  animation: spin 1s ease normal;
+}
+@keyframes spin {0% {transform: rotate(0deg);} 100% {transform: rotate(-360deg);}}
+@-webkit-keyframes spin {0% {-webkit-transform: rotate(0deg); } 100% {-webkit-transform: rotate(-360deg); }}
+@-ms-keyframes spin {0% {-ms-transform: rotate(0deg);} 100% {-ms-transform: rotate(-360deg);}}

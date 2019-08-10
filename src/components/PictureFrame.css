@@ -1,8 +1,19 @@
+.pictureFrame-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .pictureFrame {
   border: 2px solid #c5c5c5;
   border-radius: 50%;
-  width: 10rem;
-  height: 10rem;
+  width: 20rem;
+  height: 22rem;
   display: flex;
   align-items: center;
+  overflow: hidden;
+  padding-left: -.5%;
+}
+.portfolio-picture {
+  max-width: 100%;
 }

@@ -50,3 +50,34 @@
 }
 
 
+/* ANIMATIONS ON THE ABOUT PAGE */
+
+@keyframes showCity {
+  from {
+    
+  }
+  to {
+    -webkit-text-fill-color: transparent;
+    background: url('../assets/images/pland.png');
+    background-position: 90% 90%;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+  }
+}
+@keyframes hideCity {
+  from {
+    -webkit-text-fill-color: transparent;
+    background: url('../assets/images/pland.png');
+    background-position: 90% 90%;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  to {
+    
+  }
+}
+
+
