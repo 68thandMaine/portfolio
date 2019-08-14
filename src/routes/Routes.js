@@ -4,6 +4,8 @@ import {Switch, Route, withRouter} from 'react-router-dom';
 import Home from '../views/home/Home.js';
 import About from '../views/about/About.js';
 import Error404 from '../views/error/Error404.js';
+import PdFViewer from '../views/pdf-viewer/PDFViewer.js';
+import PDFJSBackend from '../services/Pdf.js';
 // ROUTING TRANSITION
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import './route-transitions.css';
@@ -21,6 +23,7 @@ function Routes({location}) {
                 <Switch location={location}>
                     <Route exact path='/' component={Home}/>
                     <Route path='/bio' component={About}/>
+                    <Route path='/resume' render={(props) => <PdFViewer backend={PDFJSBackend} src='/resume.pdf'/> } />
                     <Route component={Error404} />
                 </Switch>
               </div>
