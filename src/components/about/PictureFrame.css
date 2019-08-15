@@ -1,6 +1,7 @@
 .pictureFrame-container {
-  height: 100vh;
   display: flex;
+  padding-left: 5%;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import './PictureFrame.css';
-import headshot from '../assets/images/headshot.jpg';
+import headshot from '../../assets/images/headshot.jpg';
 
 function PictureFrame() {
   return (

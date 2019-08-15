@@ -1,6 +1,6 @@
 .linkbar-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .icon {
@@ -19,18 +19,18 @@
   
 }
 .icon:first-child {
-  background: url('../assets/icons/Github.png');
+  background: url('../../assets/icons/Github.png');
   background-size: contain;
   background-repeat: no-repeat;
     
 }
 .icon:nth-child(2) {
-  background: url('../assets/icons/linkedin.png');
+  background: url('../../assets/icons/linkedin.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
 .icon:nth-child(3) {
-  background: url('../assets/icons/instagram.png');
+  background: url('../../assets/icons/instagram.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
