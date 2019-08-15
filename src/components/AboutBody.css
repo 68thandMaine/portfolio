@@ -1,0 +1,44 @@
+.aboutBody-container {
+  padding: 10%;
+  /* max-height: 100%; */
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+}
+.portlandText {
+  line-height: 8.7rem;
+  letter-spacing: -10px;
+  margin: 5% auto;
+  -webkit-animation: hideCity 2.2s ease 0s;
+  -moz-animation: hideCity 2.2s ease 0s;
+  -o-animation: hideCity 2.2s ease 0s;
+  animation: hideCity 2.2s ease 0s;
+  background-image: none;
+  text-align: center;
+}
+
+.portlandText:hover {
+  cursor: pointer;
+  -webkit-animation: showCity 2s ease 0s ; /* Safari 4+ */
+  -moz-aanimation: showCity 2s ease 0s ; /* Fx 5+ */
+  -o-animation: showCity 2s ease 0s ;/* Opera 12+ */
+  animation: showCity 2s ease 0s ; 
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-text-fill-color: transparent;
+  background: url('../assets/images/pland.png');
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.portlandText span{
+  display: block;
+}
+
+.aboutBody-mainText {
+  margin-top: 5%;
+  /* line-height: 2%; */
+  text-align: left;
+}

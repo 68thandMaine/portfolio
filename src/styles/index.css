@@ -15,41 +15,56 @@ code {
 html {
   background-color: #252423
 }
-
+* {
+  text-decoration: none;
+  
+}
 h1, h2, h3, h4, h5, h6 {
   font-family: Eudora;
   margin: 0;
+  color: #e6e6e6;
   font-weight: normal;
 }
 
 h1 {
   font-size: 12rem;
-  color: #e6e6e6;
+  font-size: 12vw;
   font-weight: 100;
 }
 h2 {
   font-size: 11rem;
+  font-size: 11vw;
 }
 h3 {
   font-size: 6rem;
+  font-size: 6vw;
 }
 h4 {
   font-size: 5rem;
+  font-size: 5vw;
 }
 h5 {
   font-size: 4rem;
+  font-size: 4vw;
 }
 h6 {
   font-size: 3rem;
+  font-size: 3vw;
+}
+ul {
+  list-style: none;
 }
 
-li {
-  color: #d9d9d9
-}
 
-p {
+p, li {
   margin: 0;
   font-family: Manrope;
   font-size: 1.25rem;
+  font-size: 1.25vw;
   color: #c5c5c5;
+  text-decoration: none;
+}
+
+a {
+  z-index: 100;
 }

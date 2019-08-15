@@ -5,14 +5,25 @@
 
 .about-header {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: stretch;
 }
-.about-picture {
-  border: 2px solid #c5c5c5;
-  border-radius: 50%;
-  width: 10rem;
-  height: 10rem;
-  display: flex;
-  align-items: center;
+
+.about-header h1 {
+  rotate: (20deg)
+}
+.about-body {
+  position: relative;
+  top: 15rem;
+  background: #252423;
+  transition: background 0.5s linear;
+  border: solid 1px #c5c5c5;
+  border-radius: 5%;
+  margin: 0 5% 2% 5%;
+  width: 90%;
+}
+.about-body-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }

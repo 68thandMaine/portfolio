@@ -2,9 +2,14 @@ import React from 'react';
 // STYLES
 import './App.css';
 import MenuButton from './assets/images/menu.png';
-import HomeBackground from './assets/images/bg.png';
+import HomeBackground from './assets/images/HomeBG.png';
 import Error404Background from './assets/images/notfound.png';
+import BioBackground from './assets/images/AboutBG.png';
+import { images } from './assets/images/images';
+
+
 // COMPONENTS
+import BackgroundMask from './components/BackgroundMask';
 import Sidebar from './components/Sidebar';
 
 // Routes
@@ -19,7 +24,7 @@ class App extends React.Component {
     super(props);
     this.state= {
       sidebar_visible: false,
-      background: HomeBackground
+      background: 0,
     };
     this.handleViewSidebar = this.handleViewSidebar.bind(this)
     this.handleChangeBackground = this.handleChangeBackground.bind(this)
@@ -27,6 +32,7 @@ class App extends React.Component {
 
 
   handleViewSidebar() {
+    console.log(images[1])
     this.setState(state => ({
       sidebar_visible: !state.sidebar_visible
     }));
@@ -36,19 +42,19 @@ class App extends React.Component {
     console.log(location);
     switch(location) {
       case 'home':
-       return this.setState({ background:HomeBackground});
-       break;
+       return this.setState({ background:0, sidebar_visible: false});
+       
       case 'bio':
-        return this.setState({ background: null});
-        break;
+        return this.setState({ background: 1, sidebar_visible: false});
+       
       case 'projects':
-        return this.setState({ background: null});
-        break;
+        return this.setState({ background: null, sidebar_visible: false});
+       
       case 'contact':
-        return this.setState({ background: null});
-        break;
+        return this.setState({ background: null, sidebar_visible: false});
+       
       default:
-        return this.setState({ background: Error404Background});;
+        return this.setState({ background: 2, sidebar_visible: false});
     }
 }
 
@@ -60,7 +66,10 @@ class App extends React.Component {
       <Router>
         <div className="App">
           <img src={MenuButton} alt='menuButton' className='menu_icon' id='menuButton' onClick={this.handleViewSidebar}/>
-          <img src={this.state.background} alt='home background' className='background' />
+          {/* <img src={this.state.background} alt='home background' className='background' /> */}
+          <BackgroundMask 
+            imgIndex={this.state.background}
+            imgSrc={images}/> 
           <div className='container'>
           
           
