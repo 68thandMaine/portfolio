@@ -16,4 +16,4 @@
 | Name | Designer | Source | Purpose |
 |---|---|---|---|
 | **React-Transition-Group | React Transition Group | https://reactcommunity.org/react-transition-group/ | Provide animations between routes |
-
+| **React-Text-Loop | Bernardo Raposo |https://github.com/braposo/react-text-loop | Provide animations to text in my bio |

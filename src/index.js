@@ -5,9 +5,10 @@ import {HashRouter} from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
 // Global Styles
-import './styles/index.css';
-import './styles/fonts.css';
 import './styles/animations.css';
+import './styles/fonts.css';
+import './styles/index.css';
+import './styles/media-queries.css';
 
 ReactDOM.render(
   

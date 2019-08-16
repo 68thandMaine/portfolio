@@ -10,7 +10,7 @@ import { images } from './assets/images/images';
 
 // COMPONENTS
 import BackgroundMask from './components/BackgroundMask';
-import Sidebar from './components/Sidebar';
+import Sidebar from './components/sidebar/Sidebar';
 
 // Routes
 import Views from './routes/Routes';

@@ -11,17 +11,21 @@
 @keyframes shrink-views {
   from {
     margin: 0;
+    width: 100%;
   }
   to {
-    margin: 0 5% 0 10%;
+    margin: 0 5% 0 25%;
+    width: 75%;
   }
 }
 @keyframes enlarge-views {
   from {
-    margin: 0 5% 0 10%;
+    margin: 0 5% 0 25%;
+    width: 75%;
   }
   to {
     margin: 0;
+    width: 100%;
   }
 }
 
