@@ -1,6 +1,8 @@
 .aboutBody-container {
   margin: 5%;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   justify-items: center;
   text-align: center;
 }
@@ -8,7 +10,7 @@
 .aboutBody-title {
   text-align: left;
   position: relative;
-  left: -3rem;
+  left: -4rem;
 }
 .aboutBody-title p {
   font-family: Moon-Regular;
@@ -21,8 +23,10 @@
   padding-left: 3vw;
 }
 .textAnimation {
-  margin-left: 6%;
-  font-size: 5rem;
+  position: relative;
+  top: 0.5rem;  
+  font-size: 4rem;
+  font-size: 5vw;
   font-family: Moon-Light
 }
 .portlandText {
@@ -31,8 +35,6 @@
   letter-spacing: -10px;
   margin: 6% auto;
   -webkit-animation: hideCity 2.2s ease 0s;
-  -moz-animation: hideCity 2.2s ease 0s;
-  -o-animation: hideCity 2.2s ease 0s;
   animation: hideCity 2.2s ease 0s;
   background-image: none;
   text-align: center;
@@ -41,8 +43,7 @@
 .portlandText:hover {
   cursor: pointer;
   -webkit-animation: showCity 2s ease 0s ; /* Safari 4+ */
-  -moz-aanimation: showCity 2s ease 0s ; /* Fx 5+ */
-  -o-animation: showCity 2s ease 0s ;/* Opera 12+ */
+  -moz-aanimation: showCity 2s ease 0s ; /* Fx 5+ *//* Opera 12+ */
   animation: showCity 2s ease 0s ; 
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
@@ -52,12 +53,13 @@
   background-clip: text;
 }
 
-.portlandText span{
+#aboutBody_span{
   display: block;
+  font-size: 15vw;
 }
 
 .aboutBody-mainText {
   margin-top: 5%;
-  /* line-height: 2%; */
+  line-height: 2rem;
   text-align: left;
 }

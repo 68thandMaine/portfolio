@@ -1,0 +1,16 @@
+.redirect {
+  margin: 10%;
+  border-radius: 25%;
+  padding: 5%;
+  color: #c5c5c5;
+  font-family: Moon-Light;
+  background: transparent;
+  font-size: 4rem;
+  font-size: 4vw;
+}
+
+.redirect:hover {
+  cursor: pointer;
+  -webkit-animation: viewResume 2s ease normal;
+          animation: viewResume 2s ease normal;
+}

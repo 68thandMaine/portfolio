@@ -11,3 +11,5 @@ This is a document detailing things that I have pondered while developing my por
 ## Improvements
 
 - In Text animation considier making the things you are actionable links.
+
+- Maybe in the /projects I could have a pie chart with the languages of my Github repos?

@@ -17,3 +17,5 @@
 |---|---|---|---|
 | **React-Transition-Group | React Transition Group | https://reactcommunity.org/react-transition-group/ | Provide animations between routes |
 | **React-Text-Loop | Bernardo Raposo |https://github.com/braposo/react-text-loop | Provide animations to text in my bio |
+| **React-Redux | Dan Abramov | https://redux.js.org/ | To manage the state for the work view. Github api supplies state for this component and redux is necessary |
+| **Redux-Thunk | ReduxJS | https://github.com/reduxjs/redux-thunk | Allows for asynchronous interactions with the strore |

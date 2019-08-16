@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import {HashRouter} from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunkMiddleware from 'redux-thunk';
+import rootReducer from './reducers';
 import * as serviceWorker from './serviceWorker';
+import App from './App';
 
 // Global Styles
 import './styles/animations.css';
@@ -10,10 +14,15 @@ import './styles/fonts.css';
 import './styles/index.css';
 import './styles/media-queries.css';
 
+const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
+
+
 ReactDOM.render(
   
     <HashRouter>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </HashRouter>
   
 , document.getElementById('root'));

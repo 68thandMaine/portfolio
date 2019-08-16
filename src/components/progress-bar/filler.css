@@ -1,0 +1,8 @@
+.filler {
+  background: #fff;
+  height: 100%;
+  border-radius: inherit;
+  -webkit-transition: width .2s ease-in;
+  -o-transition: width .2s ease-in;
+  transition: width .2s ease-in; 
+ }
