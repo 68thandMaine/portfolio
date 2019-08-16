@@ -4,6 +4,7 @@ import './About.css';
 import AboutBody from '../../components/about/AboutBody.js';
 import LinkBar from '../../components/about/LinkBar.js';
 import PictureFrame from '../../components/about/PictureFrame.js';
+import Button from '../../components/button/button.js';
 
 function About() {
   return (
@@ -15,7 +16,7 @@ function About() {
         <div className='about-body-content'>
           <div className='about-body-pictureFrame'>
             <PictureFrame />
-            <button>Download Resume</button>
+            <Button text='Download Resume' purpose='redirect'/>
           </div>
           <AboutBody />    
         </div>
