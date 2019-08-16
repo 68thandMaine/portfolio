@@ -1,0 +1,25 @@
+/* MEDIA QUERIES FOR ABOUT PAGE */
+
+@media screen and (max-width: 320px) {
+  *::-webkit-scrollbar {
+    width: 0 !important
+  }
+  * {
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+  }
+  .about-body {
+    top: 5rem;
+  }
+  .about-body-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-body-pictureFrame {
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

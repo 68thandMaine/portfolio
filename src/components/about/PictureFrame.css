@@ -1,0 +1,22 @@
+.pictureFrame-container {
+  display: flex;
+  padding-left: 5%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pictureFrame {
+  border: 2px solid #c5c5c5;
+  border-radius: 50%;
+  width: 22rem;
+  width: 22vw;
+  
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-left: -.5%;
+}
+.portfolio-picture {
+  max-width: 100%;
+  
+}

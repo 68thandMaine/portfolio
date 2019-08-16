@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Moon-Light";
+  src: local(Moon-Light), url('../assets/fonts/Moon-Light.woff')format("woff");
+}
+@font-face {
+  font-family:'Moon-Regular';
+  src: local(Regular), url('../assets/fonts/Moon-Regular.woff')format("woff");
+}
+@font-face {
+  font-family: 'Manrope';
+  src: local(Regular), url('../assets/fonts/manrope-regular.woff')format('woff');
+}
+@font-face {
+  font-family:'Eudora';
+  src: local(Regular), url('../assets/fonts/eudora.woff')format('woff');
+}

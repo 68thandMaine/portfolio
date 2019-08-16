@@ -1,0 +1,33 @@
+.home-view {
+  background: url('../../assets/images/HomeBG.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+.sidebar + .home-container {
+  margin-left: 25%;
+}
+
+.home-header {
+  
+  
+}
+
+.home-content {
+  margin: 10% 0 10% 0;
+}
+
+.titleLetter {
+  font-family: Olegos;
+  font-size: 8rem;
+}

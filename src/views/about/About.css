@@ -1,0 +1,38 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.about-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: stretch;
+  top: 2rem;
+  position: relative;
+  margin: 2% 14% 3% 14%;
+  /* line-height: 10rem; */
+  /* line-height:12vh; */
+}
+
+.about-body {
+  position: relative;
+  top: 6rem;
+  background: #252423;
+  transition: background 0.5s linear;
+  border: solid 1px #c5c5c5;
+  border-radius: 5%;
+  margin: 0 2.5% 2% 2.5%;
+  width: 95%;
+}
+.about-body-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around
+}
+.about-body-pictureFrame {
+  width: 50rem;
+  margin: 3%;
+}
