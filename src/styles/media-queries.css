@@ -23,3 +23,11 @@
     justify-content: center;
   }
 }
+
+/* MEDIA QUERIES FOR PROJECT VIEW */
+
+@media screen and (max-wdith: 320px) {
+  .project-wrapper {
+    /* */
+  }
+}

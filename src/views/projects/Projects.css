@@ -1,0 +1,18 @@
+.project-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.project-header {
+
+}
+.project-body {
+  display: flex;
+  flex-direction: row;
+}
+.body-menu-panel {
+  display: flex;
+  flex-direction: column;
+}
+.body-project-panel {
+
+}

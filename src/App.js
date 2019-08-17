@@ -1,12 +1,9 @@
 import React from 'react';
+import { connect} from 'react-redux';
 // STYLES
 import './App.css';
 import MenuButton from './assets/images/menu.png';
-import HomeBackground from './assets/images/HomeBG.png';
-import Error404Background from './assets/images/notfound.png';
-import BioBackground from './assets/images/AboutBG.png';
 import { images } from './assets/images/images';
-
 
 // COMPONENTS
 import BackgroundMask from './components/BackgroundMask';
@@ -16,6 +13,8 @@ import Sidebar from './components/sidebar/Sidebar';
 import Views from './routes/Routes';
 import { BrowserRouter as Router } from "react-router-dom";
 
+// STATE
+import { getRepos } from './actions';
 
 
 class App extends React.Component {
@@ -23,16 +22,19 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state= {
-      sidebar_visible: false,
       background: 0,
+      projects: [],
+      sidebar_visible: false,
     };
-    this.handleViewSidebar = this.handleViewSidebar.bind(this)
-    this.handleChangeBackground = this.handleChangeBackground.bind(this)
+    this.handleViewSidebar = this.handleViewSidebar.bind(this);
+    this.handleChangeBackground = this.handleChangeBackground.bind(this);
+  }
+  
+  componentDidMount() {
+    this.props.dispatch(getRepos());
   }
 
-
   handleViewSidebar() {
-    console.log(images[1])
     this.setState(state => ({
       sidebar_visible: !state.sidebar_visible
     }));
@@ -48,13 +50,13 @@ class App extends React.Component {
         return this.setState({ background: 1, sidebar_visible: false});
        
       case 'projects':
-        return this.setState({ background: null, sidebar_visible: false});
+        return this.setState({ background: 2, sidebar_visible: false});
        
       case 'contact':
         return this.setState({ background: null, sidebar_visible: false});
        
       default:
-        return this.setState({ background: 2, sidebar_visible: false});
+        return this.setState({ background: 3, sidebar_visible: false});
     }
 }
 
@@ -87,4 +89,5 @@ class App extends React.Component {
   }
 }
 
-export default App;
+
+export default connect()(App);
