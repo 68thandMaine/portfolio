@@ -1,0 +1,12 @@
+.repoMenu-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.repoMenu-item {
+  padding: 1rem;
+}
+.repoMenu-item:hover {
+  cursor: pointer;
+}

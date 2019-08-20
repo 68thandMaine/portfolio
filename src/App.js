@@ -80,6 +80,7 @@ class App extends React.Component {
             
           
             <div className='views'>
+              <h5>Make sure you check everything before deploying!</h5>
               <Views />
             </div>
           </div>

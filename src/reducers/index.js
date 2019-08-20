@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import projectListReducer from './project/projectListReducer.js';
+import gitHubRepositoryReducer from './projects/gitHubRepositoryReducer.js';
+import projectsReducer from './projects/projectsReducer.js';
 
 const rootReducer = combineReducers({
-  projects : projectListReducer,
+  gitHubRepositories : gitHubRepositoryReducer,
+  personalProjects : projectsReducer
 });
 
 export default rootReducer;

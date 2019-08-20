@@ -3,16 +3,18 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import './Projects.css';
 
+import Card from '../../components/card/Card.js';
 import LanguageChart from '../../components/language-chart/LanguageChart.js';
+import RepoMenu from '../../components/repo-menu/RepoMenu.js';
 
 class Projects extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      projectToView: null,
+      // projectToView: null,
       repositories: null,
     };
-    this.testButton = this.testButton.bind(this);
+    this.viewGHReadMe = this.viewGHReadMe.bind(this);
   }
 
   componentWillUpdate(){
@@ -21,41 +23,36 @@ class Projects extends React.Component {
     }
   }
 
-  testButton() {
-    console.log(this.props.repositories)    
+  viewGHReadMe(names){
+    console.log('viewGHReadMe', this.props.personalProjects.initialState.personalProjects)
   }
 
   render() {
     return (
       <div className='project-wrapper'>
         <div className='project-header'>
-          <h1>my work</h1>
-          <button onClick={this.testButton}>Get Repos</button>
-          <p>I will need a a title, a short description, and perhaps an image/video to play on mouseover?</p>
-          <p>What styles should I consider?</p>
-          <p>It seems that I might want the proejct component to be comprosed of the following child components:</p>
-          <ul>
-            <li>Card component to hold the basic info for each project</li>
-            <li>Modal component to open when a project is clicked on</li>
-            <li>Project description component to be displayed within the modal as well.</li>
-          </ul>
-          <LanguageChart 
-            sortedLanguages={this.props.repositories} 
-            />
+          <h1>Always Building</h1>
         </div>
+     
         <div className='project-body'>
           <div className='body-menu-panel'>
-            <h6>Put project names in here that can be clicked on </h6>
-            <h6>Eleno-r</h6>
-            <h6>Mission-Control</h6>
-            <h6>Elenor-Server</h6>
-            <h6>Tumbleweed Bakehouse</h6>
-            <h6>Hypetown</h6>
-            <h6>Bikeindex?</h6>
+            <Card repositoryList={this.props.personalProjects.initialState}  />
+              <h6>Bikeindex?</h6>
           </div>
           <div className='body-project-panel'>
-            <h5>Before a project is selected have a text displayed about what the project page is about.</h5>
-            <h6>Then when a project is selected we can display the contents here.</h6>
+     
+          <LanguageChart 
+            repositoryList={this.props.repositories} 
+            />
+            <p>        the only thing a gambler needs is a suitcase and a trunk
+        and the only time he's satisfied is when he's drunk.
+        He fills his glasses up to the brim and he'll place the cards around.
+        The only pleasure he gets out of life is ramblin from town to town.</p>
+          <RepoMenu 
+            repositoryList={this.props.repositories} 
+            getReadMe = {this.viewGHReadMe}
+            />
+            
           </div>
         </div>
       </div>
@@ -70,7 +67,8 @@ Projects.propTypes = {
 
 const mapStateToProps = state => {
   return {
-    repositories: state.projects,
+    repositories: state.gitHubRepositories,
+    personalProjects: state.personalProjects
   }
 }
 

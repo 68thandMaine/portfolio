@@ -1,7 +1,7 @@
 import * as types from '../../constants/ActionTypes';
 
 
-const projectListReducer = ( state = {}, action ) => {
+const gitHubRepositoryReducer = ( state = {}, action ) => {
   let newState;
   switch(action.type) {
     case types.RECEIVE_REPOS: {
@@ -14,5 +14,5 @@ const projectListReducer = ( state = {}, action ) => {
   }
 };
 
-export default projectListReducer;
+export default gitHubRepositoryReducer;
 

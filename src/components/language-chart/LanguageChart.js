@@ -16,17 +16,17 @@ class LanguageChart extends React.Component {
 
   componentDidMount() {  
     console.log('mounted')
-    setTimeout(() => {this.buildChart();}, 1000);
+    setTimeout(() => {this.buildChart();}, 1500);
   }
   buildChart(){
   const myChartRef = this.chartRef.current.getContext('2d'); 
-    let languages = this.filterLanguages(this.props.sortedLanguages);
+    let languages = this.filterLanguages(this.props.repositoryList);
     let data = Object.values(languages);
     let labels = Object.keys(languages);
-    console.table(data, labels)
   this.myChart = new Chart(myChartRef, {
-    type: 'pie', 
+    type: 'doughnut', 
     data: {      
+      labels: labels,
       datasets: [
         {
           data: data,
@@ -34,12 +34,17 @@ class LanguageChart extends React.Component {
           label: ''
         }
       ],
-    labels: labels
+    },
+    options: {
+      animation:{
+        circumference: 15 * Math.PI,
+        animateRotate: true
+      },
+      legend: false,
+      responsive: true
     }
   });
 }
-
-
   filterLanguages(repoList) {  
     return repoList.reduce(this.countRepoLanguage, {});
   }
@@ -52,7 +57,6 @@ class LanguageChart extends React.Component {
   render(){
     return (
       <div className='languageChart-wrapper'>
-        Chart Component here. I will be used to hold a graph detailing the different languages that are used in the projects.
         <canvas
           id='pieChart'
           ref={this.chartRef}
@@ -63,7 +67,7 @@ class LanguageChart extends React.Component {
 }
 
 LanguageChart.propTypes = {
-  sortedLanguages: PropTypes.array
+  repositoryList: PropTypes.array
 }
 
 export default LanguageChart;

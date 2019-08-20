@@ -3,7 +3,8 @@
   flex-direction: column;
 }
 .project-header {
-
+  width: 90%;
+  margin:0 3rem 0 2rem;
 }
 .project-body {
   display: flex;
@@ -14,5 +15,5 @@
   flex-direction: column;
 }
 .body-project-panel {
-
+  width:35rem;
 }

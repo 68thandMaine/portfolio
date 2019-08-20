@@ -1,0 +1,11 @@
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px white;
+}
+
+.card-title p {
+  /* position:relative;
+     transform: rotate(270deg);
+     transform-origin: 0 0; */
+}
