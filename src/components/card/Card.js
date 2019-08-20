@@ -12,27 +12,24 @@ class Card extends React.Component {
   componentDidMount(){
     console.log('card props', this.props.repositoryList)
   }
-
+  
   render() {
     return (
-      <div>
-        {Object.keys(this.props.repositoryList.personalProjects).map(repo => {
-          console.log('repo', repo)
-          let repository = this.props.repositoryList.personalProjects[repo];
-          console.log(repository)
-          return (
-            <div className='card-wrapper'>
-            <div className='card-title'>
-              <p>{repository.name}</p>
-              </div>
-            <div className='card-body'>
-              <p>{repository.languages}</p>
-              <p>{repository.description}</p>
+      <div className='card-wrapper'>
+        <div className='row'>
+          {Object.keys(this.props.repositoryList.personalProjects).map(repo => {
+            let project = this.props.repositoryList.personalProjects[repo];
+            return (
+              <div className='grid-item-wrapper' key={repo}>
+                <div className='grid-item-container'>
+                <div className='card'>
+                  <p>{project.name}</p>
+                </div>
+                </div>
             </div>
-            </div>
-          )
-        })}
-        <div className='card-title'>Oh tell my baby sister not to do what I've done</div>
+            )
+         })}
+       </div>
       </div>
     );
   }

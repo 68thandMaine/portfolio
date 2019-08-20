@@ -57,16 +57,19 @@ class LanguageChart extends React.Component {
   render(){
     return (
       <div className='languageChart-wrapper'>
+        <h5>Project Languages</h5>
         <canvas
           id='pieChart'
           ref={this.chartRef}
+          width='403'
+          height='302'
           />
       </div>
     );
   }
 }
 
-LanguageChart.propTypes = {
+LanguageChart.spropTypes = {
   repositoryList: PropTypes.array
 }
 

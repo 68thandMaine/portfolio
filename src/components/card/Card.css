@@ -1,11 +1,41 @@
 .card-wrapper {
-  display: flex;
-  flex-direction: column;
-  border: solid 1px white;
+  margin: 0 auto;
+  text-align: left;
 }
 
-.card-title p {
-  /* position:relative;
-     transform: rotate(270deg);
-     transform-origin: 0 0; */
+.row {
+  border: solid 1px red;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  max-width: 100%;
+}
+
+.card {
+  /* padding: 2%; */
+  flex-basis: 50%;
+  -ms-flex: auto;
+  box-sizing: border-box;
+  border: solid 1px white;
+  
+}
+
+.grid-item-wrapper {
+  -webkit-box-sizing: initial;
+  -moz-box-sizing: initial;
+  box-sizing: initial;
+  /* background: #ececec; */
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  -webkit-transition: padding 0.15s cubic-bezier(0.4,0,0.2,1), margin 0.15s cubic-bezier(0.4,0,0.2,1), box-shadow 0.15s cubic-bezier(0.4,0,0.2,1);
+  transition: padding 0.15s cubic-bezier(0.4,0,0.2,1), margin 0.15s cubic-bezier(0.4,0,0.2,1), box-shadow 0.15s cubic-bezier(0.4,0,0.2,1);
+  position: relative;
+}
+
+.grid-item-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
 }

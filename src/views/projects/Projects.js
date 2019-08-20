@@ -36,18 +36,35 @@ class Projects extends React.Component {
      
         <div className='project-body'>
           <div className='body-menu-panel'>
-            <Card repositoryList={this.props.personalProjects.initialState}  />
-              <h6>Bikeindex?</h6>
+            
+            <div className='text-container'>
+              <p>I love to code. There's just something about the logical creativity needed to create web applications that excites me.</p>
+              <br />
+              <p>Here you can find the body of my work from 2018 to present.</p>
+              <br />
+              <p>I primarily write in C# or JavaScript, but I have experience working with some PHP as well.</p>
+              <br />
+              <p>My projects are tailored to the specific needs of each client, and I enjoy the collaborative effort that brings code to life.</p>
+              <p>Essentially I design, build, and maintain meaningful web applications that are easy to use.</p>
+            </div>
+            
+            <div className='pieChart-container'>
+              <LanguageChart 
+                repositoryList={this.props.repositories} 
+                />
+            </div>
+
           </div>
+
+
+
           <div className='body-project-panel'>
      
-          <LanguageChart 
-            repositoryList={this.props.repositories} 
-            />
-            <p>        the only thing a gambler needs is a suitcase and a trunk
+            <Card repositoryList={this.props.personalProjects.initialState}  />
+            {/* <p>        the only thing a gambler needs is a suitcase and a trunk
         and the only time he's satisfied is when he's drunk.
         He fills his glasses up to the brim and he'll place the cards around.
-        The only pleasure he gets out of life is ramblin from town to town.</p>
+        The only pleasure he gets out of life is ramblin from town to town.</p> */}
           <RepoMenu 
             repositoryList={this.props.repositories} 
             getReadMe = {this.viewGHReadMe}

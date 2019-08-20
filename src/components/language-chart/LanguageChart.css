@@ -1,4 +1,11 @@
 .languageChart-wrapper {
-  width: 75%;
- margin-left: 8rem;
+ 
+}
+
+#pieChart {
+  width: 20rem;
+}
+
+#pieChart:hover {
+  cursor: pointer;
 }

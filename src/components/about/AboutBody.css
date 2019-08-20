@@ -8,7 +8,7 @@
 .aboutBody-title {
   text-align: left;
   position: relative;
-  left: -3rem;
+  left: -4rem;
 }
 .aboutBody-title p {
   font-family: Moon-Regular;
@@ -22,9 +22,9 @@
 }
 .textAnimation {
   position: relative;
-  top: 0.75rem;
-  margin-left: 6%;
-  font-size: 5.5rem;
+  top: 0.5rem;  
+  font-size: 4rem;
+  font-size: 5vw;
   font-family: Moon-Light
 }
 .portlandText {
@@ -61,6 +61,5 @@
 .aboutBody-mainText {
   margin-top: 5%;
   line-height: 2rem;
-  /* font-weight: bold; */
   text-align: left;
 }

@@ -8,12 +8,24 @@
 }
 .project-body {
   display: flex;
-  flex-direction: row;
+  flex-flow: column wrap;
 }
 .body-menu-panel {
   display: flex;
-  flex-direction: column;
+  flex-flow: row nowrap;
+  align-content: center;
+  justify-content: flex-start
 }
-.body-project-panel {
-  width:35rem;
+
+.pieChart-container {
+  /* flex:1 */
+}
+
+.text-container {
+  
+  text-align: left;
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
 }
