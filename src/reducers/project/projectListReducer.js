@@ -7,7 +7,6 @@ const projectListReducer = ( state = {}, action ) => {
     case types.RECEIVE_REPOS: {
       newState = Object.assign ({}, state );
       newState = action.repoList;
-      console.log(newState)
       return newState;
     }
     default: 

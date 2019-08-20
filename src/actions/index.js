@@ -3,7 +3,6 @@ import GithubService from '../services/api/GithubService.js';
 const { action } = constants;
 
  export function getRepos() {
-   console.log('getRepos')
   return async function(dispatch) {
     try {
       const res =  await GithubService.getRepos();

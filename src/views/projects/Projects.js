@@ -10,13 +10,19 @@ class Projects extends React.Component {
     super(props);
     this.state = {
       projectToView: null,
-      repositories: null
+      repositories: null,
     };
     this.testButton = this.testButton.bind(this);
   }
 
+  componentWillUpdate(){
+    if(this.state.repositories === null) {
+      this.setState({repositories: this.props.repositories})
+    }
+  }
 
-  testButton() {    
+  testButton() {
+    console.log(this.props.repositories)    
   }
 
   render() {
@@ -59,7 +65,7 @@ class Projects extends React.Component {
 
 Projects.propTypes = {
   repositories: PropTypes.array,
-  countedLanguages: PropTypes.object
+  // countedLanguages: PropTypes.object
 }
 
 const mapStateToProps = state => {
