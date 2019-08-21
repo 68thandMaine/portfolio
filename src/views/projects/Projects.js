@@ -48,11 +48,11 @@ class Projects extends React.Component {
               <p>Essentially I design, build, and maintain meaningful web applications that are easy to use.</p>
             </div>
             
-            <div className='pieChart-container'>
+            
               <LanguageChart 
                 repositoryList={this.props.repositories} 
                 />
-            </div>
+            
 
           </div>
 
@@ -60,7 +60,9 @@ class Projects extends React.Component {
 
           <div className='body-project-panel'>
      
-            <Card repositoryList={this.props.personalProjects.initialState}  />
+            <Card 
+              repositoryList={this.props.personalProjects.initialState}  
+            />
             {/* <p>        the only thing a gambler needs is a suitcase and a trunk
         and the only time he's satisfied is when he's drunk.
         He fills his glasses up to the brim and he'll place the cards around.
@@ -68,7 +70,7 @@ class Projects extends React.Component {
           <RepoMenu 
             repositoryList={this.props.repositories} 
             getReadMe = {this.viewGHReadMe}
-            />
+          />
             
           </div>
         </div>

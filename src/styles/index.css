@@ -60,8 +60,8 @@ ul {
 p, li {
   margin: 0;
   font-family: Manrope;
-  font-size: 1.75rem;
-  font-size: 1.75vw;
+  font-size: 1.5rem;
+  font-size: 1.5vw;
   color: #c5c5c5;
   text-decoration: none;
 }

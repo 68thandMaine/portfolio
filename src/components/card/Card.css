@@ -1,10 +1,8 @@
 .card-wrapper {
   margin: 0 auto;
-  text-align: left;
 }
 
 .row {
-  border: solid 1px red;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -12,30 +10,35 @@
 }
 
 .card {
-  /* padding: 2%; */
   flex-basis: 50%;
   -ms-flex: auto;
   box-sizing: border-box;
   border: solid 1px white;
-  
+  padding: 0.5rem 1rem;
 }
+.card p:first-child{
+  font-size: 2rem;
+  font-size: 2vw;
+  margin-bottom: 1.25rem;
+}
+.card p:nth-child(2) {
+  font-size: 1.25rem;
+  font-size: 1.25vw;
+  margin-bottom: 1.25rem; 
+}
+
 
 .grid-item-wrapper {
   -webkit-box-sizing: initial;
   -moz-box-sizing: initial;
   box-sizing: initial;
-  /* background: #ececec; */
-  margin: 0;
+  margin: 1rem;
   height: 100%;
   width: 100%;
   overflow: hidden;
   -webkit-transition: padding 0.15s cubic-bezier(0.4,0,0.2,1), margin 0.15s cubic-bezier(0.4,0,0.2,1), box-shadow 0.15s cubic-bezier(0.4,0,0.2,1);
   transition: padding 0.15s cubic-bezier(0.4,0,0.2,1), margin 0.15s cubic-bezier(0.4,0,0.2,1), box-shadow 0.15s cubic-bezier(0.4,0,0.2,1);
   position: relative;
+  text-align: left;
 }
 
-.grid-item-container {
-  height: 100%;
-  width: 100%;
-  position: relative;
-}

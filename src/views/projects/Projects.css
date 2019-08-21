@@ -5,24 +5,28 @@
 .project-header {
   width: 90%;
   margin:0 3rem 0 2rem;
+  border: solid 1px blue;
 }
 .project-body {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
+  border:solid 2px green;
 }
 .body-menu-panel {
   display: flex;
   flex-flow: row nowrap;
   align-content: center;
-  justify-content: flex-start
+  justify-content: flex-start;
+  border: solid 1px red;
 }
-
-.pieChart-container {
-  /* flex:1 */
+.body-project-panel {
+  border: solid 1px white;
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
 }
 
 .text-container {
-  
   text-align: left;
   display:flex;
   flex-direction: column;

@@ -3,7 +3,8 @@
 }
 
 #pieChart {
-  width: 20rem;
+  width: 40rem;
+  width: 40vw;
 }
 
 #pieChart:hover {
