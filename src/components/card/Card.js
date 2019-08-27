@@ -28,9 +28,13 @@ class Card extends React.Component {
                     <p>{project.name}</p>
                     <p>{project.description}</p>
                     <ProgressBar percentage={project.percentComplete}/>
-                    <p>{project.languages.join(' ')}</p>
-                    <a href={project.readMeURL}>Readme</a>
-                    <a href={project.githubURL}>Github</a>
+                    <div className='card-footer'>
+                      <div className='footer-links' >
+                        <a href={project.readMeURL}><i className="fab fa-readme fa-2x" />Readme</a>
+                        <a href={project.githubURL}><i className='fab fa-github fa-2x' /> Github</a>
+                      </div>
+                      <p>{project.languages.join(' ')}</p>
+                    </div>
                   </div>
                 
               </div>

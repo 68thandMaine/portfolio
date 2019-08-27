@@ -32,7 +32,7 @@ const initialState = {
       description: "Have you ever heard a band that you wanted to see live? I'm sure you'd be hard pressed to say no. Hypetown is your friend in the entertainment age. Simply put in your location and find new music playing near you.",
       image: null,
       percentComplete: 85,
-      languages: ["JavaScript", "TypeScript"],
+      languages: ["Angular", "TypeScript"],
       githubURL: "https://github.com/68thandMaine/HypeTown",
       readMeURL: "https://github.com/68thandMaine/HypeTown/blob/master/README.md"
     },
@@ -41,7 +41,7 @@ const initialState = {
       description: "This app was built to help a bread maker with her business",
       image: null,
       percentComplete: 90,
-      languages: ["C#"],
+      languages: ["C#", "SQL"],
       githubURL: "https://github.com/68thandMaine/tumbleweedbakehouse",
       readMeURL: "https://github.com/68thandMaine/tumbleweedbakehouse/blob/master/README.md"
     }

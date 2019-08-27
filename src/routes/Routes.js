@@ -7,6 +7,7 @@ import Home from '../views/home/Home.js';
 import PdFViewer from '../views/pdf-viewer/PDFViewer.js';
 import Projects from '../views/projects/Projects.js';
 import PDFJSBackend from '../services/Pdf.js';
+import LoadingBar from '../components/loading-bar/LoadingBar.js';
 // ROUTING TRANSITION
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import './route-transitions.css';
@@ -25,7 +26,7 @@ function Routes({location}) {
                     <Route exact path='/' component={Home}/>
                     <Route path='/bio' component={About}/>
                     <Route path='/resume' render={(props) => <PdFViewer backend={PDFJSBackend} src='/resume.pdf'/> } />
-                    <Route path='/projects' component={Projects} />
+                    <Route path='/projects' component={LoadingBar} />
                     <Route component={Error404} />
                 </Switch>
               </div>

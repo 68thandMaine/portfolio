@@ -9,6 +9,20 @@
   max-width: 100%;
 }
 
+.grid-item-wrapper {
+  -webkit-box-sizing: initial;
+  -moz-box-sizing: initial;
+  box-sizing: initial;
+  margin: 1rem;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  -webkit-transition: padding 0.15s cubic-bezier(0.4,0,0.2,1), margin 0.15s cubic-bezier(0.4,0,0.2,1), box-shadow 0.15s cubic-bezier(0.4,0,0.2,1);
+  transition: padding 0.15s cubic-bezier(0.4,0,0.2,1), margin 0.15s cubic-bezier(0.4,0,0.2,1), box-shadow 0.15s cubic-bezier(0.4,0,0.2,1);
+  position: relative;
+  text-align: left;
+}
+
 .card {
   flex-basis: 50%;
   -ms-flex: auto;
@@ -27,18 +41,15 @@
   margin-bottom: 1.25rem; 
 }
 
-
-.grid-item-wrapper {
-  -webkit-box-sizing: initial;
-  -moz-box-sizing: initial;
-  box-sizing: initial;
-  margin: 1rem;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  -webkit-transition: padding 0.15s cubic-bezier(0.4,0,0.2,1), margin 0.15s cubic-bezier(0.4,0,0.2,1), box-shadow 0.15s cubic-bezier(0.4,0,0.2,1);
-  transition: padding 0.15s cubic-bezier(0.4,0,0.2,1), margin 0.15s cubic-bezier(0.4,0,0.2,1), box-shadow 0.15s cubic-bezier(0.4,0,0.2,1);
-  position: relative;
-  text-align: left;
+.card-footer {
+  display: flex;
+  flex-flow: row nowap;
 }
 
+i{
+  color: #c5c5c5;
+}
+
+i:hover{
+  cursor: pointer;
+}
