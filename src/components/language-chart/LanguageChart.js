@@ -1,5 +1,4 @@
 import React from 'react';
-import {connect} from 'react-redux';
 import Chart from 'chart.js';
 import PropTypes from 'prop-types';
 import './LanguageChart.css';
@@ -12,36 +11,43 @@ class LanguageChart extends React.Component {
     this.buildChart = this.buildChart.bind(this);
     this.countRepoLanguage = this.countRepoLanguage.bind(this);
     this.filterLanguages = this.filterLanguages.bind(this);
+    this.createColors = this.createColors.bind(this);
   }  
 
   componentDidMount() {  
-    console.log('mounted')
-    setTimeout(() => {this.buildChart();}, 1500);
+    setTimeout(() => {
+      this.buildChart();
+    }, 1500);
   }
+  
   buildChart(){
   const myChartRef = this.chartRef.current.getContext('2d'); 
     let languages = this.filterLanguages(this.props.repositoryList);
     let data = Object.values(languages);
-    let labels = Object.keys(languages);
+    let tableLabels = Object.keys(languages);
+    let colors = this.createColors(data);
   this.myChart = new Chart(myChartRef, {
     type: 'doughnut', 
     data: {      
-      labels: labels,
-      datasets: [
-        {
+      labels: tableLabels,
+      datasets: [{
           data: data,
-          hoverBorderWidth: 15,
+          backgroundColor: colors,
+          hoverBorderWidth: 5,
+          hoverBackgroundColor: 'transparent',
           label: ''
-        }
-      ],
+        }],
     },
     options: {
       animation:{
+        animationEasing: 'easeInOutQuart',
+        duration: 3000,
         circumference: 15 * Math.PI,
-        animateRotate: true
+        animateRotate: true,
+        animateScale: true
       },
-      legend: false,
-      responsive: true
+      responsive: true,
+      rotation: 90,
     }
   });
 }
@@ -53,11 +59,22 @@ class LanguageChart extends React.Component {
    counter[repository.language] = (counter[repository.language] || 0) + 1;
    return counter;
   }
+  createColors(array) {
+    let colors = [];
+    for (let i = 0; i < array.length; i++) {
+      const number1 = Math.floor(Math.random()*255 +1);
+      const number2 = Math.floor(Math.random()*255 +1);
+      const number3 = Math.floor(Math.random()*255 +1);
+      const color = `rgba(${number1}, ${number2}, ${number3}, 0.9)`;
+      colors.push(color);
+    }
+    return colors;
+  }
 
   render(){
     return (
       <div className='languageChart-wrapper'>
-        <h5>Project Languages</h5>
+        <h2>PROJECT LANGUAGES</h2>
         <canvas
           id='pieChart'
           ref={this.chartRef}

@@ -1,7 +1,7 @@
 const initialState = {
-  personalProjects: {
+personalProjects: {
     1: {
-      name: "Eleno-r",
+      name: "Elenor",
       description: "This is the portfolio for the talanted artist Shaina Morales. The goal was to have a very minimal site so that the content was the main focus. Navigation is controlled by a fixed menu bar, and a user can intuitively browse through a collection of Shaina's work. Code and Applicatoin Design by myself. Art Direction by Shaina Morales.",
       image: null,
       languages: ["React", "JavaScript", "Firebase"],

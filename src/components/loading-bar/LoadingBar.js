@@ -10,7 +10,7 @@ const LoadingBar = () => {
       <span></span>
       <span></span>
       <span></span>
-      <span></span>
+      <span></span> 
     </div>
   );
 }

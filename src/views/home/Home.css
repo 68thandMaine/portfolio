@@ -9,8 +9,13 @@
 }
 
 .home-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
   z-index: 1;
 }
@@ -25,6 +30,15 @@
 
 .home-content {
   margin: 10% 0 10% 0;
+}
+
+.home-content h3 {
+  font-family: Eudora;
+  font-size: 7vw;
+}
+.home-content h4 {
+  font-family: Eudora;
+  font-size: 5vw;
 }
 
 .titleLetter {

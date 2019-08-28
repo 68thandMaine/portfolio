@@ -11,5 +11,6 @@
 
 .redirect:hover {
   cursor: pointer;
-  animation: viewResume 2s ease normal;
+  -webkit-animation: viewResume 2s ease normal;
+          animation: viewResume 2s ease normal;
 }

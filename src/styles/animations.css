@@ -1,10 +1,37 @@
+/* COMPONENTS WITH ANIMATIONS IN THIS FILE
+   - App
+   - Sidebar
+   - About
+   - Button
+   - LanguageIcons
+*/
+
 /* ANIMATIONS ON THE APP COMPONENT */
+@-webkit-keyframes show-sidebar {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes show-sidebar {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes shrink-views {
+  from {
+    margin: 0;
+    width: 100%;
+  }
+  to {
+    margin: 0 5% 0 25%;
+    width: 75%;
   }
 }
 
@@ -16,6 +43,16 @@
   to {
     margin: 0 5% 0 25%;
     width: 75%;
+  }
+}
+@-webkit-keyframes enlarge-views {
+  from {
+    margin: 0 5% 0 25%;
+    width: 75%;
+  }
+  to {
+    margin: 0;
+    width: 100%;
   }
 }
 @keyframes enlarge-views {
@@ -31,6 +68,18 @@
 
 /* ANIMATIONS ON THE SIDEBAR COMPONENT */
 
+@-webkit-keyframes enlarge {
+  from {
+    font-size: 2rem;
+    letter-spacing: 0;
+  }
+  to {
+    font-size: 2.5rem;
+    letter-spacing:0.4rem;
+    color: #fff;
+  }
+}
+
 @keyframes enlarge {
   from {
     font-size: 2rem;
@@ -40,6 +89,16 @@
     font-size: 2.5rem;
     letter-spacing:0.4rem;
     color: #fff;
+  }
+}
+@-webkit-keyframes shrink {
+  from {
+    font-size:2.5rem;
+    letter-spacing: 0.4rem;
+  }
+  to {
+    font-size: 2rem;
+    letter-spacing: 0;
   }
 }
 @keyframes shrink {
@@ -56,6 +115,21 @@
 
 /* ANIMATIONS ON THE ABOUT PAGE */
 
+@-webkit-keyframes showCity {
+  from {
+    
+  }
+  to {
+    -webkit-text-fill-color: transparent;
+    background: url('../assets/images/pland.png');
+    background-position: 90% 90%;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+  }
+}
+
 @keyframes showCity {
   from {
     
@@ -67,6 +141,19 @@
     background-size: cover;
     -webkit-background-clip: text;
     background-clip: text;
+    
+  }
+}
+@-webkit-keyframes hideCity {
+  from {
+    -webkit-text-fill-color: transparent;
+    background: url('../assets/images/pland.png');
+    background-position: 90% 90%;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  to {
     
   }
 }
@@ -86,6 +173,24 @@
 
 /* BUTTON COMPONENT ANIMATION */
 
+@-webkit-keyframes viewResume {
+  from {
+    border-bottom: solid 1px #fff;
+    background-color: transparent;
+  }
+  to {
+    border-bottom: 0;
+    background-color: #eeeeee;
+    opacity: 0.25
+  }
+  from {
+    border-right: solid 1px #fff;
+  }
+  to {
+    border-right: 0
+  }
+}
+
 @keyframes viewResume {
   from {
     border-bottom: solid 1px #fff;
@@ -101,5 +206,20 @@
   }
   to {
     border-right: 0
+  }
+}
+
+
+/* LANGUAGEICON COMPONENT ANIMATIONS */
+
+@keyframes pulse {
+  0% {
+    width: 4vw;
+  }
+  50% {
+    width: 4.5vw;
+  }
+  100%{
+    width: 4vw;
   }
 }

@@ -1,10 +1,19 @@
 .pictureFrame-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-left: 5%;
   margin-bottom: 10rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .pictureFrame {
   border: 2px solid #c5c5c5;
@@ -12,12 +21,18 @@
   width: 25rem;
   width: 25vw;
   
+  display: -webkit-box;
+  
+  display: -ms-flexbox;
+  
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
   padding-left: -.5%;
 }
 .portfolio-picture {
   max-width: 100%;
-  
+  height: auto;
 }

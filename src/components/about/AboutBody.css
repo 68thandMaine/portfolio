@@ -1,6 +1,8 @@
 .aboutBody-container {
   margin: 5%;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   justify-items: center;
   text-align: center;
 }
@@ -33,8 +35,6 @@
   letter-spacing: -10px;
   margin: 6% auto;
   -webkit-animation: hideCity 2.2s ease 0s;
-  -moz-animation: hideCity 2.2s ease 0s;
-  -o-animation: hideCity 2.2s ease 0s;
   animation: hideCity 2.2s ease 0s;
   background-image: none;
   text-align: center;
@@ -43,8 +43,7 @@
 .portlandText:hover {
   cursor: pointer;
   -webkit-animation: showCity 2s ease 0s ; /* Safari 4+ */
-  -moz-aanimation: showCity 2s ease 0s ; /* Fx 5+ */
-  -o-animation: showCity 2s ease 0s ;/* Opera 12+ */
+  -moz-aanimation: showCity 2s ease 0s ; /* Fx 5+ *//* Opera 12+ */
   animation: showCity 2s ease 0s ; 
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;

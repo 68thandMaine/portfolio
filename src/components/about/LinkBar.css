@@ -1,13 +1,21 @@
 .linkbar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .icon {
   float: left;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center
 }
 .icon:before {
   content: '';
@@ -37,8 +45,8 @@
 
 .icon:hover {
   cursor: pointer;
-  animation: spin 1s ease normal;
+  -webkit-animation: spin 1s ease normal;
+          animation: spin 1s ease normal;
 }
-@keyframes spin {0% {transform: rotate(0deg);} 100% {transform: rotate(-360deg);}}
+@keyframes spin {0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);} 100% {-webkit-transform: rotate(-360deg);transform: rotate(-360deg);}}
 @-webkit-keyframes spin {0% {-webkit-transform: rotate(0deg); } 100% {-webkit-transform: rotate(-360deg); }}
-@-ms-keyframes spin {0% {-ms-transform: rotate(0deg);} 100% {-ms-transform: rotate(-360deg);}}

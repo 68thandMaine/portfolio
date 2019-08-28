@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import LanguageIcons from '../lanuage-icons/LanguageIcons.js';
 import ProgressBar from '../progress-bar/progressBar.js';
 import './Card.css';
 
@@ -10,36 +11,57 @@ class Card extends React.Component {
 
     };
   }
+  
   componentDidMount(){
-    console.log('card props', this.props.repositoryList)
+    console.log('CARD COMPONENTDIDMOUNT', this.props.repositoryList);
   }
   
   render() {
     return (
       <div className='card-wrapper'>
-        <h5>In Development</h5>
+        <h3>IN DEVELOPMENT</h3>
         <div className='row'>
+          
           {Object.keys(this.props.repositoryList.personalProjects).map(repo => {
             let project = this.props.repositoryList.personalProjects[repo];
+            let technologies = project.languages
+            console.table('technologies', technologies, 'repo', repo);
+            
             return (
               <div className='grid-item-wrapper' key={repo}>
                 
-                  <div className='card'>
-                    <p>{project.name}</p>
+                  <div className='card' >
+                    <h4>{project.name}</h4>
                     <p>{project.description}</p>
                     <ProgressBar percentage={project.percentComplete}/>
                     <div className='card-footer'>
-                      <div className='footer-links' >
-                        <a href={project.readMeURL}><i className="fab fa-readme fa-2x" />Readme</a>
-                        <a href={project.githubURL}><i className='fab fa-github fa-2x' /> Github</a>
+                      <div className='personalProjects'>    
+                        <h6>Project Details</h6>
+                        <div className='footer-links'>
+                          <div className='projectLinks'>
+                            <a href={project.readMeURL}><i className="fab fa-readme fa-2x" /></a>
+                            <label className='linkLabel'>Readme</label>
+                          </div>
+                          <div className='projectLinks'>
+                            <a href={project.githubURL}><i className='fab fa-github fa-2x' /></a>
+                            <label className='linkLabel'>Github</label>
+                          </div>
+                        </div>
                       </div>
-                      <p>{project.languages.join(' ')}</p>
+                      <div className='footer-languages'> 
+                        <LanguageIcons 
+                        currentProject = {project.name}
+                        languages={technologies}
+                        purpose='Environment' />
+                      </div>
                     </div>
                   </div>
-                
+              
               </div>
             )
+
          })}
+
        </div>
       </div>
     );

@@ -5,6 +5,7 @@ import './Projects.css';
 
 import Card from '../../components/card/Card.js';
 import LanguageChart from '../../components/language-chart/LanguageChart.js';
+import LoadingBars from '../../components/loading-bar/LoadingBar';
 import RepoMenu from '../../components/repo-menu/RepoMenu.js';
 
 class Projects extends React.Component {
@@ -12,22 +13,38 @@ class Projects extends React.Component {
     super(props);
     this.state = {
       // projectToView: null,
-      repositories: null,
     };
     this.viewGHReadMe = this.viewGHReadMe.bind(this);
+    this.viewToShow = this.viewToShow.bind(this);
   }
 
   componentWillUpdate(){
-    if(this.state.repositories === null) {
-      this.setState({repositories: this.props.repositories})
-    }
+    this.viewToShow();
+  }
+
+  componentDidMount(){
+    this.viewToShow();
+  }
+
+  viewToShow() {
+    let repositories = Object.entries(this.props.repositories);
+
+    if(repositories.length === 0) {
+      console.log('finally')
+      return <LoadingBars />
+    } else 
+    console.log('hi fuck')
+    return  <LanguageChart repositoryList={this.props.repositories} />
   }
 
   viewGHReadMe(names){
-    console.log('viewGHReadMe', this.props.personalProjects.initialState.personalProjects)
+    console.log('viewGHReadMe', names)
   }
 
   render() {
+
+    
+
     return (
       <div className='project-wrapper'>
         <div className='project-header'>
@@ -48,10 +65,8 @@ class Projects extends React.Component {
               <p>Essentially I design, build, and maintain meaningful web applications that are easy to use.</p>
             </div>
             
-            
-              <LanguageChart 
-                repositoryList={this.props.repositories} 
-                />
+            {this.viewToShow()}
+           
             
 
           </div>
@@ -59,14 +74,11 @@ class Projects extends React.Component {
 
 
           <div className='body-project-panel'>
-     
+    
             <Card 
-              repositoryList={this.props.personalProjects.initialState}  
+              repositoryList={this.props.personalProjects}  
             />
-            {/* <p>        the only thing a gambler needs is a suitcase and a trunk
-        and the only time he's satisfied is when he's drunk.
-        He fills his glasses up to the brim and he'll place the cards around.
-        The only pleasure he gets out of life is ramblin from town to town.</p> */}
+
           <RepoMenu 
             repositoryList={this.props.repositories} 
             getReadMe = {this.viewGHReadMe}
@@ -87,7 +99,7 @@ Projects.propTypes = {
 const mapStateToProps = state => {
   return {
     repositories: state.gitHubRepositories,
-    personalProjects: state.personalProjects
+    personalProjects: state.personalProjects.initialState
   }
 }
 

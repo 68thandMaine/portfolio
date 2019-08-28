@@ -23,7 +23,6 @@ class App extends React.Component {
     super(props);
     this.state= {
       background: 0,
-      projects: [],
       sidebar_visible: false,
     };
     this.handleViewSidebar = this.handleViewSidebar.bind(this);
@@ -31,7 +30,9 @@ class App extends React.Component {
   }
   
   componentDidMount() {
-    this.props.dispatch(getRepos());
+    console.log('APP COMPONENTDIDMOUNT');
+    console.log('.                    .');
+    this.props.dispatch((getRepos()));
   }
 
   handleViewSidebar() {
