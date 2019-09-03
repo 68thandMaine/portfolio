@@ -2,6 +2,7 @@ import React from 'react';
 import {Switch, Route, withRouter} from 'react-router-dom';
 // COMPONENTS
 import About from '../views/about/About.js';
+import Contact from '../views/contact/Contact.js';
 import Error404 from '../views/error/Error404.js';
 import Home from '../views/home/Home.js';
 import PdFViewer from '../views/pdf-viewer/PDFViewer.js';
@@ -18,7 +19,7 @@ function Routes({location}) {
         <TransitionGroup className='transition-group'>
           <CSSTransition
             key={location.key}
-            timeout={{ enter: 300, exit: 300 }}
+            timeout={{ enter: 900, exit: 300 }}
             classNames={'fade'} >
               <div className='route-section'>
                 <Switch location={location}>
@@ -26,6 +27,7 @@ function Routes({location}) {
                     <Route path='/bio' component={About}/>
                     <Route path='/resume' render={(props) => <PdFViewer backend={PDFJSBackend} src='/DevRes.pdf'/> } />
                     <Route path='/projects' component={Projects} />
+                    <Route path='/contact' component={Contact} />
                     <Route component={Error404} />
                 </Switch>
               </div>
