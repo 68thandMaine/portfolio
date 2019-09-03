@@ -52,7 +52,7 @@ class App extends React.Component {
         return this.setState({ background: 2, sidebar_visible: false});
        
       case 'contact':
-        return this.setState({ background: null, sidebar_visible: false});
+        return this.setState({ background: 3, sidebar_visible: false});
        
       default:
         return this.setState({ background: 3, sidebar_visible: false});

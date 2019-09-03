@@ -1,0 +1,11 @@
+.contact-wrapper {
+
+}
+.arrowButton{
+  display: inline-block;
+  width: 20%;
+  border-radius: 50%;
+}
+.contact-title {
+ margin-bottom: 5vw;
+}

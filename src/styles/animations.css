@@ -70,44 +70,44 @@
 
 @-webkit-keyframes enlarge {
   from {
-    font-size: 2rem;
+    font-size: 3vw;
     letter-spacing: 0;
   }
   to {
-    font-size: 2.5rem;
-    letter-spacing:0.4rem;
+    font-size: 2.5vw;
+    letter-spacing:0.4vw;
     color: #fff;
   }
 }
 
 @keyframes enlarge {
   from {
-    font-size: 2rem;
+    font-size: 3vw;
     letter-spacing: 0;
   }
   to {
-    font-size: 2.5rem;
-    letter-spacing:0.4rem;
+    font-size: 3.5vw;
+    letter-spacing:0.4vw;
     color: #fff;
   }
 }
 @-webkit-keyframes shrink {
   from {
-    font-size:2.5rem;
-    letter-spacing: 0.4rem;
+    font-size:3.5vw;
+    letter-spacing: 0.4vw;
   }
   to {
-    font-size: 2rem;
+    font-size: 3vw;
     letter-spacing: 0;
   }
 }
 @keyframes shrink {
   from {
-    font-size:2.5rem;
-    letter-spacing: 0.4rem;
+    font-size:3.5vw;
+    letter-spacing: 0.4vw;
   }
   to {
-    font-size: 2rem;
+    font-size: 3vw;
     letter-spacing: 0;
   }
 }
@@ -221,5 +221,25 @@
   }
   100%{
     width: 4vw;
+  }
+}
+
+/* ANIMATIONS ON THE CONTACT COMPONENT */
+
+@keyframes hideArrows {
+  0% {
+    opacity: 1;
+  }
+ 100%  {
+    opacity: 0;
+  }
+}
+
+@keyframes showForm {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

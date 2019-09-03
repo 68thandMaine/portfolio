@@ -23,13 +23,9 @@
   margin-left: 25%;
 }
 
-.home-header {
-  
-  
-}
 
 .home-content {
-  margin: 10% 0 10% 0;
+  margin-top: 5vw
 }
 
 .home-content h3 {
@@ -39,9 +35,4 @@
 .home-content h4 {
   font-family: Eudora;
   font-size: 5vw;
-}
-
-.titleLetter {
-  font-family: Olegos;
-  font-size: 8rem;
 }
