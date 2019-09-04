@@ -2,16 +2,12 @@ import React from 'react';
 
 import './AboutBody.css';
 
-import TextAnimation from '../../components/about/TextAnimation';
 
 function AboutBody() {
   return (
-    <div className='aboutBody-container' data-cy='aboutBody-container'>
-        <div className='aboutBody-title'>
-          <p>I'm a : <span className='textAnimation'> <TextAnimation /> </span> </p>
-          <p>living in</p>
-          <h1 className='portlandText'>portland <span id='aboutBody_span'>oregon</span></h1>
-        </div>
+    <div data-cy='aboutBody-container'>
+          
+       
         <div className='aboutBody-mainText'>
           <p>I am passionate about creating meangingful experiences for others. I've worn a lot of shoes in my life and incorporate these experiences into development to form a multi-disciplinary approach to my work.</p>
           <br />

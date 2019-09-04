@@ -4,6 +4,7 @@
    - About
    - Button
    - LanguageIcons
+   - Home
 */
 
 /* ANIMATIONS ON THE APP COMPONENT */
@@ -170,7 +171,16 @@
     
   }
 }
-
+@keyframes trippyText { 
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-webkit-keyframes trippyText {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
 /* BUTTON COMPONENT ANIMATION */
 
 @-webkit-keyframes viewResume {
@@ -263,5 +273,16 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+/* HOME COMPONENT ANIMATIONS */
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 1px #c5c5c5, 0 0 2px #c5c5c5, 0 0 3px #fff, 0 0 3.5px #fff
+  }
+  to {
+    text-shadow: 0 0 3.5px #fff, 0 0 3px #ff4da6, 0 0 2px white, 0 0 1px white,
   }
 }
