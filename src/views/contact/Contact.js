@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import EmailService from '../../services/api/EmailService';
 import './Contact.css';
 import FormGreeting from '../../components/contact-greeting/ContactGreeting.js';
 import ContactForm from '../../components/contact-form/ContactForm.js';
@@ -21,22 +22,23 @@ function Contact() {
   }
 
   function handleSendMessage(message){
-    handleToggleForm();
+    (EmailService.filterSpam(message)) ? console.log('spam caught') :  EmailService.sendEmail(message);
+    // handleToggleForm();
   }
   return (
     <div className='contact-wrapper'>
       <h1 className='contact-title'>LETS TALK</h1>
       <FormGreeting />
+      <ContactForm 
+        sendMessage = {handleSendMessage}/> 
 
-      {(displayForm === false) ? 
+      {/* {(displayForm === false) ? 
       <div className='arrowButton'> 
         <Arrows
           showForm = {handleToggleForm}/>
       </div> 
       :
-      <ContactForm 
-        sendMessage = {handleSendMessage}/> 
-      }
+      } */}
 
     </div>
   );

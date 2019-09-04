@@ -5,20 +5,17 @@ import './ContactForm.css';
 
 const ContactForm = (props) => {
   const [formInputs, setInputs] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    message: '',
+    
   });
 
-  const handleSubmit = (e) => {
-    e.preventDefault() 
+  const handleSubmit = (event) => {
+    event.preventDefault() 
     props.sendMessage(formInputs);
   }
 
-  const handleInputChange = (e) => {
-    e.persist();
-    setInputs(formInputs => ({...formInputs, [e.target.name]: e.target.value}));
+  const handleInputChange = (event) => {
+    event.persist();
+    setInputs(formInputs => ({...formInputs, [event.target.name]: event.target.value}));
   }
 
   return (
@@ -26,27 +23,36 @@ const ContactForm = (props) => {
       <form className='contactForm' onSubmit={handleSubmit}>
         <div className='form-row'>
           <div className='form-col'>
-            <label htmlFor='firstName'>First Name</label>
-            <input id='firstName' name='firstName' onChange={handleInputChange} value={formInputs.firstName} data-cy='firstName' type='text' />
+            <label htmlFor='fnme'>First Name</label>
+            <input id='fnme' name='fnme' onChange={handleInputChange} value={formInputs.firstName} data-cy='firstname' type='text' />
           </div>
           <div className='form-col'>
-            <label htmlFor='lastName'>Last Name</label>
-            <input id='lastName' name='lastName' onChange={handleInputChange} value={formInputs.lastName} data-cy='lastName' type='text' />
+            <label htmlFor='lnme'>Last Name</label>
+            <input id='lnme' name='lnme' onChange={handleInputChange} value={formInputs.lastName} data-cy='lastname' type='text' />
           </div>
         </div>
         <div className='form-row'>
-          <label htmlFor='email'>Email</label>
-          <input id='email' name='email' onChange={handleInputChange} value={formInputs.email} data-cy='email' type='email' required/>
+          <label htmlFor='eml'>Email</label>
+          <input id='eml' name='eml' onChange={handleInputChange} value={formInputs.email} data-cy='email' type='email' required/>
         </div>
         <div className='form-row'>
-          <label htmlFor='message'>Message</label>
-          <textarea id='message' name='message' onChange={handleInputChange} value={formInputs.message} data-cy='message' type='text' required></textarea>
+          <label htmlFor='msg'>Message</label>
+          <textarea id='msg' name='msg' onChange={handleInputChange} value={formInputs.message} data-cy='message' type='text' required></textarea>
         </div>
         <Button
           text='Send'
           purpose='send'
           />
       </form>
+      {/* FOR SPAM PROTECTION */}
+    {/* <label className='shieldsup' htmlFor='firstName'></label>
+    <input className='shieldsup' autoComplete='off' id='firstName' name='firstName' type='text' onChange={handleInputChange} value={formInputs.hpFirstName}/>
+    <label className='shieldsup' htmlFor='lastName'></label>
+    <input className='shieldsup' autoComplete='off' id='lastName' name='lastName' type='text' onChange={handleInputChange} value={formInputs.hpLastName} />
+    <label className='shieldsup' htmlFor='lastName'></label>
+    <input className='shieldsup' autoComplete='off' id='lastName' name='lastName' type='text' onChange={handleInputChange} value={formInputs.hpEmail} />
+    <label className='shieldsup' htmlFor='message'></label>
+    <textarea className='shieldsup' autoComplete='off' id='message' name='message' type='text' onChange={handleInputChange} value={formInputs.hpMessage} /> */}
     </div>
   );
 }
