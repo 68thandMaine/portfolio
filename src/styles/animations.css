@@ -116,18 +116,29 @@
 
 /* ANIMATIONS ON THE ABOUT PAGE */
 
-@-webkit-keyframes showCity {
+@keyframes fadeIn {
   from {
-    
+    opacity: 0;
+    font-size: 2vw;
+    color: #c5c5c5;
   }
   to {
-    -webkit-text-fill-color: transparent;
-    background: url('../assets/images/pland.png');
-    background-position: 90% 90%;
-    background-size: cover;
-    -webkit-background-clip: text;
-    background-clip: text;
-    
+    opacity: 1;
+    font-size: 3.25vw;
+    color: #fff
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    font-size: 3.25vw;
+    color: #fff;
+  }
+  to {
+   opacity: 0;
+   font-size: 2vw;
+   color: #c5c5c5;
   }
 }
 
@@ -171,53 +182,9 @@
     
   }
 }
-@keyframes trippyText { 
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-@-webkit-keyframes trippyText {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
+
 /* BUTTON COMPONENT ANIMATION */
 
-@-webkit-keyframes viewResume {
-  from {
-    border-bottom: solid 1px #fff;
-    background-color: transparent;
-  }
-  to {
-    border-bottom: 0;
-    background-color: #eeeeee;
-    opacity: 0.25
-  }
-  from {
-    border-right: solid 1px #fff;
-  }
-  to {
-    border-right: 0
-  }
-}
-
-@keyframes viewResume {
-  from {
-    border-bottom: solid 1px #fff;
-    background-color: transparent;
-  }
-  to {
-    border-bottom: 0;
-    background-color: #eeeeee;
-    opacity: 0.25
-  }
-  from {
-    border-right: solid 1px #fff;
-  }
-  to {
-    border-right: 0
-  }
-}
 
 @keyframes sendMessageButtonEnlarge {
   from {

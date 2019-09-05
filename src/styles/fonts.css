@@ -14,3 +14,7 @@
   font-family:'Eudora';
   src: local(Regular), url('../assets/fonts/eudora.woff')format('woff');
 }
+@font-face{
+  font-family: 'Wild';
+  src: local(Regular), url('../assets/fonts/wild.woff')format('woff');
+}

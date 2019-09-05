@@ -8,6 +8,7 @@ import PictureFrame from '../../components/about/PictureFrame.js';
 import PageHeader from '../../components/page-header/PageHeader.js';
 
 function About() {
+
   return (
     <div className='about-wrapper' data-cy='about-view'>
       <div className='aboutHeader'>
@@ -35,12 +36,17 @@ function About() {
         <div className ='bodyContent'>
           <div className='bodyContentGreeting'>
             <p>living in</p>
-            <h1 className='portlandText'>portland <span id='aboutBody_span'>oregon</span></h1>
+            <h1 className='portlandText'>portland <span>oregon</span></h1>
           </div>
           <div className='body'>
             <div className='bodyLinks'>
-              <LinkBar />
-              <Button />
+              <h4>Check me out online</h4>
+              <LinkBar 
+                />
+              <h4>oR</h4>
+              <Button 
+              text='DOWNLOAD MY RESUME'
+              purpose='redirect'/>
             </div>
             <div className='bodyText'>
               <AboutBody />
