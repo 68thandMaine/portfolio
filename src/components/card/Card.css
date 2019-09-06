@@ -67,74 +67,79 @@
 }
 
 .card-footer {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   margin-top: 1.25rem;
+}
+.personalProjects {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+.personalProjects h6 {
+  position: relative;
+  /* margin-left: 2.5vw; */
 }
 .footer-links {
   display: flex;
   flex-flow: row nowrap;
-  align-content: center;
-}
-.personalProjects {
-  display:-ms-grid;
-  display:grid;
-  -ms-grid-rows: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  position: relative;
-  z-index: 0;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2vw;
+  height: 6vw;
 }
 .projectLinks {
   display: flex;
   flex-flow: column nowrap;
   text-align: center;
-  margin: -1vw 1.75vw;
+  justify-content: center;
+  margin-right: 1vw;
 }
+
 .linkLabel {
   color: white;
   margin-top: 0.5rem;
 }
 
-
 .footer-languages {
   text-align: right;
+}
+.enlargeIcon {
+  font-size: 1.5vw;
+  animation: grow 0.5s linear forwards;
+  /* position: relative; */
+ 
+}
+.shrinkIcon {
+  animation: ungrow 1s;
   position: relative;
-  z-index: 100;
 }
 
-i{
+i {
+  font-size: 3vw !important;
   color: #c5c5c5;
 }
 
-i:hover{
-  cursor: pointer;
-  color: white;
-  transform: ease 3s;
-}
-
-.cardIcons {
-  font-size: 1.5vw;
-  animation: ungrow 1s;
-}
-.cardIcons:hover {
-  animation: grow 0.5s linear forwards;
-}
 @keyframes ungrow {
   from {
-    font-size: 2vw;
+    font-size: 4vw;
+    color: white;
+    margin-top: -1vh;
   }
   to {
-    font-size: 1.5vw;
+    font-size: 3vw;
+    color: #c5c5c5;
   }
 }
 
 @keyframes grow {
   from {
-    font-size: 1.5vw;
+    font-size: 3vw;
+    color: #c5c5c5;
   }
   to {
-    font-size: 2vw;
+    font-size: 4vw;
+    color: white;
+    margin-top: -1vh
   }
 }
