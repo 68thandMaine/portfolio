@@ -20,52 +20,69 @@ html {
   
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: Eudora;
+  font-family: Moon-Regular;
   margin: 0;
   color: #e6e6e6;
   font-weight: normal;
 }
 
 h1 {
+  font-family: Eudora;
   font-size: 14rem;
   font-size: 14vw;
   font-weight: 100;
 }
 h2 {
-  font-size: 10rem;
-  font-size: 10vw;
+  font-family: Eudora;
+  font-size: 9rem;
+  font-size: 9vw;
   font-weight: 100;
+  letter-spacing: 1vw;
 }
 h3 {
-  font-size: 7rem;
-  font-size: 7vw;
-}
-h4 {
-  font-size: 5rem;
-  font-size: 5vw;
-}
-h5 {
-  font-size: 4rem;
-  font-size: 4vw;
-}
-h6 {
   font-size: 3rem;
   font-size: 3vw;
+  letter-spacing: 0.75vw;
+}
+h4 {
+  font-size: 2.75vw;
+  font-size: 2.75vw;
+}
+h5 {
+  font-size: 2.25vw;
+  font-size: 2.25vw;
+}
+h6 {
+  font-size: 2rem;
+  font-size: 2vw;
 }
 ul {
   list-style: none;
 }
 
-
-p, li {
+p, li, button, a, input, textarea, label {
   margin: 0;
   font-family: Manrope;
-  font-size: 1.25rem;
-  font-size: 1.25vw;
+  font-size: 1.5rem;
+  font-size: 1.5vw;
   color: #c5c5c5;
   text-decoration: none;
 }
 
+label, button {
+  font-family: Moon-Regular;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.25vw;
+}
+
 a {
   z-index: 100;
+  cursor: default;
+}
+
+input, textarea {
+  background: transparent;
+  border: none;
 }

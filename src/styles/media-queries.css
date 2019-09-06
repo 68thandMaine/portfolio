@@ -1,25 +1,59 @@
-/* MEDIA QUERIES FOR ABOUT PAGE */
-
 @media screen and (max-width: 320px) {
-  *::-webkit-scrollbar {
+  *::-webkit-scrollbar { 
     width: 0 !important
   }
   * {
     overflow: -moz-scrollbars-none;
     -ms-overflow-style: none;
   }
-  .about-body {
-    top: 5rem;
+  .mobileMenu {
+    display: block;
+    letter-spacing: 0.4vw;
   }
-  .about-body-content {
-    display: flex;
-    flex-direction: column;
+  .sidebarMenu {
+    padding-inline-start: 0 !important;
   }
-  .about-body-pictureFrame {
-    height: 25vh;
+  .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    width: 100%;
   }
+  .sidebar + .views {
+    display: none;
+  }
+  .sidebar_nav {
+    text-align: center;
+    top: 30vh;
+  }
+  .sidebarLinkWrapper {
+    margin: 3vh 0 3vh;
+    padding: 2vh 3vw;
+    width: 40vw;
+    border: solid 1px white;
+  }
+  .sidebrLinkWrapper:hover {
+    background: white;
+    border: solid 1px black;
+    color: black;
+  }
+  .sidebarLink {
+    line-height: 2vh;
+  }  
+
+  .home-content {
+    margin-top: 0;
+  }
+
+  .about-header {
+    line-height: 4.5vh;
+  }
+  .about-body {
+    top: 3rem;
+    width: 100%;
+    margin: 0 1vw;
+  }
+
 }

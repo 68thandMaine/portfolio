@@ -1,0 +1,14 @@
+.languageChart-wrapper h2 {
+ font-family: Moon-Regular;
+ font-size: 4.25vw;
+}
+
+#pieChart {
+  width: 40rem;
+  width: 40vw;
+}
+
+#pieChart:hover {
+  cursor: pointer;
+}
+

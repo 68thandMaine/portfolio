@@ -1,0 +1,48 @@
+.redirect {
+  background: #415E65 !important;
+  color: #fff;
+  border: none;
+  padding: 0.5vw 0.25vw 0.25vw;
+}
+
+.redirect:hover {
+  
+}
+
+.socialMediaLink {
+  background: transparent !important;
+}
+
+.button {
+  font-family: Moon-light;
+  transition: ease-out 1s;
+  background: white;
+  border-radius: 2vw;
+  box-shadow: 0px 10px 40px rgba(0,0,0,0.18);
+  width: 100%;
+}
+.button:hover {
+  cursor: pointer;
+}
+
+.send {
+  animation: sendMessageButtonDefault 500ms;
+  background: #262C2C;
+  color: white;
+  font-size: 2vw;
+  letter-spacing: 0.5vw;
+  height: 8vh;
+}
+.send:hover {
+  transition: ease-in-out 500ms;
+  box-shadow: 0 12px 18px 0 black;
+  color: black;
+  background-color: #c5c5c5;
+  animation: sendMessageButtonEnlarge 2s linear forwards; 
+}
+.send:active {
+  transition: ease-in 150ms;
+  outline: none;
+  box-shadow: none;
+  color: white;
+}
