@@ -1,61 +1,145 @@
-.about-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.about-wrapper {
+  justify-content: center;
+  align-items: center;
+}
+.aboutHeader h1{
+  font-size: 8vw;
+}
+.aboutBody-container {
+  margin: 20vw 0 4vw;
+  box-shadow: 0px 10px 40px #c5c5c5;
+  border-radius: 2vw;
+  justify-items: center;
+  text-align: center;
+  position: relative;
+}
+.bodyIntro {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.introWord {
+  margin-top: 10vw;
+}
+.introWord h3 {
+  font-size: 13vw;
+  font-family: Moon-light;
+}
+.introPicture {
+  color: white;
+  padding-bottom:1vw;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
+  justify-content: center;
+}
+.picture-wrapper{
+  position: relative;
+  top: -11.5vw;
+  align-self: center;
+  z-index: 10;
+}
+.textAnimation {
+  text-align: center;
+  position: relative;
+  top: -6.5vw;
+}
+.textAnimation:after {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  border-bottom: solid 2px #c5c5c5;
+}
+.textAnimation p {
+  font-size: 6vw;
+  color: white;
+  font-family: Moon-light;
+  letter-spacing: 1vw;
+  text-transform: uppercase;
 }
 
-.about-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.bodyContent {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
-  top: 2rem;
-  position: relative;
-  margin: 2% 14% 3% 14%;
-  line-height:12.5vh;
+  flex-flow: column wrap;
+  align-content: stretch;
+  justify-content: space-evenly;
+  margin-top: -2vw;
 }
 
-.about-body {
-  position: relative;
-  top: 6rem;
-  background: #252423;
-  -webkit-transition: background 0.5s linear;
-  -o-transition: background 0.5s linear;
-  transition: background 0.5s linear;
-  border: solid 1px #c5c5c5;
-  border-radius: 5%;
-  margin: 5vw 2.5vw 2vw 2.5vw;
-  width: 95%;
-}
-.about-body-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.bodyContentGreeting {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  position: relative;
+  z-index: 10;
+  margin: 2vw 2vw 0;
 }
-.about-body-pictureFrame {
-  width: 50rem;
-  margin: 3%;
+.bodyContentGreeting p {
+  font-family: Wild;
+  font-size: 20vw;
+  transform: rotate(-20deg); 
 }
+
+.portlandText {
+  padding-right: 2vw;
+  letter-spacing: -10px;
+  -webkit-animation: hideCity 2.2s ease 0s;
+  animation: hideCity 2.2s ease 0s;
+  background-image: none;
+  text-align: center;
+}
+
+.portlandText:hover {
+  cursor: pointer;
+  -webkit-animation: showCity 2s ease 0s ; /* Safari 4+ */
+  -moz-aanimation: showCity 2s ease 0s ; /* Fx 5+ *//* Opera 12+ */
+  animation: showCity 2s ease 0s ; 
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-text-fill-color: transparent;
+  background: url('../../assets/images/pland.png');
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.portlandText span {
+  display: block;
+  margin-top: -4.5vw;
+}
+
+
+.body {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  margin: 2vw;
+  background-color: #484A4D;
+  opacity: 0.8;
+  border-radius: 2vw;
+  box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.2);
+  max-width: 100%;
+}
+
+.bodyLinks {
+  margin: 2vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  background: #2F2B29;
+  border-radius: 2vw;
+  box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.2);
+  padding: 0 2vw;
+}
+
+.bodyLinks h4 {
+  margin-top: -1vh;
+  margin-bottom: 0vw;
+  text-transform: uppercase;
+  animation: glow 25s linear forwards;
+}
+
+.bodyText {
+  margin: 2vw;
+  padding: 0 2vw;
+  border-radius: 2vw;
+  box-shadow: 0 2px 6px 0 #c5c5c5;
+  max-width: 100%;
+}
+

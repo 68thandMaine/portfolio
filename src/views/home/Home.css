@@ -19,13 +19,28 @@
   position: relative;
   z-index: 1;
 }
+
+.home-container h1 {
+  animation: glow 2s linear infinite alternate;
+}
+.trippyText {
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(270deg, #edc7ff, #d7c7ff, #ffc7ee, #fff1c7, #ffe3c7, #ffd6c7, #c7dcff, #c7fcff, #ffd6d9);
+  background-size: 400% 400%;
+  animation: trippyText 2s linear infinite;
+  -webkit-animation: trippyText 2s linear infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: glow 2s linear infinite alternate;
+}
+
 .sidebar + .home-container {
   margin-left: 25%;
 }
 
 
 .home-content {
-  margin-top: 5vw
+  margin-top: 5vw;  
 }
 
 .home-content h3 {

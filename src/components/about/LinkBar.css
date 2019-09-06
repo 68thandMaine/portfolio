@@ -1,44 +1,47 @@
+.linkbar {
+  position: relative;
+  z-index: 100;
+}
 .linkbar-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  margin: 0;
+  padding: 0 3vw;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: center;
+  position: relative;
+}
+.mediaLink {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 2%;
+  align-items: center
 }
 
 .icon {
-  float: left;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center
+  margin-bottom: 2vh;
 }
 .icon:before {
   content: '';
   display: block;
-  width: 4em;
-  height: 4em;
-  float: left;
-  margin-right: 6px;
-  
+  width: 4vw;
+  height: 4vw;
 }
-.icon:first-child {
+ #github {
   background: url('../../assets/icons/Github.png');
   background-size: contain;
   background-repeat: no-repeat;
     
 }
-.icon:nth-child(2) {
-  background: url('../../assets/icons/linkedin.png');
+ #instagram{
+  background: url('../../assets/icons/instagram.png');
   background-size: contain;
   background-repeat: no-repeat;
+
 }
-.icon:nth-child(3) {
-  background: url('../../assets/icons/instagram.png');
+ #linkedin {
+  background: url('../../assets/icons/linkedin.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -50,3 +53,22 @@
 }
 @keyframes spin {0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);} 100% {-webkit-transform: rotate(-360deg);transform: rotate(-360deg);}}
 @-webkit-keyframes spin {0% {-webkit-transform: rotate(0deg); } 100% {-webkit-transform: rotate(-360deg); }}
+
+.selectedLinkWrapper {
+  /* border-bottom: solid 2px white; */
+  margin-bottom: 2vw;
+  padding-bottom: 2vw;
+}
+#selectedLink {
+  text-transform: uppercase;
+  height: 2vw;  
+  font-size: 2vw;
+  font-family: Moon-Regular;
+  letter-spacing: 0.5vw;
+}
+.fadeTextIn {
+  animation: fadeIn 2s linear forwards;
+}
+.fadeTextOut {
+  animation: fadeOut 500ms linear forwards;
+}

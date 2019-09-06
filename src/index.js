@@ -9,10 +9,10 @@ import * as serviceWorker from './serviceWorker';
 import App from './App';
 
 // Global Styles
-import './styles/animations.css';
 import './styles/fonts.css';
 import './styles/index.css';
 import './styles/media-queries.css';
+import './styles/animations.css';
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
 
