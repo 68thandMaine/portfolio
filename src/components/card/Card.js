@@ -36,7 +36,6 @@ function Card(props) {
             .add('shrinkIcon');
     }
     function goTo(location) {
-      console.log(location)
       window.location = location;
     } 
     return (
