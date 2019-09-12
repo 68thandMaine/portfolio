@@ -1,5 +1,5 @@
 import React from 'react';
-import {Switch, Route, withRouter, BrowserRouter} from 'react-router-dom';
+import {Switch, Route, withRouter, Router} from 'react-router-dom';
 // COMPONENTS
 import About from '../views/about/About.js';
 import Contact from '../views/contact/Contact.js';
@@ -12,7 +12,7 @@ import PDFJSBackend from '../services/Pdf.js';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import './route-transitions.css';
 
-function Routes({location}) {
+function Routes({location, history}) {
     return (
       <div className='route-container'>
         <TransitionGroup className='transition-group'>
@@ -21,7 +21,7 @@ function Routes({location}) {
             timeout={{ enter: 900, exit: 300 }}
             classNames={'fade'} >
               <div className='route-section'>
-                <BrowserRouter>
+                <Router history={history} >
                   <Switch location={location}>
                       <Route exact path='/' component={Home}/>
                       <Route path='/bio' component={About}/>
@@ -30,7 +30,7 @@ function Routes({location}) {
                       <Route path='/contact' component={Contact} />
                       <Route component={Error404} />
                   </Switch>
-                </BrowserRouter>
+                </Router>
               </div>
           </CSSTransition>
         </TransitionGroup>
