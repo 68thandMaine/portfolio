@@ -13,9 +13,10 @@ function TextAnimation() {
       " human"
     ]}
     springConfig={{
-      stiffness: 180,
+      stiffness: 150,
       damping: 8
-    }} />
+    }}
+    interval= {1500} />
   )
 }
 

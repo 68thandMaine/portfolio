@@ -1,0 +1,34 @@
+.pageHeaderWrapper {
+  margin:2vw 0 4vw;
+}
+.pageHeaderWrapper h1 {
+  font-size: 6vw;
+  margin: 0 10vw 0 10vw;
+}
+.formGreetingWrapper {
+
+}
+
+.contact-title {
+ margin-bottom: 5vw;
+}
+
+.formWrapper {
+  display: none;
+}
+.show{
+  display: block !important;
+}
+.hide{
+  display: none !important;
+}
+
+
+.sendingWrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 25vh auto;
+}
+

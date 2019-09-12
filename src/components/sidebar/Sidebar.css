@@ -3,28 +3,36 @@
   margin: 0 15%;
   text-align: left;
   margin: 0;
-  top: 40%;
-  transform: translateY(-50%);
+  top: 40vh;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
-
+.mobileMenu {
+  display:none;
+}
 .active {
   color: #fff;
 }
-li a {
+.sidebarLink {
   font-family: Moon-Light;
-  font-size: 2rem;
+  font-size: 3vw;
   text-transform: uppercase;
-  line-height: 6rem;
+  line-height: 11vh;
   color: #C5C5C5;
   text-decoration: none;
-  animation-name: shrink;
-  animation-duration: 2s;
+  -webkit-animation-name: shrink;
+          animation-name: shrink;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
-li a:hover {
+.sidebarLink:hover {
   cursor: pointer;
   color: #fff;
-  font-size: 2.5rem;
-  animation-name: enlarge;
-  animation-duration: 1s;
-  letter-spacing: 0.4rem;
+  font-size: 3.5vw;
+  -webkit-animation-name: enlarge;
+          animation-name: enlarge;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  letter-spacing: 0.4vw;
 }

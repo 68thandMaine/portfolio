@@ -1,0 +1,54 @@
+#arrowAnim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1vw;
+}
+.arrowSliding:hover {
+  cursor: pointer;
+}
+
+.arrow {
+  width: 2.0vw;
+  height: 2.0vw;
+  border: 0.9vw solid;  border-color: white transparent transparent #c5c5c5;
+  transform: rotate(-135deg);
+}
+
+
+.arrowSliding {
+  position: absolute;
+  -webkit-animation: slide 4s linear infinite; 
+          animation: slide 4s linear infinite;
+}
+
+.delay1 {
+  -webkit-animation-delay: 1s; 
+    animation-delay: 1s;
+}
+.delay2 {
+  -webkit-animation-delay: 2s; 
+    animation-delay: 2s;
+}
+.delay3 {
+  -webkit-animation-delay: 3s; 
+    animation-delay: 3s;
+}
+
+@-webkit-keyframes slide {
+    0% { opacity:0; transform: translateY(-6vw); }	
+   20% { opacity:1; transform: translateY(-1vw); }	
+   80% { opacity:1; transform: translateY(1vw); }	
+  100% { opacity:0; transform: translateY(6vw); }	
+}
+@keyframes slide {
+    0% { opacity:0; transform: translateY(-6vw); }	
+   20% { opacity:1; transform: translateY(-1vw); }	
+   80% { opacity:1; transform: translateY(1vw); }	
+  100% { opacity:0; transform: translateY(6vw); }	
+}
+
+.fadeOut {
+  animation: hideArrows 500ms linear forwards;
+  opacity: 0;
+}

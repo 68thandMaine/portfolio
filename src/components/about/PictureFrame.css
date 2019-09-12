@@ -1,23 +1,12 @@
-.pictureFrame-container {
-  display: flex;
-  padding-left: 5%;
-  margin-bottom: 10rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 .pictureFrame {
-  border: 2px solid #c5c5c5;
+  box-shadow:  0 2px 6px black;
   border-radius: 50%;
-  width: 25rem;
   width: 25vw;
-  
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding-left: -.5%;
 }
 .portfolio-picture {
   max-width: 100%;
-  
+  height: auto;
 }
