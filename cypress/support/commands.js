@@ -1,25 +1,38 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add("login", (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add("drag", { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add("dismiss", { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This is will overwrite an existing command --
-// Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+Cypress.Commands.add('viewFormName', () => {
+  cy.get('[data-cy="showFormButton"]').click();
+});
+Cypress.Commands.add('viewFormSubject', () => {
+  cy.get('[data-cy="showFormButton"]').click();
+  cy.get('[data-cy="showSubjectButton"]').click();
+});
+Cypress.Commands.add('viewFormMessage', () => {
+  cy.get('[data-cy="showFormButton"]').click();
+  cy.get('[data-cy="showSubjectButton"]').click();
+  cy.get('[data-cy="showMessageButton"]').click();
+});
+Cypress.Commands.add('viewFormEmail', () => {
+  cy.get('[data-cy="showFormButton"]').click();
+  cy.get('[data-cy="showSubjectButton"]').click();
+  cy.get('[data-cy="showMessageButton"]').click();
+  cy.get('[data-cy="showEmailButton"]').click();
+});
+Cypress.Commands.add('fillOutContactForm', () => {
+  cy.visit({
+    method: 'POST',
+    url: Cypress.env('emailURL'),
+    headers: {
+      'Content-Type' : 'application/json',
+    },
+    body: {
+      user_id: Cypress.env('userID'),
+      service_id: Cypress.env('serviceID'),
+      template_id: Cypress.env('templateID'),
+      template_params: {
+        nme: "Chris",
+        sbjct: "Cypress Testing",
+        msg: "Test test, this is a test.",
+        eml: "chrisrudnicky@gmail.com"
+      }
+    }
+  });
+})

@@ -31,6 +31,7 @@ class App extends React.Component {
   
   componentDidMount() {
     this.props.dispatch((getRepos()));
+    this.handleChangeBackground(window.location.pathname)
   }
 
   handleViewSidebar() {
@@ -39,19 +40,19 @@ class App extends React.Component {
     }));
   }
 
+
   handleChangeBackground(location) {
-    console.log(location);
     switch(location) {
-      case 'home':
+      case '/':
        return this.setState({ background:0, sidebar_visible: false});
        
-      case 'bio':
+      case '/bio':
         return this.setState({ background: 1, sidebar_visible: false});
        
-      case 'projects':
+      case '/projects':
         return this.setState({ background: 2, sidebar_visible: false});
        
-      case 'contact':
+      case '/contact':
         return this.setState({ background: 3, sidebar_visible: false});
        
       default:

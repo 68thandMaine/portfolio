@@ -1,6 +1,5 @@
 const EmailService = {
   sendEmail: async (email) => {
-    console.log(email)
     const response = await fetch(process.env.REACT_APP_EMAIL_URL,{
       method: 'POST',
       headers: {
@@ -13,7 +12,7 @@ const EmailService = {
         template_params: email
       }) 
     });
-    return response.statusText;
+    return response.status;
   },
   filterSpam: (message) => {
     const messageFields = Object.keys(message);

@@ -34,6 +34,5 @@ context('/bio view integration tests', () => {
     it('clicking the resume button will redirect to the resume page', () => {
 
     });
-    
   });
 });

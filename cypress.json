@@ -1,3 +1,9 @@
 {
-  "baseUrl": "http://localhost:3000"
+  "baseUrl": "http://localhost:3000",
+  "env": {
+    "emailURL": "https://api.emailjs.com/api/v1.0/email/send",
+    "userID": "user_pUftPGojxhnWyxBQ1qhLK",
+    "serviceID": "gmail",
+    "templateID": "template_rZUsPXOt"
+  }
 }

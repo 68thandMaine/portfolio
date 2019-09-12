@@ -113,7 +113,7 @@
   background-color: #484A4D;
   opacity: 0.8;
   border-radius: 2vw;
-  box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.2);
+  box-shadow: inset 2px 5px 10px 7px hsla(0, 0%, 0%, 0.2);
   max-width: 100%;
 }
 

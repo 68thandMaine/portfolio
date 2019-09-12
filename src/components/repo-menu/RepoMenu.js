@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Button from '../button/button.js';
 import LanguageIcons from '../lanuage-icons/LanguageIcons.js';
 import './RepoMenu.css';
 
@@ -22,22 +23,28 @@ function RepoMenu(props) {
           return (
             <div className='repoMenu-item' key={repo}>
               <div className='item-header'>
-                <p>Repository:
-                  <span> {repository.name} </span></p>
-                
-                  <p>Created: 
-                  <span className='repoText'> {repository.createdAt}</span></p>
-                
+                <p className='repoText'>
+                  {repository.name} 
+                </p>
+                <p>Created: <span className='repoText'>
+                     { repository.createdAt}
+                  </span>
+                </p>
               </div>
               <div className='description'>
                 <p className='repoText'>{repository.description} </p>
               </div>
               <div className='item-footer'>
-                 <button className='github-btn'onClick={(e) => visitURL(repository.githubURL, e)}>Click to visit the source code</button>
+                <Button 
+                  onClick={(e) => visitURL(repository.githubURL, e)}
+                  purpose='sourceCode'
+                  text='Click to view source code'
+                  />
+                 
                  <LanguageIcons 
                   languages = {formatLanguages(repository.language)} 
                   currentProject ={repository.name}
-                  purpose = "Language: " />
+                  purpose = "Language " />
               </div>
             </div>
             );

@@ -8,14 +8,12 @@ import './ContactGreeting.css';
     
     <div className='formIntro'>
       <div className='introGroup'>
-        <h4>HAVE COMMENTS ABOUT MY SITE?</h4>
-        <h5>WANT TO COLLABORATE?</h5>
+        <h3>WANT TO COLLABORATE?</h3>
+        <h3>HAVE AN OPINION?</h3>
+        <h4>I'd love to hear !</h4>
       </div>
-      <div className='introGroup'>
-        <p>I'd love to hear from you about your experience visiting my website or if you want to work together.</p>
-        <p>Can't wait to hear from you.</p>
-      </div>
-      
+      <h5>All ya gotta do is fill out small form and</h5>
+      <h5>we'll be on our way to creating greatness.</h5>
     </div>
     
   )

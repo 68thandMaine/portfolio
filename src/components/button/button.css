@@ -1,18 +1,4 @@
-.redirect {
-  background: #415E65 !important;
-  color: #fff;
-  border: none;
-  padding: 0.5vw 0.25vw 0.25vw;
-}
-
-.redirect:hover {
-  
-}
-
-.socialMediaLink {
-  background: transparent !important;
-}
-
+/* For general styling */
 .button {
   font-family: Moon-light;
   transition: ease-out 1s;
@@ -20,13 +6,30 @@
   border-radius: 2vw;
   box-shadow: 0px 10px 40px rgba(0,0,0,0.18);
   width: 100%;
+  font-size: 1vw
 }
 .button:hover {
   cursor: pointer;
 }
 
+
+/* For /bio */
+
+.redirect {
+  background: #415E65 !important;
+  color: #fff;
+  border: none;
+  padding: 0.5vw 0.25vw 0.25vw;
+}
+
+.socialMediaLink {
+  background: transparent !important;
+}
+
+/* For ./contact */
+
 .send {
-  animation: sendMessageButtonDefault 500ms;
+  animation: shrinkButtonText 500ms;
   background: #262C2C;
   color: white;
   font-size: 2vw;
@@ -38,11 +41,128 @@
   box-shadow: 0 12px 18px 0 black;
   color: black;
   background-color: #c5c5c5;
-  animation: sendMessageButtonEnlarge 2s linear forwards; 
+  animation: enlargeButtonText 2s linear forwards; 
 }
 .send:active {
   transition: ease-in 150ms;
-  outline: none;
   box-shadow: none;
+  color: white
+}
+
+/* For ./projects */
+
+.sourceCode {
+  background: transparent;
+  border: solid 1px white;
+  padding-top: 0.25vw;
+  height: 4vw;
+}
+.sourceCode:hover {
+  transition: ease-in-out 500ms;
+  background:#658A97;
+  border: none;
+}
+.sourceCode:active {
+  transition: ease-in 150ms;
+  box-shadow: none;
+  color: white; 
+  background: transparent !important;
+}
+
+.projectLinkButton {
+  background-color: transparent !important;
+  border: solid 1px white;
+  border-radius: 2vw;
+  font-size: 1vw;
+  margin-top: 1.5vw;
+  padding: 0.75vw 1vw;
+}
+.projectLinkButton:hover {
+  transition: ease-in-out 250ms;
+  background: white !important;
+  color: black;
+  box-shadow: inset 0 2px 6px 0;
+  border: none;
+}
+.projectLinkButton:active {
+  transition: ease-in 150ms;
+  box-shadow: none;
+  color: white; 
+  background: transparent !important;
+}
+
+
+.formAdvance {
+  color: black;
+  font-size: 3vw;
+}
+.formAdvance:hover {
+  transition: ease-in-out 500ms;
   color: white;
+  background: transparent !important;
+  
+}
+.formAdance:active {
+
+}
+
+.advance {
+  background: #262C2C;
+  color: white;
+  font-size: 2vw;
+  padding: 1vw;
+  margin: 0 auto;
+}
+.advance:hover {
+background: transparent !important;
+transition: ease-in-out 500ms;
+box-shadow: 0 12px 18px 0 black;
+border: solid 1px white;
+animation: enlargeButtonText 2s linear forwards;
+}
+.advance:active {
+  transition: ease-in 150ms;
+  box-shadow: none;
+  border: none;
+}
+
+.goBack {
+  margin: 0 2vw;
+  background: transparent !important;
+  color: #45d3ce;
+  border: 1px solid #45d3ce;
+  font-size: 1.75vw;
+  letter-spacing: 0.5vw;
+}
+.goBack:hover{ 
+  transition: ease-in-out 500ms;
+  box-shadow: 0 12px 18px 0 black;
+  color: black;
+  background-color: #c5c5c5;
+  animation: goBackButtonShrink 2s linear forwards; 
+}
+.goBack:active {
+  transition: ease-in 150ms;
+  box-shadow: none;
+  color: white
+}
+
+.messageSentButton {
+  color: black;
+  transition: ease-in-out 500ms;
+  padding: 1.5vw;
+  background: hsla(0, 0%, 100%, 0.18);
+  border: none; 
+}
+.messageSentButton:hover {
+  transition: ease-in-out 1s;
+  border: 1px solid white;
+  color: white;
+  background: transparent;
+  box-shadow: inset 0 2px 6px white;
+}
+.messageSentButton:active {
+  transition: ease-in-out 150ms;
+  box-shadow: none;
+  opacity: .1;
 }

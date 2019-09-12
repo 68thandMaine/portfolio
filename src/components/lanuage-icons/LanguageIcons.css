@@ -7,8 +7,9 @@
   height: 6vw;
   padding-bottom: 5vw;
 }
-
-
+.languageIconWrapper h6 {
+  text-transform: uppercase;
+}
 .languageIcon {
   margin: 0.3rem 0.3rem;
   width: 4rem;

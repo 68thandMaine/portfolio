@@ -1,0 +1,20 @@
+.modalWrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center; 
+  height: 100vh;
+  transition: ease-in-out 1s;
+}
+.modalBody {
+  background: hsl(300, 2%, 2%, 0.38);
+  padding: 12vw;
+  border-radius: 2vw;
+
+}
+.modalText {
+  width: 55svw;
+}
+.modalButtonWrapper {
+  margin: 2vw;
+}
