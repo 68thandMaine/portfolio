@@ -1,17 +1,18 @@
 import React from 'react';
+import {withRouter} from 'react-router-dom';
 import './About.css';
 import AboutBody from '../../components/about/AboutBody.js';
 import LinkBar from '../../components/about/LinkBar.js';
 import TextAnimation from '../../components/about/TextAnimation.js';
 import Button from '../../components/button/button.js';
 import PictureFrame from '../../components/about/PictureFrame.js';
-<<<<<<< HEAD
-import Button from '../../components/button/button.js';
-=======
 import PageHeader from '../../components/page-header/PageHeader.js';
->>>>>>> develop
 
-function About() {
+function About(props) {
+
+  function handleViewResume() {
+    props.history.push('/resume');
+  }
 
   return (
     <div className='about-wrapper' data-cy='about-view'>
@@ -20,13 +21,6 @@ function About() {
           title='WELCOME TO MY LITTLE CORNER OF THE INTERNET'
           />
       </div>
-<<<<<<< HEAD
-      <div className='about-body'>
-        <div className='about-body-content'>
-          <div className='about-body-pictureFrame'>
-            <PictureFrame />
-            <Button text='Download Resume' purpose='redirect'/>
-=======
       <div className='aboutBody-container'>
         <div className='bodyIntro'>
           <div className='introWord'>
@@ -57,16 +51,17 @@ function About() {
               <h4>oR</h4>
               <Button 
               text='DOWNLOAD MY RESUME'
-              purpose='redirect'/>
+              purpose='redirect'
+              clickEvent={(e) => handleViewResume()}
+              />
             </div>
             <div className='bodyText'>
               <AboutBody />
             </div>
->>>>>>> develop
           </div>
         </div>
       </div>
     </div>
   )
 }
-export default About;
+export default withRouter(About);

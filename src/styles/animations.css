@@ -184,24 +184,6 @@
 }
 
 /* BUTTON COMPONENT ANIMATION */
-<<<<<<< HEAD
-
-@keyframes viewResume {
-  from {
-    border-bottom: solid 1px #fff;
-    background-color: transparent;
-  }
-  to {
-    border-bottom: 0;
-    background-color: #eeeeee;
-    opacity: 0.25
-  }
-  from {
-    border-right: solid 1px #fff;
-  }
-  to {
-    border-right: 0
-=======
 
 
 @keyframes enlargeButtonText {
@@ -283,6 +265,5 @@
   }
   to {
     text-shadow: 0 0 3.5px #fff, 0 0 3px #ff4da6, 0 0 2px white, 0 0 1px white,
->>>>>>> develop
   }
 }
