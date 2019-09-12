@@ -39,8 +39,8 @@
   left: 0;
   -webkit-animation-name: show-sidebar;
           animation-name: show-sidebar;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
 }
 
 .views {
@@ -48,8 +48,8 @@
   display: absolute;
   -webkit-animation-name: enlarge-views;
           animation-name: enlarge-views;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: .25s;
+          animation-duration: .25s;
 }
 
 .sidebar + .views {
@@ -57,6 +57,6 @@
   width: 80%;
   -webkit-animation-name: shrink-views;
           animation-name: shrink-views;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
 }

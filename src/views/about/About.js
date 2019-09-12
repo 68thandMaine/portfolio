@@ -36,19 +36,22 @@ function About(props) {
           </div>
         </div>
         <div className='textAnimation'>
-          <p><TextAnimation/></p> 
+          <TextAnimation/>
         </div>
         <div className ='bodyContent'>
           <div className='bodyContentGreeting'>
-            <p>living in</p>
-            <h1 className='portlandText'>portland <span>oregon</span></h1>
+            <h1 className='portlandText'> 
+              <span>Living in</span>
+              <span>portland</span> 
+              <span>oregon</span>
+            </h1>
           </div>
           <div className='body'>
             <div className='bodyLinks'>
               <h4>Check me out online</h4>
               <LinkBar 
                 />
-              <h4>oR</h4>
+              <h4>or</h4>
               <Button 
               text='DOWNLOAD MY RESUME'
               purpose='redirect'

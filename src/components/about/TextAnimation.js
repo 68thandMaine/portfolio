@@ -1,8 +1,10 @@
 import React from 'react';
+import './TextAnimation.css';
 import TextLoop from 'react-text-loop';
 
 function TextAnimation() {
   return (
+    <div className='textLoopStyles'>
     <TextLoop children={[
       " musician ",
       " scientist ",
@@ -16,7 +18,9 @@ function TextAnimation() {
       stiffness: 150,
       damping: 8
     }}
-    interval= {1500} />
+    interval= {1500} 
+    />
+    </div>
   )
 }
 

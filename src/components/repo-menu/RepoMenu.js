@@ -16,7 +16,7 @@ function RepoMenu(props) {
 
   return (
     <div className='repoMenu-wrapper'>
-      <h3>ON GITHUB</h3>
+      <h3>APPLICATIONS ON GITHUB</h3>
       <div className='repoMenu'>
         {Object.keys(props.repositoryList).map(repo => {
           let repository = props.repositoryList[repo];
@@ -36,7 +36,7 @@ function RepoMenu(props) {
               </div>
               <div className='item-footer'>
                 <Button 
-                  onClick={(e) => visitURL(repository.githubURL, e)}
+                  clickEvent={(e) => visitURL(repository.githubURL)}
                   purpose='sourceCode'
                   text='Click to view source code'
                   />
@@ -56,7 +56,10 @@ function RepoMenu(props) {
 }
 
 RepoMenu.propTypes = {
-  repositoryList: PropTypes.object,
+  repositoryList: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array
+  ]),
 }
 
 export default RepoMenu;

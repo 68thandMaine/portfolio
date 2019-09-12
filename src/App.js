@@ -68,19 +68,12 @@ class App extends React.Component {
       <Router>
         <div className="App">
           <img src={MenuButton} alt='menuButton' className='menu_icon' id='menuButton' onClick={this.handleViewSidebar}/>
-          {/* <img src={this.state.background} alt='home background' className='background' /> */}
           <BackgroundMask 
             imgIndex={this.state.background}
             imgSrc={images}/> 
           <div className='container'>
-          
-          
             {showSidebar}
-          
-            
-          
             <div className='views'>
-              {/* <h5>Make sure you check everything before deploying!</h5> */}
               <Views />
             </div>
           </div>

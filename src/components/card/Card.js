@@ -40,7 +40,7 @@ function Card(props) {
     } 
     return (
         <div className='card-wrapper'>
-            <h3>IN DEVELOPMENT</h3>
+            <h3>APPLICATIONS IN DEVELOPMENT</h3>
             <div className='row'>
 
                 {Object
@@ -98,7 +98,7 @@ function Card(props) {
 }
 
 Card.propTypes = {
-    repositoryList: PropTypes.array
+    repositoryList: PropTypes.object
 }
 
 export default Card;

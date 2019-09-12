@@ -6,7 +6,7 @@
   border-radius: 2vw;
   box-shadow: 0px 10px 40px rgba(0,0,0,0.18);
   width: 100%;
-  font-size: 1vw
+  font-size: 1vw;
 }
 .button:hover {
   cursor: pointer;
@@ -71,6 +71,7 @@
   border: solid 1px white;
   padding-top: 0.25vw;
   height: 4vw;
+  outline: none;
 }
 .sourceCode:hover {
   transition: ease-in-out 500ms;
@@ -79,7 +80,7 @@
 }
 .sourceCode:active {
   transition: ease-in 150ms;
-  box-shadow: none;
+  box-shadow: 0 2px 8px 0 #c5c5c5;
   color: white; 
   background: transparent !important;
 }

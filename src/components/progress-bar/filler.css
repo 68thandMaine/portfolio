@@ -1,5 +1,5 @@
 .filler {
-  background: #fff;
+  background: hsla(0,100%,50%, 0.6);
   height: 100%;
   border-radius: inherit;
   -webkit-transition: width .2s ease-in;

@@ -18,7 +18,7 @@ function Routes({location, history}) {
         <TransitionGroup className='transition-group'>
           <CSSTransition
             key={location.key}
-            timeout={{ enter: 900, exit: 300 }}
+            timeout={{ enter: 1500, exit: 500 }}
             classNames={'fade'} >
               <div className='route-section'>
                 <Router history={history} >

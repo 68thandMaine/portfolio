@@ -2,6 +2,9 @@
   justify-content: center;
   align-items: center;
 }
+.aboutHeader {
+  margin-top: 2vw;
+}
 .aboutHeader h1{
   font-size: 8vw;
 }
@@ -47,13 +50,6 @@
   margin: 0 auto;
   width: 50%;
   border-bottom: solid 2px #c5c5c5;
-}
-.textAnimation p {
-  font-size: 6vw;
-  color: white;
-  font-family: Moon-light;
-  letter-spacing: 1vw;
-  text-transform: uppercase;
 }
 
 .bodyContent {
@@ -129,17 +125,19 @@
 }
 
 .bodyLinks h4 {
-  margin-top: -1vh;
-  margin-bottom: 0vw;
+  position: relative;
+  top: 0.5vw;
   text-transform: uppercase;
   animation: glow 25s linear forwards;
 }
 
 .bodyText {
   margin: 2vw;
-  padding: 0 2vw;
+  padding: 2vw 2vw;
   border-radius: 2vw;
   box-shadow: 0 2px 6px 0 #c5c5c5;
   max-width: 100%;
+  background: #2F2B29;
+  
 }
 

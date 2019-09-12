@@ -32,14 +32,16 @@ function Projects(props) {
       <div className='project-body'>
         <div className='body-menu-panel'>
           <div className='text-container'>
-            <p>I love to code. There\'s just something about the logical creativity needed to create web applications that excites me.</p>
-            <br />
-            <p>Here you can find the body of my work from 2018 to present.</p>
-            <br />
-            <p>I primarily write in C# or JavaScript, but I have experience working with some PHP as well.</p>
-            <br />
-            <p>My projects are tailored to the specific needs of each client, and I enjoy the collaborative effort that brings code to life.</p>
-            <p>Essentially I design, build, and maintain meaningful web applications that are easy to use.</p>
+            <div className='intro'>
+              <h6>He who works with his hands is a <span className='highlightedText'>laborer</span>.</h6>
+              <h6>He who works with his hands and his head is a <span className='highlightedText'>craftsman</span>.</h6>
+              <h6>He who works with his hands and his head and his heart is an <span className='highlightedText'>artist</span>.</h6>
+              <h6> - Francis of Assisi</h6>
+            </div>
+            <p>I love to code. There's just something about the logical creativity needed to create web applications that excites me. Here you can find the body of my work from 2018 to present. As I am early in my career much of my work is still in development – however I invite you to visit any project's repository below to view the source code and ReadMe.</p>
+        
+            <p>I believe that web applications should be performant, purposeful, and aesthetically pleasing. My current focus is on responsive design, SASS, CI/CD pipelines, performance, and accessibility as I believe that these should be some of the core competencies of a modern frontend developer.</p>
+
           </div>
           {viewToShow()}
         </div>
@@ -47,11 +49,9 @@ function Projects(props) {
           <Card 
             repositoryList={props.personalProjects}  
           />
-
-        <RepoMenu 
-          repositoryList={props.repositories} 
-        />s
-          
+          <RepoMenu 
+            repositoryList={props.repositories} 
+          />
         </div>
       </div>
     </div>
@@ -59,8 +59,11 @@ function Projects(props) {
 }
 
 Projects.propTypes = {
-  repositories: PropTypes.array,
-  // countedLanguages: PropTypes.object
+  repositories: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array
+  ]),
+  personalProjects: PropTypes.object
 }
 
 const mapStateToProps = state => {
