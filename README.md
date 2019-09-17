@@ -1,7 +1,10 @@
-# Hello and Welcome to my Personal Portfolio :)
+# The Portfolio of Chris Rudnicky
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f794c326-2545-40b3-811f-dca0f79417ac/deploy-status)](https://app.netlify.com/sites/naughty-williams-0f0c7a/deploys)
+
 _Created by Chris Rudnicky._
 
+> Version: 1.0  
+> Last ReadMe Update: 09/16/19
 ___
 
 This repository is for the project website and contains all the source code necessary for providing a complete clone of my portfolio.
@@ -12,10 +15,10 @@ ___
 
 | Section | Title | Section | Title |
 |---|---|---|---|
-|I|[Description](#description)|V.| [Project Architecture](#project-architecture) |
-|II|[Installation](#installation)| VI. | [Next Steps](#next-steps)|
-|III|[Technologies Used](#technologies-used)| VII. | [Testing The App](#testing-the-app) |
-|IV |[Reference Material](#reference-material)| VIII. | Copyright and Licensing Information |
+|I|[Description](#I.-description)|V.| [Project Architecture](#V.-project-architecture) |
+|II|[Installation](#II.-installation)| VI. | [Next Steps](#VI.-next-steps)|
+|III|[Technologies Used](#III.-technologies-used)| VII. | [Testing The App](#VII.-testing-the-app) |
+|IV |[Reference Material](#IV.-reference-material)| VIII. | [Copyright and Licensing Information](#VII.-copyright-and-licensing-information) |
 
 ___
 
@@ -102,3 +105,73 @@ The table below provides an overview of each subdirectory within ```/src```. Mor
 ___
 
 ### VI. Next Steps
+
+This is currently version 1.0 of my portfolio, and I fully intend to continue to build on this project throughout the rest of my life. I have plans to include several new features, and will undoubtedly change the layout and conent as the project grows. That being said there are several refactors and devops projects that must be addressed before any new features are added.
+
+#### Major Refactors
+
+I built version 1 of my portfolio hastily, and as a way to reintroduce myself to React after a stint working in Vue. This has left my code full of refactorable code. Below are the refactors I've identified **as of 09/16/19**.
+
+|Refactor| Reason | Complete|
+|---|---|---|
+| Add media queries| My portfolio was not built with a mobile first mindset. I will refactor the project to be mobile friendly | [ ] |
+| Change class based components to functional components. | Halfway through development I decided to start exploring the **React Hooks API**. I quickly began to wite functional components using `setState` and `useEffect`, but did not change many of the older class based components over. **Using of the Hooks API will eliminate my need for Redux and make my components easier to understand**.| [ ]  |
+| Integrate SASS | The performance of the application can be improved by decreasing my CSS bundle, and the HTTP requests that are made from importing all of the CSS files in each view and component. **SASS will allow me to us nesting, partials, variables, and mixins to increase control over my CSS and make it more efficient and performant**. | [ ] |
+
+#### Dev Ops
+
+Version 1 contains some integration test files, but no unit tests or a CI/CD pipeline. Before creating new feature it is critica that the integrity of my application is ensured. I will finish writing integration tests with Cypress and add unit Tests with Jasmine before investigating CI tools.
+
+    [ ] Write integration tests for the application views.
+
+    [ ] Write unit tests for the application funtions.
+
+    [ ] Create a CI/CD pipeline
+
+#### Features
+
+The next versions of the application will grow the capabilites of the portfolio, and possibly add layout changes over time.
+
+|Feature | Purpose | Complete |
+|---|---|---|
+| Backend ***refactor*** | As the portfolio project grows I will need more control over managing the content. I will create a C# backend and a MySQL database to back my portfolio content. | [ ] |
+| Blog | As I develop, I write to help me remember. I intend to publish these writings on my portfolio because everyone else is doing it. Maybe it'll help someone. | [ ] |
+|Photography Gallery | I want my portfolio to be about me, not just my development. I love photography and have a ton of pictures on my laptop. I will make a gallery to display them all that will start as a view on my portfolio before becoming a standalone website. | [ ] |
+
+[ ] Layout Refactor.
+
+- After checking off all the above boxes I will create a new layout and theme for my portfolio.
+
+___
+
+### VII. Testing The App
+
+> As of **09/16/19** there are only a few integration tests in the app,
+
+My portolio will have both unit tests and integration tests written for all views and paths before advancing to the next version. I currently am using **Jest** and **Cypress** for the unit and end-to-end testing frameworks.
+
+#### End-To-End Tests
+
+I use [The JavaScript End to End Testing Framework Cypress](https://www.cypress.io) and you should too.
+
+Cypress is an open source testing framework that creates a cleaner development experience. It increases the debugability of tests, provides real time reloads, can be incorporated into a CI/CD pipeline, and has a pretty nifty test runner. Developers can harness the power of Cypress for total network control over tests and managing the state of the application without using realtime HTTP requests.
+
+I use Cypress to test the routing, style, and behavior of the application and the various integrated components.
+
+For more information on the tests that I have written [Please click here](./documentation/IntegrationTests.md).
+
+#### Unit Tests
+
+There are currently no unit tests on my portfolio, but I am adding them as soon as possible.
+
+#### CI/CD Pipeline
+
+I am using Jenkins and CircleCI to create a CI/CD pipeline. It does not exist, but will soon.
+
+___
+
+### VIII. Copyright and Licensing Information
+
+For specific references to open source creators please refer to [the reference section](#IV.-reference-material). 
+
+This is my personal portfolio. All images were taken by me, Chris Rudnicky. Please reference me if you take an image off this page.
