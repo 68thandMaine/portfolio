@@ -4,12 +4,8 @@ This is a document detailing things that I have pondered while developing my por
 
 ## Styles
 
-- Are viewport units available in all web browswers?
-
 - Are my animations tacky or tasteful?
 
 ## Improvements
 
 - In Text animation considier making the things you are actionable links.
-
-- Maybe in the /projects I could have a pie chart with the languages of my Github repos?
