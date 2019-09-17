@@ -1,5 +1,8 @@
 .card-wrapper {
-  margin: 0 auto;
+  border-top: solid 2px white;
+  border-radius: 1vw;
+  padding-top: 1vw;
+  margin-top: 1vw;
 }
 .card-wrapper h3 {
   border-bottom: solid 2px white;
@@ -67,32 +70,56 @@
 }
 
 .card-footer {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   margin-top: 1.25rem;
 }
 .personalProjects {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .personalProjects h6 {
   position: relative;
   /* margin-left: 2.5vw; */
 }
 .footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 2vw;
   height: 6vw;
 }
 .projectLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   text-align: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-right: 1vw;
 }
 
@@ -106,18 +133,32 @@
 }
 .enlargeIcon {
   font-size: 1.5vw;
-  animation: grow 0.5s linear forwards;
+  -webkit-animation: grow 0.5s linear forwards;
+          animation: grow 0.5s linear forwards;
   /* position: relative; */
  
 }
 .shrinkIcon {
-  animation: ungrow 1s;
+  -webkit-animation: ungrow 1s;
+          animation: ungrow 1s;
   position: relative;
 }
 
 i {
   font-size: 3vw !important;
   color: #c5c5c5;
+}
+
+@-webkit-keyframes ungrow {
+  from {
+    font-size: 4vw;
+    color: white;
+    margin-top: -1vh;
+  }
+  to {
+    font-size: 3vw;
+    color: #c5c5c5;
+  }
 }
 
 @keyframes ungrow {
@@ -129,6 +170,18 @@ i {
   to {
     font-size: 3vw;
     color: #c5c5c5;
+  }
+}
+
+@-webkit-keyframes grow {
+  from {
+    font-size: 3vw;
+    color: #c5c5c5;
+  }
+  to {
+    font-size: 4vw;
+    color: white;
+    margin-top: -1vh
   }
 }
 

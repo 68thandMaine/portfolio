@@ -1,21 +1,37 @@
 .contactForm-body {
-  animation: showForm 1s linear forwards;
+  -webkit-animation: showForm 1s linear forwards;
+          animation: showForm 1s linear forwards;
   margin-top: 2vw;
   margin-bottom: 9vw;
   padding: 1vw 0 3vw 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .contactForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   margin-left: 2.25vw;
   padding: 2vw;
   text-align: justify;
-  flex-grow: 0.3;
-  align-items: center;
-  justify-content: stretch;
+  -webkit-box-flex: 0.3;
+      -ms-flex-positive: 0.3;
+          flex-grow: 0.3;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
 }
 
 .shieldsup {
@@ -33,12 +49,15 @@
 }
 
 .formInput {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-rows: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   margin-bottom: 2vw;
   text-align: center;
 }
 #messageWrapper .formInput {
+  -ms-grid-rows: 1fr 6fr;
   grid-template-rows: 1fr 6fr;
 }
 
@@ -55,10 +74,15 @@
   margin-bottom: 1.5vw;
 }
 .formNavigationButtons{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   position: relative;
   width: 75vw;
 }
-

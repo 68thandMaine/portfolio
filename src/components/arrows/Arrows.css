@@ -1,7 +1,13 @@
 #arrowAnim {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 1vw;
 }
 .arrowSliding:hover {
@@ -12,7 +18,9 @@
   width: 2.0vw;
   height: 2.0vw;
   border: 0.9vw solid;  border-color: white transparent transparent #c5c5c5;
-  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+          transform: rotate(-135deg);
 }
 
 
@@ -36,19 +44,20 @@
 }
 
 @-webkit-keyframes slide {
-    0% { opacity:0; transform: translateY(-6vw); }	
-   20% { opacity:1; transform: translateY(-1vw); }	
-   80% { opacity:1; transform: translateY(1vw); }	
-  100% { opacity:0; transform: translateY(6vw); }	
+    0% { opacity:0; -webkit-transform: translateY(-6vw); transform: translateY(-6vw); }	
+   20% { opacity:1; -webkit-transform: translateY(-1vw); transform: translateY(-1vw); }	
+   80% { opacity:1; -webkit-transform: translateY(1vw); transform: translateY(1vw); }	
+  100% { opacity:0; -webkit-transform: translateY(6vw); transform: translateY(6vw); }	
 }
 @keyframes slide {
-    0% { opacity:0; transform: translateY(-6vw); }	
-   20% { opacity:1; transform: translateY(-1vw); }	
-   80% { opacity:1; transform: translateY(1vw); }	
-  100% { opacity:0; transform: translateY(6vw); }	
+    0% { opacity:0; -webkit-transform: translateY(-6vw); transform: translateY(-6vw); }	
+   20% { opacity:1; -webkit-transform: translateY(-1vw); transform: translateY(-1vw); }	
+   80% { opacity:1; -webkit-transform: translateY(1vw); transform: translateY(1vw); }	
+  100% { opacity:0; -webkit-transform: translateY(6vw); transform: translateY(6vw); }	
 }
 
 .fadeOut {
-  animation: hideArrows 500ms linear forwards;
+  -webkit-animation: hideArrows 500ms linear forwards;
+          animation: hideArrows 500ms linear forwards;
   opacity: 0;
 }
