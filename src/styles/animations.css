@@ -175,10 +175,10 @@
 }
 
 @-webkit-keyframes showCity {
-  0% {
+  from {
     background-image: null
   }
-  100% {
+  to {
     background: url('../assets/images/JPEG/portland.png');
     background-position: 90% 90%;
     background-size: cover;
@@ -204,7 +204,7 @@
   }
 }
 @-webkit-keyframes hideCity {
-  0% {
+  from {
     -webkit-text-fill-color: transparent;
     background-image: url('../assets/images/JPEG/portland.png');
     background-position: 90% 90%;
@@ -213,7 +213,7 @@
     -webkit-background-clip: text;
     background-clip: text;
   }
-  100% {
+  to {
     
   }
 }

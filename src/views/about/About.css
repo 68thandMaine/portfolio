@@ -117,18 +117,18 @@
 }
 
 .portlandText:hover {
-  background-image: url('../../assets/images/JPEG/portland.jpg');
-  -webkit-background-size: cover;
-  background-size: cover;
   cursor: pointer;
-  -webkit-animation: showCity 2s ease 0s ; /* Safari 4+ */
-  -moz-aanimation: showCity 2s ease 0s ; /* Fx 5+ *//* Opera 12+ */
+  background-image: url('../../assets/images/JPEG/portland.jpg');
+  background-size: cover;
   animation: showCity 2s ease 0s ; 
+  -webkit-background-size: cover;
+  -webkit-animation: showCity 1s ease 0s ; /* Safari 4+ */
+  -moz-aanimation: showCity 2s ease 0s ; /* Fx 5+ *//* Opera 12+ */
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
   background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .portlandText h1 {
