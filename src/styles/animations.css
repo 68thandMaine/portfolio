@@ -176,7 +176,7 @@
 
 @-webkit-keyframes showCity {
   from {
-    background-image: null
+    
   }
   to {
     background: url('../assets/images/JPEG/portland.png');
