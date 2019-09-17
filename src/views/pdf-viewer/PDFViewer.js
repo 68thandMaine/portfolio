@@ -1,6 +1,6 @@
 import React from 'react';
 import './PDFViewer.css';
-// import {Resume} from '../../assets/resume/resume.pdf';
+
 
 class PDFViewer extends React.Component {
   constructor (props) {

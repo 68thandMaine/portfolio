@@ -18,8 +18,6 @@ const GithubService = {
     });
     return repositoryArray;
     },
-
-
 };
 
 export default GithubService;

@@ -1,45 +1,106 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import EmailService from '../../services/api/EmailService';
 import './Contact.css';
-import PageHeader from '../../components/page-header/PageHeader.js'
-import FormGreeting from '../../components/contact-greeting/ContactGreeting.js';
+import Button from '../../components/button/button.js';
 import ContactForm from '../../components/contact-form/ContactForm.js';
-import Arrows from '../../components/arrows/Arrows.js';
+import FormGreeting from '../../components/contact-greeting/ContactGreeting.js';
+import LoadingBars from '../../components/loading-bar/LoadingBar.js';
+import Modal from '../../components/modal/Modal.js';
+import PageHeader from '../../components/page-header/PageHeader.js';
 
-function Contact() {
-  // Declare state values for displaying the form or not
-  const [displayForm, set_displayForm] = useState(false); //useState() takes the intitial state of displayForm
-  
+function Contact(props) {
+    const [pageHeader,
+        set_pageHeader] = useState('Lets Talk');
+    const [successMessage,
+        set_successMessage] = useState(null);
+    useEffect(() => {
+        showSuccessMessage();
+    });
 
- function handleToggleForm() {
-   let toggleForm = !displayForm;
-    set_displayForm(toggleForm);
-    document.querySelector('.contact-wrapper').scrollIntoView(false);
-  }
+    async function handleSendMessage(message) {
+       
+        if (EmailService.filterSpam(message)) {
+            console.log('spam caught');
+        } else {
+            document
+                .querySelector('.pageHeaderWrapper')
+                .classList
+                .add('hide');
+            document
+                .querySelector('.formWrapper')
+                .classList
+                .add('hide');
+           set_successMessage(0);
+           let answer = await EmailService.sendEmail(message);
+            switch (answer) {
+                case 200:
+                    return set_successMessage(200);
+                case 400: 
+                    return set_successMessage(400);
+                default:
+                    return set_successMessage(null);
+            }
+        }
+    }
 
-  function handleSendMessage(message){
-    (EmailService.filterSpam(message)) ? console.log('spam caught') :  EmailService.sendEmail(message);
-    handleToggleForm();
-  }
-  return (
-    <div className='contact-wrapper'>
-      <PageHeader 
-        title="LETS TALK"
-        className='contact-title' />
-      <FormGreeting />
+    function showSuccessMessage() {
+        switch(successMessage) {
+            case 200: 
+            return(
+                <Modal 
+                    text="Thank you, I'll be in touch."
+                    button="returnHome" /> 
+            );
+            case 400: 
+            return (
+                <Modal 
+                text="Sorry, there was an error with the form submission."
+                button="tryAgain" />
+            );
+            case 0:
+                return (
+                <div className='sendingWrapper'>
+                    <LoadingBars />
+                </div>);
+            default: 
+             return null;
+        }
+    }
 
-      {(displayForm === false) ? 
-      <div className='arrowButton'> 
-        <Arrows
-          showForm = {handleToggleForm}/>
-      </div> 
-      :
-      <ContactForm 
-        sendMessage = {handleSendMessage}/> 
-      }
+    function showForm() {
+        document
+            .querySelector('.formGreetingWrapper')
+            .classList
+            .add('hide');
+        document
+            .querySelector('.formWrapper')
+            .classList
+            .add('show');
+        document
+            .getElementById('nme')
+            .focus();
+        set_pageHeader('What should I call you');
+    }
 
-    </div>
-  );
+    return (
+        <div className='contact-wrapper'>
+            <div className='pageHeaderWrapper'>
+                <PageHeader title={pageHeader} className='contact-title'/>
+            </div>
+            <div className='formGreetingWrapper' data-cy='formGreetingWrapper'>
+                <FormGreeting/>
+                <Button
+                    text='Begin'
+                    purpose='formAdvance'
+                    clickEvent={showForm}
+                    testingID='showFormButton'/>
+            </div>
+            <div className='formWrapper' data-cy='formWrapper'>
+                <ContactForm sendMessage={handleSendMessage} setPageHeader={set_pageHeader}/>
+            </div>
+            {showSuccessMessage()}
+        </div>
+    );
 }
 
 export default Contact;

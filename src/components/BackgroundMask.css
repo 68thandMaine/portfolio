@@ -1,5 +1,7 @@
 .background {
-  /* transition: ease-in-out 50ms; */
+  -webkit-transition: ease-in-out 50ms;
+  -o-transition: ease-in-out 50ms;
+  transition: ease-in-out 50ms;
   width: 100%;
   position: absolute;
   z-index: 0;

@@ -6,11 +6,17 @@ import './AboutBody.css';
 function AboutBody() {
   return (
         <div className='aboutBody-text'>
-          <p>I am passionate about creating meangingful experiences for others. I've worn a lot of shoes in my life and incorporate these experiences into development to form a multi-disciplinary approach to my work.</p>
-          <br />
-          <p>I have a passion for continued education and am currently focusing on an ASP.NET + JavaScript stack. I like to document my progress in blog posts, so be sure to check them out. When I'm not coding I generally spend time going out with my partner, hking with friends, relaxing with my cat Oliver, cooking, exercising, or reading. We are more than our jobs and I belive in pursuing what makes you feel good. I'm lucky to have found a passion in coding as it speaks to my logical and creative sides.</p>
-          <br />
-          <p>Interested in learnig more? Check out the links below to view my social media accounts, or view my contact page to get in touch. I'd love to talk with you about how I might be able to turn an idea into life with you.</p>
+          <h5>It's nice to meet you!</h5>
+          <p>I've never been good at introductions, so let's just jump straight into it...</p>
+          <p>Throughout my life I've found myself drawn to activites that require <span className='bolder'>logical creativity.</span> In essence - I like to apply my own ingenuity to established processes and discover what outcomes I can produce. Following this fascination has given the opportunity to try my hands at many cool things, but most recently - web development!</p>
+          
+          <p>I take pride in the content I produce, and I tend to work most with <span className='technologyBolder'>React, Vue, Node, and C#</span>. I enjoy using my critical thinking and keen attention to detail that I honed working in scientific fields and form a well documented, and strategic approach for creating new tools and bringing ideas to life.
+          </p>  
+
+
+          <p>
+          I drink coffee, I read, I bike, I notice the small details in life, I write code and improve my development skills every day.
+          </p>
        </div>
   )
 }

@@ -24,3 +24,6 @@ yarn-error.log*
 
 # Added By Developer
 /.env
+/cypress.json
+/menuicon.ai
+/page content.docx

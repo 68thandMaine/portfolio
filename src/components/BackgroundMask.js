@@ -16,13 +16,12 @@ class BackgroundMask extends React.Component {
     });
   }
   
+
   render() {
     const activeImage = this.props.imgSrc[this.props.imgIndex];
 
    return (
-    <div>
-      <img className='background' src ={activeImage} alt='background mask' />
-    </div>
+    <img className='background' src ={activeImage} alt='background mask' />
    ); 
   }
 }

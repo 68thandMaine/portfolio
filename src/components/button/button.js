@@ -1,18 +1,23 @@
 import React from 'react';
-import {Redirect} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './button.css';
 
 
 const Button = (props) => {
   return (
-    <button className={`button + ${props.purpose}`}>{props.text}</button>
+    <button data-cy={props.testingID} className={`button + ${props.purpose}`}
+      onClick={props.clickEvent}
+      type='button'>
+        {props.text}
+    </button>
   )
 }
 
 Button.propTypes = {
   text: PropTypes.string,
-  purpose: PropTypes.string
+  purpose: PropTypes.string, 
+  clickEvent: PropTypes.func,
+  testingId: PropTypes.string
 }
 
 export default Button;

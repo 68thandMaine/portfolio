@@ -8,13 +8,13 @@
 }
 @font-face {
   font-family: 'Manrope';
-  src: local(Regular), url('../assets/fonts/manrope-regular.woff')format('woff');
+  src: local(Regular), url('../assets/fonts/manrope-thin.woff')format('woff');
 }
 @font-face {
   font-family:'Eudora';
   src: local(Regular), url('../assets/fonts/eudora.woff')format('woff');
 }
-@font-face{
-  font-family: 'Wild';
-  src: local(Regular), url('../assets/fonts/wild.woff')format('woff');
+@font-face {
+  font-family: 'Hero';
+  src: local(Regular), url('../assets/fonts/herolight.woff')format('woff')
 }

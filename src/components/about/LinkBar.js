@@ -1,7 +1,5 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import './LinkBar.css';
-import Button from '../button/button.js';
-
 
 
 function Linkbar (props) {
@@ -17,7 +15,6 @@ function hideText() {
   let textBox = document.getElementById('selectedLink');
   textBox.classList.remove('fadeTextIn');
   textBox.classList.add('fadeTextOut');
-  // setSocialName(' ');
 }
   return (
     <div className='linkbar'>
@@ -27,24 +24,12 @@ function hideText() {
       <div className='linkbar-container'>
         <div className='mediaLink'>
           <a className='icon' id='linkedin' onMouseEnter={()=> showText('linkedin')} onMouseLeave={() => hideText()} alt='follow me on linkedin' href='https://www.linkedin.com/in/crudnicky' > </a>
-          {/* <Button 
-            text='linkedin'
-            purpose='socialMediaLink'
-            /> */}
         </div>
         <div className='mediaLink'>
           <a className='icon' id='instagram' onMouseEnter={()=>showText('instagram')} onMouseLeave={()=>hideText()}alt='follow me on instagram' href='https://www.instagram.com/virginiathekid' > </a>
-          {/* <Button 
-            text='instagram'
-            purpose='socialMediaLink'
-            /> */}
         </div>
         <div className='mediaLink'>
           <a className='icon' id='github'  onMouseEnter={()=>showText('github')} onMouseLeave={()=>hideText()}alt='link to github' href='https://www.github.com/68thandMaine'> </a>
-          {/* <Button 
-            text='github'
-            purpose='socialMediaLink'
-            /> */}
         </div>
       </div>
     </div>
