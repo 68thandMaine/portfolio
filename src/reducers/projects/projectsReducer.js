@@ -1,7 +1,6 @@
-import * as types from '../../constants/ActionTypes';
 import initialState from '../../constants';
 
-const projectsReducer = (state = initialState, action) => {
+const projectsReducer = (state = initialState) => {
 
   return state;
 }
