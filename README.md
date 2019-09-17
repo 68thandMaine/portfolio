@@ -1,5 +1,5 @@
 # Hello and Welcome to my Personal Portfolio :)
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f794c326-2545-40b3-811f-dca0f79417ac/deploy-status)](https://app.netlify.com/sites/naughty-williams-0f0c7a/deploys)
 _Created by Chris Rudnicky._
 
 ___
