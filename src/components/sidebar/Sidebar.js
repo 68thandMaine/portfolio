@@ -1,12 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Sidebar.css';
+import Button from '../button/button.js';
+
 
 function sidebar(props) {
 
   return (
     <div className='sidebar'>
       <nav className='sidebar_nav'>
+      <Button 
+        text='X'
+        purpose='closeSidebarButton'
+        clickEvent={props.closeMenu}
+        testingId = 'closeSidebarButton' />
       <h1 className='mobileMenu'>MENU</h1>
         <ul className='sidebarMenu'> 
           <li className='sidebarLinkWrapper' onClick={(e) => props.changeBackground('/', e)}><Link className='sidebarLink' to ='/' >Home</Link></li>

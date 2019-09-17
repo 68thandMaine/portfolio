@@ -6,10 +6,17 @@
 .linkbar-container {
   margin: 0;
   padding: 0 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
   position: relative;
 }
 .linkbar-container:after {
@@ -21,13 +28,22 @@
   margin-top: 2vw;
 }
 .mediaLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   margin: 2%;
-  align-items: center
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center
 }
 
 .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 2vh;
 }
@@ -76,8 +92,10 @@
   letter-spacing: 0.5vw;
 }
 .fadeTextIn {
-  animation: fadeIn 2s linear forwards;
+  -webkit-animation: fadeIn 2s linear forwards;
+          animation: fadeIn 2s linear forwards;
 }
 .fadeTextOut {
-  animation: fadeOut 500ms linear forwards;
+  -webkit-animation: fadeOut 500ms linear forwards;
+          animation: fadeOut 500ms linear forwards;
 }

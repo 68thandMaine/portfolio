@@ -11,14 +11,19 @@
     letter-spacing: 0.4vw;
   }
   .sidebarMenu {
-    padding-inline-start: 0 !important;
+    -webkit-padding-start: 0 !important;
+            padding-inline-start: 0 !important;
   }
   .sidebar {
     position: absolute;
     top: 0;
     left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
   }
   .sidebar + .views {

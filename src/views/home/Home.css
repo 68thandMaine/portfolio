@@ -1,12 +1,3 @@
-.home-view {
-  background: url('../../assets/images/HomeBG.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100%;
-  position: absolute;
-  z-index: 0;
-}
 
 .home-container {
   display: -webkit-box;
@@ -21,7 +12,8 @@
 }
 
 .home-container h1 {
-  animation: glow 2s linear infinite alternate;
+  -webkit-animation: glow 2s linear infinite alternate;
+          animation: glow 2s linear infinite alternate;
 }
 .trippyText {
   -webkit-text-fill-color: transparent;
@@ -31,7 +23,8 @@
   -webkit-animation: trippyText 2s linear infinite;
   background-clip: text;
   -webkit-background-clip: text;
-  animation: glow 2s linear infinite alternate;
+  -webkit-animation: glow 2s linear infinite alternate;
+          animation: glow 2s linear infinite alternate;
 }
 
 .sidebar + .home-container {
