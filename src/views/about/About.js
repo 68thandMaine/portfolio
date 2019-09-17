@@ -40,11 +40,11 @@ function About(props) {
         </div>
         <div className ='bodyContent'>
           <div className='bodyContentGreeting'>
-            <h1 className='portlandText'> 
-              <span>Living in</span>
-              <span>portland</span> 
-              <span>oregon</span>
-            </h1>
+            <div className='portlandText'> 
+              <h1>Living in</h1>
+              <h1>portland</h1> 
+              <h1>oregon</h1>
+            </div>
           </div>
           <div className='body'>
             <div className='bodyLinks'>

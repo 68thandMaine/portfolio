@@ -175,16 +175,17 @@
 }
 
 @-webkit-keyframes showCity {
-  from {
-    
+  0% {
+    background-image: null
   }
-  to {
-    -webkit-text-fill-color: transparent;
+  100% {
     background: url('../assets/images/JPEG/portland.png');
     background-position: 90% 90%;
     background-size: cover;
-    -webkit-background-clip: text;
+    -webkit-background-size: cover;
     background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     
   }
 }
@@ -195,7 +196,7 @@
   }
   to {
     -webkit-text-fill-color: transparent;
-    background: url('../assets/images/JPEG/portland.png');
+    background-image: url('../assets/images/JPEG/portland.png');
     background-position: 90% 90%;
     background-size: cover;
     -webkit-background-clip: text;
@@ -203,29 +204,30 @@
   }
 }
 @-webkit-keyframes hideCity {
-  from {
+  0% {
     -webkit-text-fill-color: transparent;
-    background: url('../assets/images/JPEG/portland.png');
+    background-image: url('../assets/images/JPEG/portland.png');
     background-position: 90% 90%;
     background-size: cover;
+    -webkit-background-size: cover;
     -webkit-background-clip: text;
     background-clip: text;
   }
-  to {
+  100% {
     
   }
 }
 @keyframes hideCity {
   from {
     -webkit-text-fill-color: transparent;
-    background: url('../assets/images/JPEG/portland.png');
+    background-image: url('../assets/images/JPEG/portland.png');
     background-position: 90% 90%;
     background-size: cover;
     -webkit-background-clip: text;
     background-clip: text;
   }
   to {
-    
+   
   }
 }
 
