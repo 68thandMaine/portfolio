@@ -110,7 +110,7 @@
   letter-spacing: -10px;
   -webkit-animation: hideCity 5s ease 0s;
   animation: hideCity 5s ease 0s;
-  background-image: none;
+  background: none;
   text-align: center;
 }
 
