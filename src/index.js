@@ -11,8 +11,8 @@ import App from './App';
 // Global Styles
 import './styles/fonts.css';
 import './styles/index.css';
-import './styles/media-queries.css';
 import './styles/animations.css';
+import './styles/media-queries.css';
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
 

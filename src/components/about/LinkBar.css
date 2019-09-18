@@ -25,7 +25,6 @@
   margin: 0 auto;
   border-bottom: solid 2px white;
   width: 100%;
-  margin-top: 2vw;
 }
 .mediaLink {
   display: -webkit-box;
@@ -69,6 +68,10 @@
   background: url('../../assets/icons/linkedin.png');
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.mobileLabel {
+  display:none;
 }
 
 .icon:hover {
