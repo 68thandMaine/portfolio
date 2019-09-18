@@ -1,4 +1,4 @@
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 615px) {
   *::-webkit-scrollbar { 
     width: 0 !important
   }
@@ -6,59 +6,289 @@
     overflow: -moz-scrollbars-none;
     -ms-overflow-style: none;
   }
+
+  p {
+    font-size: 3.5vw;
+    font-weight: 5000;
+  }
+
   .mobileMenu {
     display: block;
     letter-spacing: 0.4vw;
+    font-size: 20vw;
+    margin-top: 2vh;
+  }
+  .mobileCloseButton {
+    display: block;
   }
   .sidebarMenu {
-    -webkit-padding-start: 0 !important;
-            padding-inline-start: 0 !important;
+    padding: 0;
   }
-  .sidebar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 100%;
-  }
+  
   .sidebar + .views {
     display: none;
   }
   .sidebar_nav {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
     text-align: center;
-    top: 30vh;
+    top: 37vh;
+    width: 100%;
   }
   .sidebarLinkWrapper {
-    margin: 3vh 0 3vh;
+    margin: 4.5vh auto;
     padding: 2vh 3vw;
     width: 40vw;
     border: solid 1px white;
-  }
-  .sidebrLinkWrapper:hover {
-    background: white;
-    border: solid 1px black;
-    color: black;
+    background: hsl(0, 3%, 22%, 0.6);
   }
   .sidebarLink {
     line-height: 2vh;
+    font-weight: bolder;
+    font-size: 4vw;
   }  
-
-  .home-content {
-    margin-top: 0;
+  .closeSidebarButton {
+    display: none;
   }
 
-  .about-header {
-    line-height: 4.5vh;
-  }
-  .about-body {
-    top: 3rem;
-    width: 100%;
+
+  .route-container {
     margin: 0 1vw;
   }
 
+/* Home view media queries */
+  .home-container {
+    padding-top: 20%
+  }
+  .home-container h1 {
+    font-size: 40vw;
+  }
+
+  .home-content h3 {
+    font-size: 14vw;
+  }
+
+  .home-content h4 {
+    font-size: 10vw;
+  }
+  .trippyText {
+    display: block;
+    font-size: 12vw;
+  }
+
+
+
+/* Bio media queries */
+  .aboutHeader h1 {
+    font-size: 17vw;
+  }
+  .introWord {
+    margin: 0;
+  }
+  .introWord h3 {
+    font-size: 22vw;
+  }
+  .pictureFrame {
+    width: 40vw;
+  }
+  .textAnimation {
+    margin: 2vh auto 0; 
+    position: relative;
+  }
+  .textLoopStyles {
+    height: 7vh;
+    padding-top:1.5vh;
+    font-size: 11.5vw;
+    font-weight: bold;
+    overflow: hidden;
+  }
+  .portlandText {
+    background-image: url('../assets/images/JPEG/portland.jpg');
+    background-size: cover;
+    background-clip: text;
+    animation: none;
+  }
+  .portlandText  h1{
+    font-size: 25vw;
+    letter-spacing: 0.05vw;
+  }
+  .body {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+  .aboutBody-text h5 {
+    font-size: 6.8vw;
+    font-weight: bold;
+  }
+  .aboutBody-text h5:after {
+    width: 100%;
+    margin-top: 1vh;
+  }
+  .aboutBody-text {
+    text-align: justify;
+    line-height: 3vh;
+  }
+  .aboutBody-text p{
+   margin-bottom: 1.5vw;
+  }
+  .aboutBody-text p:last-child {
+    font-size: 3.5vw;
+  }
+  .aboutBody-text p:last-child:before {
+    padding-top:1vh;
+  }
+  .aboutBody-text p:last-child:after {
+    padding-bottom: 1vh;
+  }
+  .bodyLinks h4 {
+    margin-top: 1vh;
+    font-size: 8vw;
+  }
+  .icon{
+    margin-bottom: 0;
+  }
+  .icon:before {
+    width: 10vw;
+    height: 10vh;
+  }
+  #selectedLink {
+    display: none;
+  }
+  .mobileLabel {
+    display: block;
+    text-transform: uppercase;
+    margin-top: -3vh;
+    font-weight: bolder;
+  }
+  .redirect {
+    font-size: 6vw;
+    font-weight: bold;
+    margin: 1vh 0 2vh;
+  }
+
+/* Projects media queries */
+
+  .project-header h1 {
+    font-size: 26vw;
+  }
+  .body-menu-panel {
+    display: flex;
+    flex-flow: column wrap;
+    overflow: scroll;
+  }
+
+  .body-project-panel {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .text-container p {
+   line-height: 3vh;
+   font-size: 3.5vw; 
+  }
+  .intro h6{
+    font-size: 5vw;
+  }
+  .languageChart-wrapper {
+    margin-top: 5vh;
+  }
+  .languageChart-wrapper h2 {
+    font-size: 7vw;
+    margin-bottom: 3vh;
+    text-transform: uppercase;
+  }
+
+  .card-wrapper h3, .repoMenu-wrapper h3{
+    font-size:  8vw;
+    margin-top: 3vw;
+  }
+
+  .card {
+    padding: 2.5vw;
+    text-align: justify;
+  }
+
+  .card h4, .item-header p:first-child {
+    text-align: center;
+    font-size: 7.5vw;
+  }
+
+  .card p:nth-child(2){
+    font-size: 4vw;
+  }
+
+  .progressBarWrapper {
+    margin: 4vw auto;
+  }
+  .progressBarWrapper h6, .personalProjects h6, .languageIconWrapper h6 {
+    font-size: 6vw;
+    text-align: center;
+  }
+
+  .card-footer {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  .footer-languages {
+    margin-top: 9vw;
+  }
+  .footer-links{
+    margin-top: 5vh;
+  }
+
+  .projectLinks {
+    margin: 7vw;
+  }
+  i {
+    font-size: 8vw !important;
+  }
+  .languageIcon {
+    width: 9vw;
+  }
+  
+  .languageIcons {
+    height: 9vh;
+    margin-top: 2vh;
+  }
+
+  @keyframes pulse {
+    0% {
+      width: 9vw;
+    }
+    50% {
+      width: 9.5vw;
+    }
+    100%{
+      width: 9vw;
+    }
+  }
+
+  .projectLinkButton {
+    font-size: 6.5vw;
+    font-weight: bold;
+    animation: none;
+  }
+
+
+  .item-header {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    align-items: center;
+  }
+
+  .item-header p:nth-child(2) {
+    font-size: 5vw;
+  }
+  .repoText {
+    font-size: 4vw;
+  }
+  .sourceCode {
+    font-size: 4vw;
+    height: auto;
+  }
+  .item-footer {
+    height: auto;
+  }
 }
