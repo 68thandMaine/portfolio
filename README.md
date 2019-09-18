@@ -114,7 +114,7 @@ I built version 1 of my portfolio hastily, and as a way to reintroduce myself to
 
 |Refactor| Reason | Complete|
 |---|---|---|
-| Add media queries| My portfolio was not built with a mobile first mindset. I will refactor the project to be mobile friendly | [ ] |
+| Add media queries| My portfolio was not built with a mobile first mindset. I will refactor the project to be mobile friendly | [X] |
 | Change class based components to functional components. | Halfway through development I decided to start exploring the **React Hooks API**. I quickly began to wite functional components using `setState` and `useEffect`, but did not change many of the older class based components over. **Using of the Hooks API will eliminate my need for Redux and make my components easier to understand**.| [ ]  |
 | Integrate SASS | The performance of the application can be improved by decreasing my CSS bundle, and the HTTP requests that are made from importing all of the CSS files in each view and component. **SASS will allow me to us nesting, partials, variables, and mixins to increase control over my CSS and make it more efficient and performant**. | [ ] |
 

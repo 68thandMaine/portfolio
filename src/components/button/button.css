@@ -112,7 +112,7 @@
   border: solid 1px white;
   border-radius: 2vw;
   font-size: 1vw;
-  margin-top: 1.5vw;
+  margin: 2vh auto 2vh;
   padding: 0.75vw 1vw;
 }
 .projectLinkButton:hover {
@@ -258,4 +258,12 @@ border: solid 1px white;
   transition: ease-in 250ms;
   -webkit-box-shadow: inset 0px 10px 40px rgba(0,0,0,0.8);
           box-shadow: inset 0px 10px 40px rgba(0,0,0,0.8);
+}
+
+.mobileCloseSidebarButton {
+  width: 55vw;
+  margin: 0 auto;
+  padding: 2vh 3vw;
+  background: transparent;
+  font-size: 3vw;
 }

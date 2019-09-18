@@ -20,6 +20,13 @@ function sidebar(props) {
           <li className='sidebarLinkWrapper' onClick={(e) => props.changeBackground('/bio', e)}><Link className='sidebarLink' to='/bio' >About Me</Link></li>
           <li className='sidebarLinkWrapper' onClick={(e) => props.changeBackground('/projects',e)}><Link className='sidebarLink' to ='/projects' >Work</Link></li>
           <li className='sidebarLinkWrapper' onClick={(e) => props.changeBackground('/contact', e)}><Link className='sidebarLink' to='/contact' >Contact</Link></li>
+          <li className='mobileCloseButton'>
+            <Button 
+              text='close'
+              purpose='mobileCloseSidebarButton'
+              clickEvent={props.closeMenu}
+              testingId = 'mobileCloseSidebarButton' />
+          </li>
         </ul>
       </nav>
     </div>
