@@ -1,19 +1,15 @@
 .languageIconWrapper {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-flow: column nowrap;
   text-align: center;
-  height: 6vw;
-  padding-bottom: 5vw;
 }
 .languageIconWrapper h6 {
   text-transform: uppercase;
 }
 .languageIcon {
   margin: 0.3rem 0.3rem;
-  width: 4rem;
-  width: 4vw;
+  width: 7rem;
+  width: 7vw;
   -webkit-animation: pulse 2s linear infinite;
           animation: pulse 2s linear infinite;
   position: relative;
