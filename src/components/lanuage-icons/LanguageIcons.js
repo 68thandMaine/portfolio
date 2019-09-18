@@ -59,7 +59,7 @@ const LanguageIcons = (props) => {
         document.getElementById(props.currentProject).append(vueIcon);
       }
     }
-  });
+  }, []);
 
     return (
       <div className='languageIconWrapper' >

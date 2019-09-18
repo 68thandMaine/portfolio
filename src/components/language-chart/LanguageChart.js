@@ -75,12 +75,12 @@ class LanguageChart extends React.Component {
   render(){
     return (
       <div className='languageChart-wrapper'>
-        <h2>PROJECT LANGUAGES</h2>
+        <h2>Quantity of projects / language on Github</h2>
         <canvas
           id='pieChart'
           ref={this.chartRef}
-          width='403'
-          height='302'
+          width='6'
+          height='6'
           />
       </div>
     );

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const ProgressBar = (props) => {
   return (
-    <div>
+    <div className='progressBarWrapper'>
       <h6>PERCENT COMPLETE: {props.percentage}%</h6>
       <div className='progressBar'>
         <Filler percent={props.percentage}/>
