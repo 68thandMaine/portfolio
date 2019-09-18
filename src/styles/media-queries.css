@@ -269,8 +269,6 @@
     font-weight: bold;
     animation: none;
   }
-
-
   .item-header {
     display: flex;
     flex-flow: column nowrap;
@@ -291,4 +289,45 @@
   .item-footer {
     height: auto;
   }
+
+
+  /* Contact view media queries */
+  .contact-wrapper {
+    margin-top: 5vh;
+  }
+  .pageHeaderWrapper h1 {
+    font-size: 20vw;
+    line-height: 12vh
+  }
+  .introGroup h3{
+    font-size: 6vw;
+  }
+  .introGroup h4 {
+    font-size: 4.5vw;
+  }
+  .formIntro h6 {
+    font-size: 3vw;
+  }
+  .formAdvance {
+    font-size: 6vw;
+  }
+  .contactFormLabel {
+    font-size: 6vw;
+    font-weight: bold;
+  }
+  .formInput input, .formInput textarea{
+    font-size: 6vw;
+  }
+  .formNavigationButtons {
+    margin-top: 4vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  .advance, .goBack {
+    font-size: 6vw;
+    margin: 1vw 0 1vw 0;
+    animation: none;
+  }
+
 }
