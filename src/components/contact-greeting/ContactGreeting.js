@@ -13,7 +13,7 @@ import './ContactGreeting.css';
         <br/>
         <h4>I'D LOVE TO HEAR FROM YOU!</h4>
       </div>
-      <h6>All ya gotta do is click the button below and fill out a few questions I have for you.</h6>
+      <h6>All you have to do is click the button below and fill out a few questions I have for you.</h6>
     </div>
     
   )
