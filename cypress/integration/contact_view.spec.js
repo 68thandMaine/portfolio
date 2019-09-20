@@ -98,7 +98,7 @@ context('/contact view integration tests', () => {
     });
   });
   describe('Form behavior', () => {
-    it.only('form fields are required and will not advance unless a valid input is received', () => {
+    it('form fields are required and will not advance unless a valid input is received', () => {
       cy.get('[data-cy="showFormButton"]').click();
       cy.get('[data-cy="name"]').type(' ');
       cy.get('[data-cy="showSubjectButton"]').click();
@@ -164,24 +164,32 @@ context('/contact view integration tests', () => {
         .should(($msg) => {
           expect($msg).to.contain('A valid email is required.');
         });
-      cy.get('[data-cy="email"]')
-        .type('chrisrudnicky@gmail.com');
-      cy.get('[data-cy="sendMessageButton"]').click();
-      cy.get('[data-cy="modalWrapper"]')
-        .should('be.visible');
+      // cy.get('[data-cy="email"]')
+      //   .type('chrisrudnicky@gmail.com');
+      // cy.get('[data-cy="sendMessageButton"]').click();
+      // cy.get('[data-cy="modalWrapper"]')
+      //   .should('be.visible');
       });
 
     it('focus is given to the name when the name field is displayed', () => {
-      // should('have.focus')
+      cy.viewFormName();
+      cy.get('[data-cy="name"]')
+        .should('have.focus');
     });
     it('focus is given to the subject when the subject field is displayed', () => {
-
+      cy.viewFormSubject();
+      cy.get('[data-cy="subject"]')
+        .should('have.focus');
     });
     it('focus is given to the message when the message field is displayed', () => {
-
+      cy.viewFormMessage();
+      cy.get('[data-cy="message"]')
+        .should('have.focus');
     });
-    it('focus is given to the email with the email field is displayed', () => {
-
+    it.only('focus is given to the email with the email field is displayed', () => {
+      cy.viewFormEmail();
+      cy.get('[data-cy="email"]')
+        .should('have.focus');
     });
     it('the name value is retained when navigating back from the subject view', () => {
 

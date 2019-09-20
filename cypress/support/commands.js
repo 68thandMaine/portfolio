@@ -3,17 +3,23 @@ Cypress.Commands.add('viewFormName', () => {
 });
 Cypress.Commands.add('viewFormSubject', () => {
   cy.get('[data-cy="showFormButton"]').click();
+  cy.get('[data-cy="name"]').type('Chris');
   cy.get('[data-cy="showSubjectButton"]').click();
 });
 Cypress.Commands.add('viewFormMessage', () => {
   cy.get('[data-cy="showFormButton"]').click();
+  cy.get('[data-cy="name"]').type('Chris');
   cy.get('[data-cy="showSubjectButton"]').click();
+  cy.get('[data-cy="subject"]').type('testing');
   cy.get('[data-cy="showMessageButton"]').click();
 });
 Cypress.Commands.add('viewFormEmail', () => {
   cy.get('[data-cy="showFormButton"]').click();
+  cy.get('[data-cy="name"]').type('Chris');
   cy.get('[data-cy="showSubjectButton"]').click();
+  cy.get('[data-cy="subject"]').type('testing');
   cy.get('[data-cy="showMessageButton"]').click();
+  cy.get('[data-cy="message"]').type('I am the message!');
   cy.get('[data-cy="showEmailButton"]').click();
 });
 Cypress.Commands.add('fillOutContactForm', () => {
