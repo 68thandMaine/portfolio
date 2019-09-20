@@ -186,19 +186,31 @@ context('/contact view integration tests', () => {
       cy.get('[data-cy="message"]')
         .should('have.focus');
     });
-    it.only('focus is given to the email with the email field is displayed', () => {
+    it('focus is given to the email with the email field is displayed', () => {
       cy.viewFormEmail();
       cy.get('[data-cy="email"]')
         .should('have.focus');
     });
     it('the name value is retained when navigating back from the subject view', () => {
-
+      cy.viewFormSubject();
+      cy.get('[data-cy="goBackToNameButton"]').click();
+      cy.get('[data-cy="name"]').should(($name) => {
+        expect($name).to.have.value('Chris');
+      });
     });
     it('the subject value is retained when navigating back from the message view', () => {
-
+      cy.viewFormMessage();
+      cy.get('[data-cy="goBackToSubjectButton"]').click();
+      cy.get('[data-cy="subject"]').should(($subject) => {
+        expect($subject).to.have.value('testing');
+      })
     });
-    it('the message value is retained when navigaing back from the email view', () => {
-
+    it.only('the message value is retained when navigaing back from the email view', () => {
+      cy.viewFormEmail();
+      cy.get('[data-cy="goBackToMessageButton"]').click();
+      cy.get('[data-cy="message"]').should(($message) => {
+        expect($message).to.have.value('I am the message!');
+      });
     });
   });
   describe('Form submission message', () => {
