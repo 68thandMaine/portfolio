@@ -14,9 +14,9 @@ ___
 
 ### [Tested Views](#tested-views)
 
-### [Custom Functions](#custom-functions)
-
 ### [Using Cypress](#using-cypress)
+
+### [Custom Functions](#custom-functions)
 
 ___
 

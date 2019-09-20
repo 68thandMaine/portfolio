@@ -98,17 +98,81 @@ context('/contact view integration tests', () => {
     });
   });
   describe('Form behavior', () => {
-    it('name is required', () => {
-      
-    });
-    it('email is required', () => {
+    it.only('form fields are required and will not advance unless a valid input is received', () => {
+      cy.get('[data-cy="showFormButton"]').click();
+      cy.get('[data-cy="name"]').type(' ');
+      cy.get('[data-cy="showSubjectButton"]').click();
+      cy.get('[data-cy="label"]')
+        .should(($lbl) => {
+          expect($lbl).to.contain('Full Name / Company Name');
+          expect($lbl).to.have.class('invalidEntry');
+      });
+      cy.get('[data-cy="validationMessage"]')
+        .should(($msg) => {
+          expect($msg).to.contain('The name field must filled in.');
+        });
+      cy.get('[data-cy="subjectWrapper"]')
+        .should('be.hidden');
+      cy.get('[data-cy="name"]').type('Horatio');
+      cy.get('[data-cy="showSubjectButton"]').click();
+      cy.get('[data-cy="subjectWrapper"]')
+        .should('be.visible');
+      cy.get('[data-cy="subject"]').type(' ');
+      cy.get('[data-cy="showMessageButton"]').click();
+      cy.get('[data-cy="label"]')
+      .should(($lbl) => {
+        expect($lbl).to.contain('Subject');
+        expect($lbl).to.have.class('invalidEntry');
+      });
+        cy.get('[data-cy="validationMessage"]')
+        .should(($msg) => {
+          expect($msg).to.contain('The subject field must filled in.');
+        });
+      cy.get('[data-cy="messageWrapper"]')
+        .should('be.hidden');
+      cy.get('[data-cy="subject"]').type('Just Testing This Biz');
+      cy.get('[data-cy="showMessageButton"]').click();
+      cy.get('[data-cy="messageWrapper"]')
+        .should('be.visible');
+      cy.get('[data-cy="message"]').type(' ');
+      cy.get('[data-cy="showEmailButton"]').click();
+      cy.get('[data-cy="label"]')
+      .should(($lbl) => {
+        expect($lbl).to.contain('Message');
+        expect($lbl).to.have.class('invalidEntry');
+      });
+      cy.get('[data-cy="validationMessage"]')
+        .should(($msg) => {
+          expect($msg).to.contain('A valid message is required.');
+        });
+      cy.get('[data-cy="emailWrapper"]')
+        .should('be.hidden');
+      cy.get('[data-cy="message"]')
+        .type('Here I am writing a letter to you in this test file. I hope you enjoy it');
+      cy.get('[data-cy="showEmailButton"]').click();
+      cy.get('[data-cy="emailWrapper"]')
+        .should('be.visible');
 
-    });
-    it('message is required', () => {
+      cy.get('[data-cy="email"]').type(' ');
+      cy.get('[data-cy="sendMessageButton"]').click();
+      cy.get('[data-cy="label"]')
+      .should(($lbl) => {
+        expect($lbl).to.contain('Email');
+        expect($lbl).to.have.class('invalidEntry');
+      });
+        cy.get('[data-cy="validationMessage"]')
+        .should(($msg) => {
+          expect($msg).to.contain('A valid email is required.');
+        });
+      cy.get('[data-cy="email"]')
+        .type('chrisrudnicky@gmail.com');
+      cy.get('[data-cy="sendMessageButton"]').click();
+      cy.get('[data-cy="modalWrapper"]')
+        .should('be.visible');
+      });
 
-    });
     it('focus is given to the name when the name field is displayed', () => {
-
+      // should('have.focus')
     });
     it('focus is given to the subject when the subject field is displayed', () => {
 
@@ -130,7 +194,7 @@ context('/contact view integration tests', () => {
     });
   });
   describe('Form submission message', () => {
-    it.only('successful form submission will hide the form and the page header and show the success message', () => {
+    it('successful form submission will hide the form and the page header and show the success message', () => {
       cy.fillOutContactForm();
       // cy.get('[data-cy="sendMessageButton"]').click();
       cy.get('[data-cy="succssMessageWrapper"]')
