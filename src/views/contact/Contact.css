@@ -5,9 +5,6 @@
   font-size: 6vw;
   margin: 0 10vw 0 10vw;
 }
-.formGreetingWrapper {
-
-}
 
 .contact-title {
  margin-bottom: 5vw;
@@ -22,8 +19,6 @@
 .hide{
   display: none !important;
 }
-
-
 .sendingWrapper {
   display: -webkit-box;
   display: -ms-flexbox;

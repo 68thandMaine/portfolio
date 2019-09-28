@@ -8,7 +8,6 @@ function ContactForm(props) {
   const [validationMessage, setValidationMessage] = useState();
   
   const handleFormSubmit = () => {
-    // event.preventDefault();
     props.sendMessage(formInputs);
   };
   const handleInputChange = (event) => {

@@ -22,10 +22,18 @@ Cypress.Commands.add('viewFormEmail', () => {
   cy.get('[data-cy="message"]').type('I am the message!');
   cy.get('[data-cy="showEmailButton"]').click();
 });
-Cypress.Commands.add('fillOutContactForm', () => {
+
+Cypress.Commands.add('fillOutContactFormCorrectly', () => {
   cy.fixture('emailjs.json').then((request) => {
-    cy.route('POST', Cypress.env('emailURL'), request.status);
+    return request.success;
   });
+});
+
+Cypress.Commands.add('fillOutContactFormIncorrectly', () => {
+  cy.fixture('email.json').then((request) => {
+    return request.failure;
+  });
+});
 
   // cy.visit({
   //   method: 'POST',
@@ -45,4 +53,3 @@ Cypress.Commands.add('fillOutContactForm', () => {
   //     }
   //   }
   // });
-});

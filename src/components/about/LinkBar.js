@@ -27,8 +27,8 @@ function hideText() {
           <p className='mobileLabel'>Linkedin</p>
         </div>
         <div className='mediaLink'>
-          <a className='icon' id='instagram' onMouseEnter={()=>showText('instagram')} onMouseLeave={()=>hideText()}alt='follow me on instagram' href='https://www.instagram.com/virginiathekid' ></a>
-          <p className='mobileLabel'>instagram</p>
+          <a className='icon' id='instagram' onMouseEnter={()=>showText('instagram')} onMouseLeave={()=>hideText()}alt='follow me on instagram' href="https://www.instagram.com/virginiathekid" ></a>
+          <p className='mobileLabel'>Instagram</p>
         </div>
         <div className='mediaLink'>
           <a className='icon' id='github'  onMouseEnter={()=>showText('github')} onMouseLeave={()=>hideText()}alt='link to github' href='https://www.github.com/68thandMaine'> </a>

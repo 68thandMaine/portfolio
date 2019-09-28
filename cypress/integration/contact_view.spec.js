@@ -158,20 +158,31 @@ context('/contact view integration tests', () => {
       });
     });
   });
-  describe.only('Form submission message', () => {
-    it('successful form submission will hide the form and the page header and show the success message', () => {
-      // cy.fillOutContactForm();
+  describe('Form submission message', () => {
+    it.only('successful form submission will hide the form and the page header and show the success message', () => {
+      // The function below should return a status code of 200, and then show the success message. That's what you need.
+      cy.fillOutContactFormCorrectly().then((success) => {
+        console.log('success', success);
+        // Then I want to assert that the modal should be visible and the content should say thank you I'll be in touch.
+        
+      });
+
+
+
+      
+      // I should write a function that switches the view from the contact form to the success or failure message rather than having it rely on a button. 
+
+
+
       // cy.get('[data-cy="sendMessageButton"]').click();
       // cy.get('[data-cy="succssMessageWrapper"]')
       //   .should('exist')
       //   .and('be.visible');
-      cy.fixture('emailjs.json').then((request) => {
-        console.log(request);
-      })
+     
     });
 
     it('An unsuccessful form submission will hide the form and page header and show the error message', () => {
-
+      cy.fillOutContactFormIncorrectly();
     });
   });
 });
