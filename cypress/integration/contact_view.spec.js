@@ -169,7 +169,7 @@ context('/contact view integration tests', () => {
 
 
 
-      
+       
       // I should write a function that switches the view from the contact form to the success or failure message rather than having it rely on a button. 
 
 
