@@ -3,8 +3,9 @@ context('/bio view integration tests', () => {
     cy.visit('/bio');
   });
   describe('Animation Behavior', () => {
-    it('hovering over "PORTLAND OREGON will add a background to the font', () => {
-
+    it.only('hovering over "PORTLAND OREGON will add a background to the font', () => {
+      cy.get('[data-cy="portlandText"]')
+        .trigger('mouseover');
     });
     it('hovering over the social media links will cause them to animate', () => {
 
