@@ -56,6 +56,7 @@ function About(props) {
               text='DOWNLOAD MY RESUME'
               purpose='redirect'
               clickEvent={(e) => handleViewResume()}
+              testingID='resumeButton'
               />
             </div>
             <div className='bodyText'>
