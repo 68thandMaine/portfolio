@@ -5,9 +5,9 @@ import './ContactForm.css';
 
 function ContactForm(props) {
   const [formInputs, setInputs] = useState({});
+  const [validationMessage, setValidationMessage] = useState();
   
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleFormSubmit = () => {
     props.sendMessage(formInputs);
   };
   const handleInputChange = (event) => {
@@ -16,7 +16,7 @@ function ContactForm(props) {
   };
   const handleKeyPress = (event, view) => {
     if(event.key==='Enter') {
-      advance(view);
+      validateInput(view);
     }
   };
   const goBack = (view) => {
@@ -64,28 +64,81 @@ function ContactForm(props) {
         return null;
     }
   };
+  const validateInput =(input) => {
+    switch (input) {
+      case "name" : 
+        if(formInputs.nme === undefined ||  formInputs.nme.trim().length <= 1) {
+          document.getElementById('nameLabel').classList.add('invalidEntry');
+          setValidationMessage('The name field must filled in.');
+          setTimeout(()=>{
+            document.getElementById('nameLabel').classList.remove('invalidEntry');
+            setValidationMessage();
+          }, 3000);
+        } else
+        advance('subject');
+        break;
+      case "subject": 
+        if(formInputs.sbjct === undefined || formInputs.sbjct.trim().length <= 1) {
+          document.getElementById('subjectLabel').classList.add('invalidEntry');
+          setValidationMessage('The subject field must filled in.');
+          setTimeout(()=>{
+            document.getElementById('subjectLabel').classList.remove('invalidEntry');
+            setValidationMessage();
+          }, 3000);
+        } else
+        advance('message');
+        break;
+      case "message":
+        if(formInputs.msg === undefined || formInputs.msg.trim().length <= 1) {
+          document.getElementById('messageLabel').classList.add('invalidEntry');
+          setValidationMessage('A valid message is required.');
+          setTimeout(()=>{
+            document.getElementById('messageLabel').classList.remove('invalidEntry');
+            setValidationMessage();
+          }, 3000);
+        } else
+        advance('email');
+        break;
+      case "email":
+        if(formInputs.eml === undefined || formInputs.eml.trim().length <= 1) {
+          document.getElementById('emailLabel').classList.add('invalidEntry');
+          setValidationMessage('A valid email is required.');
+          setTimeout(()=>{
+            document.getElementById('emailLabel').classList.remove('invalidEntry');
+            setValidationMessage();
+          }, 3000);
+        } else
+        handleFormSubmit();
+        break;
+      default:
+        return null;
+      }
+  }
 
   return (
     <div className='contactForm-body' data-cy='contactForm'>
+      
       <form className='contactForm' >
        
         <div id='nameWrapper' data-cy="nameWrapper">
           <div className='formInput'>
-           <label className='contactFormLabel' htmlFor='nme'>Full name / Company Name</label>
-            <input  id='nme' name='nme' onChange={handleInputChange} value={formInputs.name} data-cy='name' type='text' onKeyPress={(e)=>handleKeyPress(e, 'subject')} />
+           <label id='nameLabel' className='contactFormLabel' htmlFor='nme' data-cy='label'>Full Name / Company Name</label>
+            <p data-cy='validationMessage'>{validationMessage}</p>
+            <input  id='nme' name='nme' onChange={handleInputChange} value={formInputs.name} data-cy='name' type='text' onKeyPress={(e)=>handleKeyPress(e, 'name')} />
           </div>
           <Button
             text="to subject"
             purpose='advance'
-            clickEvent={(e) => {advance('subject')}}
+            clickEvent={(e) => {validateInput('name')}}
             testingID='showSubjectButton' />
         </div>
 
         <div id='subjectWrapper' className='hide' data-cy='subjectWrapper'>
           <div className='formInput'>
-            <label className='contactFormLabel' htmlFor='sbjct'>Subject</label>
+            <label id='subjectLabel' className='contactFormLabel' htmlFor='sbjct' data-cy='label'>Subject</label>
+            <p data-cy='validationMessage'>{validationMessage}</p>
             <input id='sbjct' name='sbjct' onChange={handleInputChange} value={formInputs.subject} data-cy='subject' type='text' 
-            onKeyPress={(e) => handleKeyPress(e, 'message')}/>
+            onKeyPress={(e) => handleKeyPress(e, 'subject')}/>
           </div>
           <div className='formNavigationButtons'>
             <Button
@@ -96,15 +149,16 @@ function ContactForm(props) {
             <Button
               text=" to message"
               purpose='advance'
-              clickEvent={(e) => {advance('message')}}
+              clickEvent={(e) => {validateInput('subject')}}
               testingID='showMessageButton' />
             </div>
         </div>
 
         <div id='messageWrapper' className='hide' data-cy='messageWrapper'>
           <div className='formInput'>
-            <label className='contactFormLabel' htmlFor='msg'>Message</label> 
-            <textarea id='msg' name='msg' onChange={handleInputChange} value={formInputs.message} data-cy='message' type='text' onKeyPress={(e) => handleKeyPress(e, 'email')} ></textarea>
+            <label id='messageLabel' className='contactFormLabel' htmlFor='msg' data-cy='label'>Message</label> 
+            <p data-cy='validationMessage'>{validationMessage}</p>
+            <textarea id='msg' name='msg' onChange={handleInputChange} value={formInputs.message} data-cy='message' type='text'></textarea>
           </div>
           <div className='formNavigationButtons'>
             <Button
@@ -115,15 +169,16 @@ function ContactForm(props) {
             <Button
               text="to email"
               purpose='advance'
-              clickEvent={(e) => {advance('email')}}
+              clickEvent={(e) => {validateInput('message')}}
               testingID='showEmailButton' />
             </div>
         </div>
 
         <div id='emailWrapper' className='hide' data-cy='emailWrapper'>
           <div className='formInput'>
-            <label className='contactFormLabel' htmlFor='eml'>Email</label>
-            <input id='eml' name='eml' onChange={handleInputChange} value={formInputs.email} data-cy='email' type='email'/>
+            <label id='emailLabel' className='contactFormLabel' htmlFor='eml' data-cy="label">Email</label>
+            <p data-cy='validationMessage'>{validationMessage}</p>
+            <input id='eml' name='eml' onChange={handleInputChange} value={formInputs.email} data-cy='email' type='email'  onKeyPress={(e) => handleKeyPress(e, 'email')}/>
           </div>
           <div className='formNavigationButtons'>
             <Button
@@ -134,7 +189,7 @@ function ContactForm(props) {
             <Button
               text='Send'
               purpose='send'
-              clickEvent={handleSubmit}
+              clickEvent={(e) => {validateInput('email')}}
               testingID='sendMessageButton'
               />
             </div>

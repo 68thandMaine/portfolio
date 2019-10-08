@@ -4,7 +4,7 @@ import './LanguageIcons.css';
 import {icons} from '../../assets/icons/icons.js';
 
 const LanguageIcons = (props) => {
-  useEffect(()=>{
+  useEffect((props)=>{
     let languages = props.languages;
     for( let i = 0; i < languages.length; i++ ) {
       if(languages[i] === "Angular") {

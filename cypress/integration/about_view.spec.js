@@ -2,26 +2,24 @@ context('/bio view integration tests', () => {
   beforeEach(() => {
     cy.visit('/bio');
   });
-  describe('Animation Behavior', () => {
-    it('hovering over "PORTLAND OREGON will add a background to the font', () => {
-
-    });
-    it('hovering over the social media links will cause them to animate', () => {
-
-    });
-  });
   describe('Social Media Links', () => {
-    it('clicking the Github will redirect to the 68thandMaine github', () => {
-
+    it('The Github icon contains an <a> with the 68thandMaine Github URL', () => {
+      cy.get('[data-cy="githubLink"]')
+        .should('have.attr', 'href')
+        .and('eq', 'https://www.github.com/68thandMaine');
     });
-    it('clicking the Linkedin will redirect to Chris Rudnicky\'s Linkedin account', () => {
-
+    it('The Linkedin icon contains an <a> with my Linkedin URL', () => {
+      cy.get('[data-cy="linkedinLink"]')
+      .should('have.attr', 'href')
+      .and('eq', 'https://www.linkedin.com/in/crudnicky');
     });
-    it('clicking the Instagram will redirect to VirginiaTheKid\'s Instagram account', () => {
-
+    it('The instagram icon contains an <a> with my instagram URL', () => {
+      cy.get('[data-cy="instagramLink"]')
+      .should('have.attr', 'href')
+      .and('eq', 'https://www.instagram.com/virginiathekid');
     });
     it('hovering over the linkedin icon will display "linkedin" in caps', () => {
-
+      // cy.get('[data-cy="linkedinLink').
     });
     it('hovering over the instagram icon will display "instagram" in caps', () => {
 
@@ -31,8 +29,11 @@ context('/bio view integration tests', () => {
     });
   });
   describe('Buttons', () => {
-    it('clicking the resume button will redirect to the resume page', () => {
-
+    it.only('clicking the resume button will redirect to the resume page', () => {
+      cy.get('[data-cy="resumeButton"]')
+        .click();
+      cy.url()
+        .should('include', '/resume');
     });
   });
 });

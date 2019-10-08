@@ -17,7 +17,7 @@ Button.propTypes = {
   text: PropTypes.string,
   purpose: PropTypes.string, 
   clickEvent: PropTypes.func,
-  testingId: PropTypes.string
+  testingID: PropTypes.string
 }
 
 export default Button;
