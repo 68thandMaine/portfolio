@@ -44,7 +44,7 @@
     background: hsl(0, 3%, 22%, 0.6);
   }
   .sidebarLink {
-    line-height: 2vh;
+    line-height: 2rem;
     font-weight: bolder;
     font-size: 4vw;
   }  
@@ -127,7 +127,7 @@
   }
   .aboutBody-text {
     text-align: justify;
-    line-height: 3vh;
+    line-height: 3rem;
   }
   .aboutBody-text p{
    margin-bottom: 1.5vw;
@@ -183,7 +183,7 @@
     flex-flow: column nowrap;
   }
   .text-container p {
-   line-height: 3vh;
+   line-height: 3rem;
    font-size: 3.5vw; 
   }
   .intro h6{
@@ -297,7 +297,7 @@
   }
   .pageHeaderWrapper h1 {
     font-size: 20vw;
-    line-height: 12vh
+    line-height: 12rem
   }
   .introGroup h3{
     font-size: 6vw;
