@@ -1,0 +1,22 @@
+{
+  "personalProjects": {
+       "1": {
+        "name": "Elenor",
+        "description": "description of project",
+        "image": null,
+        "languages": ["React", "JavaScript", "Firebase"],
+        "percentComplete": 75,
+        "githubURL": "https://github.com/68thandMaine/Eleno-r",
+        "readMeURL": "https://github.com/68thandMaine/Eleno-r/blob/master/ReadMe.md"
+      },
+     "2": {
+        "name": "Carry-Me",
+        "description": "description of project",
+        "image": null,
+        "languages": ["React", "JavaScript", "Node"],
+        "percentComplete": 5,
+        "githubURL": "https://github.com/68thandMaine/carry-me",
+        "readMeURL": "https://github.com/68thandMaine/carry-me/blob/master/ReadMe.md"
+      }
+  }
+}

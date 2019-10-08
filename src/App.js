@@ -14,7 +14,7 @@ import Views from './routes/Routes';
 import { BrowserRouter as Router } from "react-router-dom";
 
 // STATE
-import { getRepos } from './actions';
+import { getRepos, receivePersonalProjects } from './actions';
 
 
 class App extends React.Component {
@@ -31,7 +31,8 @@ class App extends React.Component {
   
   componentDidMount() {
     this.props.dispatch((getRepos()));
-    this.handleChangeBackground(window.location.pathname)
+    this.props.dispatch((receivePersonalProjects()));
+    this.handleChangeBackground(window.location.pathname);
   }
 
   handleViewSidebar() {

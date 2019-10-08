@@ -35,21 +35,24 @@ Cypress.Commands.add('fillOutContactFormIncorrectly', () => {
   });
 });
 
-  // cy.visit({
-  //   method: 'POST',
-  //   url: Cypress.env('emailURL'),
-  //   headers: {
-  //     'Content-Type' : 'application/json',
-  //   },
-  //   body: {
-  //     user_id: Cypress.env('userID'),
-  //     service_id: Cypress.env('serviceID'),
-  //     template_id: Cypress.env('templateID'),
-  //     template_params: {
-  //       nme: "Chris",
-  //       sbjct: "Cypress Testing",
-  //       msg: "Test test, this is a test.",
-  //       eml: "chrisrudnicky@gmail.com"
-  //     }
-  //   }
-  // });
+Cypress.Commands.add('setStateAndVisit', (url, stateField, fixture) => {
+  cy.fixture(fixture).then(data=> {
+    cy.visit(url, {
+      onBeforeLoad: win => {
+        switch(stateField) {
+          case 'personalProjects' : {
+            win.initialState = data.personalProjects;
+            break;
+          }
+          case 'githubProjects': {
+            win.initialState = data.gitHubProjects;
+            break;
+          }
+          default:
+            return null;
+        }
+      }
+    
+    });
+  });
+});

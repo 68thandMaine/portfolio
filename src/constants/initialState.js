@@ -1,5 +1,4 @@
-const initialState = {
-personalProjects: {
+const initialState = (window.Cypress && window.initialState) || {
     1: {
       name: "Elenor",
       description: "Elenor is a portfolio for the talented artist Shaina Morales. The overall goal was to develop a  minimal site so that the content was the main focus. Navigating throughout the portfolio is controlled by a fixed menu bar, and a user can intuitively browse through a collection of Shaina's work sorted into galleries by category. Code and application design by myself. Art direction by Shaina Morales.",
@@ -45,7 +44,6 @@ personalProjects: {
       githubURL: "https://github.com/68thandMaine/tumbleweedbakehouse",
       readMeURL: "https://github.com/68thandMaine/tumbleweedbakehouse/blob/master/README.md"
     }
-  }
 };
 
 export default initialState;

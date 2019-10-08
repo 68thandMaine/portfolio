@@ -43,14 +43,16 @@ function Card(props) {
             <h3>APPLICATIONS IN DEVELOPMENT</h3>
             <div className='row'>
 
-                {Object
-                    .keys(props.repositoryList.personalProjects)
-                    .map(repo => {
-                        let project = props.repositoryList.personalProjects[repo];
+                {Object.keys(props.repositoryList).map(repo => {
+                        let project = props.repositoryList[repo];
                         let technologies = project.languages
-
+                        
+                        
+                        // <button onClick={()=>{console.log(props.repositoryList)}}>TEST</button>
                         return (
                             <div className='grid-item-wrapper' key={repo}>
+                        
+                      
 
                                 <div className='card'>
                                     <h4>{project.name}</h4>
@@ -67,13 +69,18 @@ function Card(props) {
                                                             text='Readme'
                                                             purpose='projectLinkButton'
                                                             clickEvent={()=>goTo(project.readMeURL)}
+                                                            testingID='projectLinkReadMe'
                                                             />
                                                     </div>
                                                 </div>
                                                 <div className='projectLinks'>
                                                     <i id={`ghIcon_${project.name}`} className='fab fa-github fa-2x'/>
                                                     <div onMouseEnter={()=>enlargeGHIcon(project.name)} onMouseLeave={()=>shrinkGHIcon(project.name)}>
-                                                        <Button text='Github' purpose='projectLinkButton' clickEvent={()=>goTo(project.githubURL)}/>
+                                                        <Button 
+                                                            text='Github' 
+                                                            purpose='projectLinkButton' 
+                                                            clickEvent={()=>goTo(project.githubURL)}
+                                                            testingID='projectLinkGithub'/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -81,7 +88,7 @@ function Card(props) {
                                         <div className='footer-languages'>
                                             <LanguageIcons
                                                 currentProject={project.name}
-                                                languages={technologies}
+                                                languageArray={technologies}
                                                 purpose='Environment'/>
                                         </div>
                                     </div>

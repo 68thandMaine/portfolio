@@ -19,7 +19,7 @@ function hideText() {
   return (
     <div className='linkbar'>
       <div className='selectedLinkWrapper'>
-        <p id='selectedLink'>{socialName}</p>
+        <p id='selectedLink' data-cy='socialMediaAccount'>{socialName}</p>
       </div>
       <div className='linkbar-container'>
         <div className='mediaLink'>
