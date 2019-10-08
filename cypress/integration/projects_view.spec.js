@@ -1,4 +1,4 @@
-isContext('./projects view integration tests', () => {
+describe('./projects view integration tests', () => {
   beforeEach(() => {
     cy.visit('./projects');
   });

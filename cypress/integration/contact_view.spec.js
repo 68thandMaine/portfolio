@@ -162,7 +162,7 @@ context('/contact view integration tests', () => {
     it.only('successful form submission will hide the form and the page header and show the success message', () => {
       // The function below should return a status code of 200, and then show the success message. That's what you need.
       cy.fillOutContactFormCorrectly().then(($success) => {
-        expect($success).to.have.value(200)
+        console.log($success)
         // Then I want to assert that the modal should be visible and the content should say thank you I'll be in touch.
         
       });

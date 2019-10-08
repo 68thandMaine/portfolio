@@ -23,15 +23,15 @@ function hideText() {
       </div>
       <div className='linkbar-container'>
         <div className='mediaLink'>
-          <a className='icon' id='linkedin' data-cy='linkedinLink' onMouseEnter={()=> showText('linkedin')} onMouseLeave={() => hideText()} alt='follow me on linkedin' href='https://www.linkedin.com/in/crudnicky' > </a>
+          <div className='icon' id='linkedin' data-cy='linkedinLink' onMouseEnter={()=> showText('linkedin')} onMouseLeave={() => hideText()} alt='follow me on linkedin' href='https://www.linkedin.com/in/crudnicky' > </div>
           <p className='mobileLabel'>Linkedin</p>
         </div>
         <div className='mediaLink'>
-          <a className='icon' id='instagram' data-cy='instagramLink' onMouseEnter={()=>showText('instagram')} onMouseLeave={()=>hideText()}alt='follow me on instagram' href="https://www.instagram.com/virginiathekid" ></a>
+          <div className='icon' id='instagram' data-cy='instagramLink' onMouseEnter={()=>showText('instagram')} onMouseLeave={()=>hideText()}alt='follow me on instagram' href="https://www.instagram.com/virginiathekid" ></div>
           <p className='mobileLabel'>Instagram</p>
         </div>
         <div className='mediaLink'>
-          <a className='icon' id='github' data-cy="githubLink" onMouseEnter={()=>showText('github')} onMouseLeave={()=>hideText()}alt='link to github' href='https://www.github.com/68thandMaine'> </a>
+          <div className='icon' id='github' data-cy="githubLink" onMouseEnter={()=>showText('github')} onMouseLeave={()=>hideText()}alt='link to github' href='https://www.github.com/68thandMaine'> </div>
           <p className='mobileLabel'>Github</p>
         </div>
       </div>
