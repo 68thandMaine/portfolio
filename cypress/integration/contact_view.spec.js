@@ -1,3 +1,6 @@
+// This allows testing of different data responses. Using to stub out fetch requests.
+// const deferred = require('./deferred');
+
 context('/contact view integration tests', () => {
   beforeEach(() => {
     cy.visit('./contact');
@@ -109,11 +112,6 @@ context('/contact view integration tests', () => {
         .should(($msg) => {
           expect($msg).to.contain('A valid email is required.');
         });
-      // cy.get('[data-cy="email"]')
-      //   .type('chrisrudnicky@gmail.com');
-      // cy.get('[data-cy="sendMessageButton"]').click();
-      // cy.get('[data-cy="modalWrapper"]')
-      //   .should('be.visible');
       });
 
     it('focus is given to the name when the name field is displayed', () => {
@@ -158,31 +156,30 @@ context('/contact view integration tests', () => {
       });
     });
   });
-  describe('Form submission message', () => {
-    it.only('successful form submission will hide the form and the page header and show the success message', () => {
-      // The function below should return a status code of 200, and then show the success message. That's what you need.
-      cy.fillOutContactFormCorrectly().then(($success) => {
-        console.log($success)
-        // Then I want to assert that the modal should be visible and the content should say thank you I'll be in touch.
-        
-      });
-
-
-
-       
-      // I should write a function that switches the view from the contact form to the success or failure message rather than having it rely on a button. 
-
-
-
-      // cy.get('[data-cy="sendMessageButton"]').click();
-      // cy.get('[data-cy="succssMessageWrapper"]')
-      //   .should('exist')
-      //   .and('be.visible');
-     
-    });
-
-    it('An unsuccessful form submission will hide the form and page header and show the error message', () => {
-      cy.fillOutContactFormIncorrectly();
-    });
-  });
 });
+  
+  
+  /**
+   * The test case below is not ready. Cypress cannot intercept fetch requests, so I have to hack a way around the fetch requests my portfolio makes. I believe this is more of a unit test anyways...
+   */
+  
+  
+  // describe('Form submission message', () => {
+  //   it.only('successful form submission will hide the form and the page header and show the success message', () => {
+  //     cy.fixture('emailjs.json').as('email');
+  //     cy.visit('/contact');
+  //     cy.viewFormEmail();
+  //     cy.get('[data-cy="email"]').type('chrisrudnicky@gmail.com')
+  //     cy.get('[data-cy="sendMessageButton"]').then((button) => {
+  //       cy.window().then((win) => {
+  //         cy.stub(win, 'handleSendMessage', '@email.correctEmail');
+  //         button.click();
+  //       });
+  //     });
+  //     cy.get('[data-cy="sendingWrapper"]').should('exist')
+  //   });
+  //   it('An unsuccessful form submission will hide the form and page header and show the error message', () => {
+  //     cy.fillOutContactFormIncorrectly();
+  //   });
+  // });
+

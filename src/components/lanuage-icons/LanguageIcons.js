@@ -4,8 +4,8 @@ import './LanguageIcons.css';
 import {icons} from '../../assets/icons/icons.js';
 
 const LanguageIcons = (props) => {
-  useEffect((props)=>{
-    let languages = props.languages;
+  useEffect(()=>{
+    let languages = props.languageArray;
     for( let i = 0; i < languages.length; i++ ) {
       if(languages[i] === "Angular") {
         let angularIcon = document.createElement("IMG");
@@ -59,20 +59,20 @@ const LanguageIcons = (props) => {
         document.getElementById(props.currentProject).append(vueIcon);
       }
     }
-  }, []);
+  }, [props.languageArray, props.currentProject]);
 
     return (
       <div className='languageIconWrapper' >
         <h6>{props.purpose}</h6>
-        <div className='languageIcons' id={props.currentProject}>
-
+        <div className='languageIcons' id={props.currentProject} data-cy='languageIcons'>
+          
         </div>
       </div>
     );
   }
 
 LanguageIcons.propTypes = {
-  languages: PropTypes.array.isRequired,
+  languageArray: PropTypes.array.isRequired,
   currentProject: PropTypes.string.isRequired,
   purpose: PropTypes.string.isRequired,
 }

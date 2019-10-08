@@ -1,3 +1,6 @@
+import { receiveRepos } from '../../src/actions'
+const dispatch = action => cy.window().its('store').invoke('dispatch', action)
+
 Cypress.Commands.add('viewFormName', () => {
   cy.get('[data-cy="showFormButton"]').click();
 });
@@ -35,21 +38,24 @@ Cypress.Commands.add('fillOutContactFormIncorrectly', () => {
   });
 });
 
-  // cy.visit({
-  //   method: 'POST',
-  //   url: Cypress.env('emailURL'),
-  //   headers: {
-  //     'Content-Type' : 'application/json',
-  //   },
-  //   body: {
-  //     user_id: Cypress.env('userID'),
-  //     service_id: Cypress.env('serviceID'),
-  //     template_id: Cypress.env('templateID'),
-  //     template_params: {
-  //       nme: "Chris",
-  //       sbjct: "Cypress Testing",
-  //       msg: "Test test, this is a test.",
-  //       eml: "chrisrudnicky@gmail.com"
-  //     }
-  //   }
-  // });
+Cypress.Commands.add('setStateAndVisit', (url, stateField, fixture) => {
+  cy.fixture(fixture).then(data=> {
+    cy.visit(url, {
+      onBeforeLoad: win => {
+        switch(stateField) {
+          case 'personalProjects' : {
+            win.initialState = data.personalProjects;
+            break;
+          }
+          // case 'githubProjects': {
+          //   // For now this is unused as Cypress does not support interacting with 
+          //   // the fetch api and I cannot overwrite the call setting githubproject state.
+          //   break;
+          // }
+          default:
+            return null;
+        }
+      }
+    });
+  });
+});

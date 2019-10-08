@@ -8,13 +8,13 @@ function sidebar(props) {
 
   return (
     <div className='sidebar'>
-      <nav className='sidebar_nav'>
+      <nav className='sidebar_nav'  data-cy='sidebar'>
       <Button 
         text='X'
         purpose='closeSidebarButton'
         clickEvent={props.closeMenu}
         testingId = 'closeSidebarButton' />
-      <h1 className='mobileMenu'>MENU</h1>
+      <h1 className='mobileMenu' data-cy='mobileMenuHeader'>MENU</h1>
         <ul className='sidebarMenu'> 
           <li className='sidebarLinkWrapper' onClick={(e) => props.changeBackground('/', e)}><Link className='sidebarLink' to ='/' >Home</Link></li>
           <li className='sidebarLinkWrapper' onClick={(e) => props.changeBackground('/bio', e)}><Link className='sidebarLink' to='/bio' >About Me</Link></li>

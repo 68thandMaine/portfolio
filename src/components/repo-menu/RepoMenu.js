@@ -42,7 +42,7 @@ function RepoMenu(props) {
                   />
                  
                  <LanguageIcons 
-                  languages = {formatLanguages(repository.language)} 
+                  languageArray = {formatLanguages(repository.language)} 
                   currentProject ={repository.name}
                   purpose = "Language " />
               </div>

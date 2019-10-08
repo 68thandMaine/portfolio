@@ -17,6 +17,8 @@ function Contact(props) {
         showSuccessMessage();
     });
 
+    window.handleSendMessage = handleSendMessage
+
     async function handleSendMessage(message) {
        
         if (EmailService.filterSpam(message)) {
@@ -54,12 +56,12 @@ function Contact(props) {
             case 400: 
             return (
                 <Modal 
-                text="Sorry, there was an error with the form submission."
-                button="tryAgain" />
+                    text="Sorry, there was an error with the form submission."
+                    button="tryAgain" />
             );
             case 0:
                 return (
-                <div className='sendingWrapper'>
+                <div className='sendingWrapper' data-cy='sendingWrapper'>
                     <LoadingBars />
                 </div>);
             default: 

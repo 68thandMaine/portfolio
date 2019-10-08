@@ -1,0 +1,23 @@
+{
+  "data": {
+    "gitHubRepositories": [
+      {
+        "name": "Portfolio",
+        "githubURL": "https://github.com/68thandMaine/portfolio",
+        "createdAt": "Fri, 16 Nov 2018",
+        "description": "Project description",
+        "language": "React"
+      },
+      {
+        "name": "Where is my bike",
+        "githubURL": "https://github.com/68thandMaine/Where-Is-My-Bike",
+        "createdAt": "Fri, 16 Nov 2018",
+        "description": "Project description",
+        "language": "JavaScript"
+      }
+    ],
+    "noRepos": [
+
+    ]
+  }
+}

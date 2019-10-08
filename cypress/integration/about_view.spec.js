@@ -19,17 +19,26 @@ context('/bio view integration tests', () => {
       .and('eq', 'https://www.instagram.com/virginiathekid');
     });
     it('hovering over the linkedin icon will display "linkedin" in caps', () => {
-      // cy.get('[data-cy="linkedinLink').
+      cy.get('[data-cy="linkedinLink').trigger('mouseover');
+      cy.get('[data-cy="socialMediaAccount"]').then(($p) => {
+        expect($p).to.have.text('linkedin');
+      });
     });
     it('hovering over the instagram icon will display "instagram" in caps', () => {
-
+      cy.get('[data-cy="instagramLink').trigger('mouseover');
+      cy.get('[data-cy="socialMediaAccount"]').then(($p) => {
+        expect($p).to.have.text('instagram');
+      });
     });
     it('hovering over the github icon will display "github" in caps', () => {
-
+      cy.get('[data-cy="githubLink').trigger('mouseover');
+      cy.get('[data-cy="socialMediaAccount"]').then(($p) => {
+        expect($p).to.have.text('github');
+      });
     });
   });
   describe('Buttons', () => {
-    it.only('clicking the resume button will redirect to the resume page', () => {
+    it('clicking the resume button will redirect to the resume page', () => {
       cy.get('[data-cy="resumeButton"]')
         .click();
       cy.url()

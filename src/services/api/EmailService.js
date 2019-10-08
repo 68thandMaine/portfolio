@@ -12,7 +12,6 @@ const EmailService = {
         template_params: email
       }) 
     });
-    console.log(response)
     return response.status;
   },
   filterSpam: (message) => {

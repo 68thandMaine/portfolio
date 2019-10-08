@@ -1,0 +1,85 @@
+{
+  "personalProjects": {
+       "1": {
+        "name": "C# EXAMPLE",
+        "description": "C# INTEGRATION EXAMPLEs",
+        "image": null,
+        "languages": ["C#"],
+        "percentComplete": 75,
+        "githubURL": "https://github.com/68thandMaine/Eleno-r",
+        "readMeURL": "https://github.com/68thandMaine/Eleno-r/blob/master/ReadMe.md"
+      },
+     "2": {
+      "name": "JavaScript EXAMPLE",
+      "description": "JavaScript INTEGRATION EXAMPLEs",
+      "image": null,
+      "languages": ["JavaScript"],
+        "percentComplete": 5,
+        "githubURL": "https://github.com/68thandMaine/carry-me",
+        "readMeURL": "https://github.com/68thandMaine/carry-me/blob/master/ReadMe.md"
+      },
+      "3": {
+       "name": "TypeScript EXAMPLE",
+       "description": "TypeScript INTEGRATION EXAMPLEs",
+       "image": null,
+       "languages": ["TypeScript"],
+         "percentComplete": 5,
+         "githubURL": "https://github.com/68thandMaine/carry-me",
+         "readMeURL": "https://github.com/68thandMaine/carry-me/blob/master/ReadMe.md"
+       },
+       "4": {
+        "name": "Vue EXAMPLE",
+        "description": "Vue INTEGRATION EXAMPLEs",
+        "image": null,
+        "languages": ["Vue"],
+          "percentComplete": 5,
+          "githubURL": "https://github.com/68thandMaine/carry-me",
+          "readMeURL": "https://github.com/68thandMaine/carry-me/blob/master/ReadMe.md"
+        },
+        "5": {
+         "name": "React EXAMPLE",
+         "description": "React INTEGRATION EXAMPLEs",
+         "image": null,
+         "languages": ["React"],
+           "percentComplete": 5,
+           "githubURL": "https://github.com/68thandMaine/carry-me",
+           "readMeURL": "https://github.com/68thandMaine/carry-me/blob/master/ReadMe.md"
+         },
+         "6": {
+          "name": "Angular EXAMPLE",
+          "description": "Angular INTEGRATION EXAMPLEs",
+          "image": null,
+          "languages": ["Angular"],
+            "percentComplete": 5,
+            "githubURL": "https://github.com/68thandMaine/carry-me",
+            "readMeURL": "https://github.com/68thandMaine/carry-me/blob/master/ReadMe.md"
+          },
+          "7": {
+           "name": "MySql EXAMPLE",
+           "description": "MySql INTEGRATION EXAMPLEs",
+           "image": null,
+           "languages": ["SQL"],
+             "percentComplete": 5,
+             "githubURL": "https://github.com/68thandMaine/carry-me",
+             "readMeURL": "https://github.com/68thandMaine/carry-me/blob/master/ReadMe.md"
+           },
+           "8": {
+            "name": "Firebase EXAMPLE",
+            "description": "Firebase INTEGRATION EXAMPLEs",
+            "image": null,
+            "languages": ["Firebase"],
+              "percentComplete": 5,
+              "githubURL": "https://github.com/68thandMaine/carry-me",
+              "readMeURL": "https://github.com/68thandMaine/carry-me/blob/master/ReadMe.md"
+            },
+            "9": {
+              "name": "HTML EXAMPLE",
+              "description": "HTML INTEGRATION EXAMPLEs",
+              "image": null,
+              "languages": ["HTML"],
+                "percentComplete": 5,
+                "githubURL": "https://github.com/68thandMaine/carry-me",
+                "readMeURL": "https://github.com/68thandMaine/carry-me/blob/master/ReadMe.md"
+              }
+  }
+}
