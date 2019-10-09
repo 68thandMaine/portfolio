@@ -165,7 +165,7 @@ context('/contact view integration tests', () => {
   
   
   // describe('Form submission message', () => {
-  //   it.only('successful form submission will hide the form and the page header and show the success message', () => {
+  //   it('successful form submission will hide the form and the page header and show the success message', () => {
   //     cy.fixture('emailjs.json').as('email');
   //     cy.visit('/contact');
   //     cy.viewFormEmail();
