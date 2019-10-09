@@ -9,18 +9,18 @@ function LanguageChart(props) {
     setTimeout(() => {
       buildChart();
     }, 1500);
-  });
+  }, [props.repositoryList]);
   
     
   let chartRef = React.createRef();
   
-  function buildChart(){
-  const myChartRef = chartRef.current.getContext('2d'); 
+ function buildChart(){
+    const myChartRef = chartRef.current.getContext('2d'); 
     let languages = filterLanguages(props.repositoryList);
     let data = Object.values(languages);
     let tableLabels = Object.keys(languages);
     let colors = createColors(data);
-    let myChart = new Chart(myChartRef, {
+     new Chart(myChartRef, {
     type: 'doughnut', 
     data: {      
       labels: tableLabels,

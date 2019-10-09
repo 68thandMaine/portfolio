@@ -16,10 +16,10 @@ function sidebar(props) {
         testingId = 'closeSidebarButton' />
       <h1 className='mobileMenu' data-cy='mobileMenuHeader'>MENU</h1>
         <ul className='sidebarMenu'> 
-          <li className='sidebarLinkWrapper' onClick={(e) => props.changeBackground('/', e)}><Link className='sidebarLink' to ='/' >Home</Link></li>
-          <li className='sidebarLinkWrapper' onClick={(e) => props.changeBackground('/bio', e)}><Link className='sidebarLink' to='/bio' >About Me</Link></li>
-          <li className='sidebarLinkWrapper' onClick={(e) => props.changeBackground('/projects',e)}><Link className='sidebarLink' to ='/projects' >Work</Link></li>
-          <li className='sidebarLinkWrapper' onClick={(e) => props.changeBackground('/contact', e)}><Link className='sidebarLink' to='/contact' >Contact</Link></li>
+          <Link className='sidebarLink' to ='/'  onClick={(e) => props.changeBackground('/', e)}>Home</Link>
+          <Link className='sidebarLink' to='/bio' onClick={(e) => props.changeBackground('/bio', e)}>About Me</Link>
+          <Link className='sidebarLink' to ='/projects' onClick={(e) => props.changeBackground('/projects',e)}>Work</Link>
+          <Link className='sidebarLink' to='/contact' onClick={(e) => props.changeBackground('/contact', e)}>Contact</Link>
           <li className='mobileCloseButton'>
             <Button 
               text='close'

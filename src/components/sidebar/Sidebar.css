@@ -14,7 +14,9 @@
 .active {
   color: #fff;
 }
+
 .sidebarLink {
+  display: block;
   font-family: Moon-Light;
   font-size: 3vw;
   text-transform: uppercase;
