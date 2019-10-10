@@ -20,6 +20,6 @@ workflows:
               - develop
           requires:
             - cypress/install
-          start: npm run start
-          test: npm run cypress
+          start: npm start
+          
     
