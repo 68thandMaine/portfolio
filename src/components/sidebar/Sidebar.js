@@ -8,24 +8,24 @@ function sidebar(props) {
 
   return (
     <div className='sidebar'>
-      <nav className='sidebar_nav'>
+      <nav className='sidebar_nav'  data-cy='sidebar'>
       <Button 
         text='X'
         purpose='closeSidebarButton'
         clickEvent={props.closeMenu}
-        testingId = 'closeSidebarButton' />
-      <h1 className='mobileMenu'>MENU</h1>
+        testingID = 'closeSidebarButton' />
+      <h1 className='mobileMenu' data-cy='mobileMenuHeader'>MENU</h1>
         <ul className='sidebarMenu'> 
-          <li className='sidebarLinkWrapper' onClick={(e) => props.changeBackground('/', e)}><Link className='sidebarLink' to ='/' >Home</Link></li>
-          <li className='sidebarLinkWrapper' onClick={(e) => props.changeBackground('/bio', e)}><Link className='sidebarLink' to='/bio' >About Me</Link></li>
-          <li className='sidebarLinkWrapper' onClick={(e) => props.changeBackground('/projects',e)}><Link className='sidebarLink' to ='/projects' >Work</Link></li>
-          <li className='sidebarLinkWrapper' onClick={(e) => props.changeBackground('/contact', e)}><Link className='sidebarLink' to='/contact' >Contact</Link></li>
+          <Link className='sidebarLink' to ='/'  onClick={(e) => props.changeBackground('/', e)} data-cy='homeLink'>Home</Link>
+          <Link className='sidebarLink' to='/bio' onClick={(e) => props.changeBackground('/bio', e)} data-cy='bioLink'>About Me</Link>
+          <Link className='sidebarLink' to ='/projects' onClick={(e) => props.changeBackground('/projects',e)} data-cy='projectsLink'>Work</Link>
+          <Link className='sidebarLink' to='/contact' onClick={(e) => props.changeBackground('/contact', e)} data-cy='contactLink'>Contact</Link>
           <li className='mobileCloseButton'>
             <Button 
               text='close'
               purpose='mobileCloseSidebarButton'
               clickEvent={props.closeMenu}
-              testingId = 'mobileCloseSidebarButton' />
+              testingID = 'mobileCloseSidebarButton' />
           </li>
         </ul>
       </nav>

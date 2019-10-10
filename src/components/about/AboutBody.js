@@ -12,7 +12,7 @@ function AboutBody() {
           <p>I take pride in the content I produce, and I tend to work most with <span className='technologyBolder'>React, Vue, Node, and C#</span>. I enjoy using my critical thinking and keen attention to detail that I honed working in scientific fields and form a well documented, and strategic approach for creating new tools and bringing ideas to life.
           </p>  
           <p>
-          I drink coffee, I read, I bike, I notice the small details in life, I write code and grow myself a little each day.
+          I drink coffee, I read, I bike, I notice the small details in life, I write code and grow a little each day.
           </p>
        </div>
   )

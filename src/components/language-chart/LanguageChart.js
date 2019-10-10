@@ -1,65 +1,52 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Chart from 'chart.js';
 import PropTypes from 'prop-types';
 import './LanguageChart.css';
 
-class LanguageChart extends React.Component {
+function LanguageChart(props) {
+  let chartRef = React.createRef();
 
-  constructor(props){
-    super(props);
-    this.chartRef = React.createRef(); // Creates direct access to the DOM node chart.js will use
-    this.buildChart = this.buildChart.bind(this);
-    this.countRepoLanguage = this.countRepoLanguage.bind(this);
-    this.filterLanguages = this.filterLanguages.bind(this);
-    this.createColors = this.createColors.bind(this);
-  }  
-
-  componentDidMount() {  
-    setTimeout(() => {
-      this.buildChart();
-    }, 1500);
+  useEffect(() => {  
+  function buildChart(){
+      const myChartRef = chartRef.current.getContext('2d'); 
+      let languages = filterLanguages(props.repositoryList);
+      let data = Object.values(languages);
+      let tableLabels = Object.keys(languages);
+      let colors = createColors(data);
+       new Chart(myChartRef, {
+      type: 'doughnut', 
+      data: {      
+        labels: tableLabels,
+        datasets: [{
+            data: data,
+            backgroundColor: colors,
+            hoverBorderWidth: 5,
+            hoverBackgroundColor: 'transparent',
+            label: ''
+          }],
+      },
+      options: {
+        animation:{
+          animationEasing: 'easeInOutQuart',
+          duration: 3000,
+          circumference: 15 * Math.PI,
+          animateRotate: true,
+          animateScale: true
+        },
+        responsive: true,
+        rotation: 90,
+      }
+    });
+  }
+  function filterLanguages(repoList) {  
+    return repoList.reduce(countRepoLanguage, {});
   }
   
-  buildChart(){
-  const myChartRef = this.chartRef.current.getContext('2d'); 
-    let languages = this.filterLanguages(this.props.repositoryList);
-    let data = Object.values(languages);
-    let tableLabels = Object.keys(languages);
-    let colors = this.createColors(data);
-  this.myChart = new Chart(myChartRef, {
-    type: 'doughnut', 
-    data: {      
-      labels: tableLabels,
-      datasets: [{
-          data: data,
-          backgroundColor: colors,
-          hoverBorderWidth: 5,
-          hoverBackgroundColor: 'transparent',
-          label: ''
-        }],
-    },
-    options: {
-      animation:{
-        animationEasing: 'easeInOutQuart',
-        duration: 3000,
-        circumference: 15 * Math.PI,
-        animateRotate: true,
-        animateScale: true
-      },
-      responsive: true,
-      rotation: 90,
-    }
-  });
-}
-  filterLanguages(repoList) {  
-    return repoList.reduce(this.countRepoLanguage, {});
-  }
-
-   countRepoLanguage(counter, repository) {
+   function countRepoLanguage(counter, repository) {
    counter[repository.language] = (counter[repository.language] || 0) + 1;
    return counter;
   }
-  createColors(array) {
+  function createColors(array) {
     let colors = [];
     for (let i = 0; i < array.length; i++) {
       const hue = Math.floor(Math.random()* 10);
@@ -71,20 +58,25 @@ class LanguageChart extends React.Component {
     }
     return colors;
   }
+  
+  setTimeout(() => {
+    buildChart();
+  }, 1500);  
+}, [props.repositoryList, chartRef]);
 
-  render(){
+
+  
     return (
-      <div className='languageChart-wrapper'>
+      <div className='languageChart-wrapper' data-cy='chart'> 
         <h2>Quantity of projects / language on Github</h2>
         <canvas
           id='pieChart'
-          ref={this.chartRef}
+          ref={chartRef}
           width='6'
           height='6'
           />
       </div>
     );
-  }
 }
 
 LanguageChart.spropTypes = {

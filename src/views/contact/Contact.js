@@ -20,7 +20,7 @@ function Contact(props) {
     async function handleSendMessage(message) {
        
         if (EmailService.filterSpam(message)) {
-            console.log('spam caught');
+          console.log('spam caught');
         } else {
             document
                 .querySelector('.pageHeaderWrapper')
@@ -54,12 +54,12 @@ function Contact(props) {
             case 400: 
             return (
                 <Modal 
-                text="Sorry, there was an error with the form submission."
-                button="tryAgain" />
+                    text="Sorry, there was an error with the form submission."
+                    button="tryAgain" />
             );
             case 0:
                 return (
-                <div className='sendingWrapper'>
+                <div className='sendingWrapper' data-cy='sendingWrapper'>
                     <LoadingBars />
                 </div>);
             default: 
@@ -84,19 +84,28 @@ function Contact(props) {
 
     return (
         <div className='contact-wrapper'>
-            <div className='pageHeaderWrapper'>
-                <PageHeader title={pageHeader} className='contact-title'/>
+            <div> 
+                <div className='pageHeaderWrapper'>
+                    <PageHeader title={pageHeader} className='contact-title'/>
+                </div>
+                <div className='formGreetingWrapper' data-cy='formGreetingWrapper'>
+                    <FormGreeting/>
+                    <Button
+                        text='Begin'
+                        purpose='formAdvance'
+                        clickEvent={showForm}
+                        testingID='showFormButton'/>
+                </div>
             </div>
-            <div className='formGreetingWrapper' data-cy='formGreetingWrapper'>
-                <FormGreeting/>
-                <Button
-                    text='Begin'
-                    purpose='formAdvance'
-                    clickEvent={showForm}
-                    testingID='showFormButton'/>
-            </div>
+
+
             <div className='formWrapper' data-cy='formWrapper'>
+            
+            
                 <ContactForm sendMessage={handleSendMessage} setPageHeader={set_pageHeader}/>
+           
+           
+           
             </div>
             {showSuccessMessage()}
         </div>
@@ -104,3 +113,6 @@ function Contact(props) {
 }
 
 export default Contact;
+
+
+

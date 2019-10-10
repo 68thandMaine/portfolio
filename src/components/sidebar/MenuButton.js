@@ -4,7 +4,7 @@ import './MenuButton.css';
 
 const MenuButton = (props) => {
   return (
-    <div className='menuButtonWrapper' onClick={props.openMenu}>
+    <div className='menuButtonWrapper' onClick={props.openMenu} data-cy='menuButton'>
       
         <div className='col'></div>
         <div className='col'>M</div>

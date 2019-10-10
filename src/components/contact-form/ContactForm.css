@@ -12,6 +12,7 @@
           justify-content: center;
 }
 
+
 .contactForm {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,8 +58,8 @@
   text-align: center;
 }
 #messageWrapper .formInput {
-  -ms-grid-rows: 1fr 6fr;
-  grid-template-rows: 1fr 6fr;
+  -ms-grid-rows: 1fr 4fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .formInput:after {
@@ -73,7 +74,7 @@
   font-size: 2.5vw;
   margin-bottom: 1.5vw;
 }
-.formNavigationButtons{
+.formNavigationButtons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,4 +86,13 @@
       justify-content: space-around;
   position: relative;
   width: 75vw;
+}
+
+.invalidEntry {
+  transition: ease-in-out 150ms;
+  color: red;
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }

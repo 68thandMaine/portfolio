@@ -40,7 +40,7 @@ function About(props) {
         </div>
         <div className ='bodyContent'>
           <div className='bodyContentGreeting'>
-            <div className='portlandText'> 
+            <div className='portlandText' data-cy='portlandText'> 
               <h1>Living in</h1>
               <h1>portland</h1> 
               <h1>oregon</h1>
@@ -56,6 +56,7 @@ function About(props) {
               text='DOWNLOAD MY RESUME'
               purpose='redirect'
               clickEvent={(e) => handleViewResume()}
+              testingID='resumeButton'
               />
             </div>
             <div className='bodyText'>

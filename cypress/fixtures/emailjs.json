@@ -1,0 +1,10 @@
+{
+  "correctEmail": {
+    "nme": "Chris",
+    "sbjct": "Test",
+    "msg": "Test",
+    "eml": "chrisrudnicky@gmail.com"
+  },
+  "success": 200,
+  "failure": 400
+}
