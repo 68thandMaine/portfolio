@@ -7,6 +7,7 @@ function LanguageChart(props) {
   let chartRef = React.createRef();
 
   useEffect(() => {  
+    console.log('useEffect')
   function buildChart(){
       const myChartRef = chartRef.current.getContext('2d'); 
       let languages = filterLanguages(props.repositoryList);
@@ -59,9 +60,7 @@ function LanguageChart(props) {
     return colors;
   }
   
-  setTimeout(() => {
-    buildChart();
-  }, 1500);  
+  buildChart();
 }, [props.repositoryList, chartRef]);
 
 

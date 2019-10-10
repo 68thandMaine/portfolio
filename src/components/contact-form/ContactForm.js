@@ -21,18 +21,15 @@ function ContactForm(props) {
   };
   const goBack = (view) => {
     switch (view) {
-      case 'name':
-        props.setPageHeader("what should I call you?");
+      case 'name':        
         document.getElementById('subjectWrapper').classList.add('hide');
         document.getElementById('nameWrapper').classList.remove('hide');
         break;
       case 'subject' : 
-        props.setPageHeader("what's this all about?");
         document.getElementById('messageWrapper').classList.add('hide');
         document.getElementById('subjectWrapper').classList.remove('hide');
       break;
       case 'message' :
-        props.setPageHeader("what can I do for you?"); 
         document.getElementById('emailWrapper').classList.add('hide');
         document.getElementById('messageWrapper').classList.remove('hide');
       break;
@@ -43,19 +40,16 @@ function ContactForm(props) {
   const advance = (view) => {
     switch (view) {
       case "subject": 
-        props.setPageHeader("what's this all about?");
         document.getElementById('nameWrapper').classList.add('hide');
         document.getElementById('subjectWrapper').classList.remove('hide');
         document.getElementById('sbjct').focus();
         break;
       case "message":
-        props.setPageHeader("what can I do for you?");
         document.getElementById('subjectWrapper').classList.add('hide');
         document.getElementById('messageWrapper').classList.remove('hide');
         document.getElementById('msg').focus();
         break;
       case "email":
-        props.setPageHeader("What's a good email I can reach you at?");
         document.getElementById('messageWrapper').classList.add('hide');
         document.getElementById('emailWrapper').classList.remove('hide');
         document.getElementById('eml').focus();
@@ -211,7 +205,6 @@ function ContactForm(props) {
 
 ContactForm.propTypes = {
   sendMessage: PropTypes.func.isRequired,
-  setPageHeader: PropTypes.func.isRequired
 }
 
 export default ContactForm;

@@ -6,11 +6,9 @@ import ContactForm from '../../components/contact-form/ContactForm.js';
 import FormGreeting from '../../components/contact-greeting/ContactGreeting.js';
 import LoadingBars from '../../components/loading-bar/LoadingBar.js';
 import Modal from '../../components/modal/Modal.js';
-import PageHeader from '../../components/page-header/PageHeader.js';
 
 function Contact(props) {
-    const [pageHeader,
-        set_pageHeader] = useState('Lets Talk');
+    
     const [successMessage,
         set_successMessage] = useState(null);
     useEffect(() => {
@@ -22,10 +20,6 @@ function Contact(props) {
         if (EmailService.filterSpam(message)) {
           console.log('spam caught');
         } else {
-            document
-                .querySelector('.pageHeaderWrapper')
-                .classList
-                .add('hide');
             document
                 .querySelector('.formWrapper')
                 .classList
@@ -79,15 +73,11 @@ function Contact(props) {
         document
             .getElementById('nme')
             .focus();
-        set_pageHeader('What should I call you');
     }
 
     return (
         <div className='contact-wrapper'>
             <div> 
-                <div className='pageHeaderWrapper'>
-                    <PageHeader title={pageHeader} className='contact-title'/>
-                </div>
                 <div className='formGreetingWrapper' data-cy='formGreetingWrapper'>
                     <FormGreeting/>
                     <Button
@@ -102,7 +92,7 @@ function Contact(props) {
             <div className='formWrapper' data-cy='formWrapper'>
             
             
-                <ContactForm sendMessage={handleSendMessage} setPageHeader={set_pageHeader}/>
+                <ContactForm sendMessage={handleSendMessage} />
            
            
            
