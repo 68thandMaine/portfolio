@@ -62,7 +62,7 @@ function LanguageChart(props) {
   setTimeout(() => {
     buildChart();
   }, 1500);  
-}, [props.repositoryList]);
+}, [props.repositoryList, chartRef]);
 
 
   
