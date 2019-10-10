@@ -2,7 +2,6 @@ version: 2.1
 orbs:
   cypress: cypress-io/cypress@1
 workflows:
-  # version: 2.1
   build:
     jobs:
       - cypress/install:
@@ -11,6 +10,7 @@ workflows:
               only:
               - master
               - develop
+              - ci/cd_building
           build: npm run build
       - cypress/run:
           filters:
@@ -18,8 +18,8 @@ workflows:
               only:
               - master
               - develop
+              - ci/cd_building
           requires:
             - cypress/install
-          start: npm start
-          
+          start: npm run cypress
     
