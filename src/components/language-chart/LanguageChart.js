@@ -4,56 +4,49 @@ import PropTypes from 'prop-types';
 import './LanguageChart.css';
 
 function LanguageChart(props) {
-
-  useEffect(() => {
-    setTimeout(() => {
-      buildChart();
-    }, 1500);
-  }, [props.repositoryList]);
-  
-    
   let chartRef = React.createRef();
-  
- function buildChart(){
-    const myChartRef = chartRef.current.getContext('2d'); 
-    let languages = filterLanguages(props.repositoryList);
-    let data = Object.values(languages);
-    let tableLabels = Object.keys(languages);
-    let colors = createColors(data);
-     new Chart(myChartRef, {
-    type: 'doughnut', 
-    data: {      
-      labels: tableLabels,
-      datasets: [{
-          data: data,
-          backgroundColor: colors,
-          hoverBorderWidth: 5,
-          hoverBackgroundColor: 'transparent',
-          label: ''
-        }],
-    },
-    options: {
-      animation:{
-        animationEasing: 'easeInOutQuart',
-        duration: 3000,
-        circumference: 15 * Math.PI,
-        animateRotate: true,
-        animateScale: true
+
+  useEffect(() => {  
+  function buildChart(){
+      const myChartRef = chartRef.current.getContext('2d'); 
+      let languages = filterLanguages(props.repositoryList);
+      let data = Object.values(languages);
+      let tableLabels = Object.keys(languages);
+      let colors = createColors(data);
+       new Chart(myChartRef, {
+      type: 'doughnut', 
+      data: {      
+        labels: tableLabels,
+        datasets: [{
+            data: data,
+            backgroundColor: colors,
+            hoverBorderWidth: 5,
+            hoverBackgroundColor: 'transparent',
+            label: ''
+          }],
       },
-      responsive: true,
-      rotation: 90,
-    }
-  });
-}
+      options: {
+        animation:{
+          animationEasing: 'easeInOutQuart',
+          duration: 3000,
+          circumference: 15 * Math.PI,
+          animateRotate: true,
+          animateScale: true
+        },
+        responsive: true,
+        rotation: 90,
+      }
+    });
+  }
   function filterLanguages(repoList) {  
     return repoList.reduce(countRepoLanguage, {});
   }
-
+  
    function countRepoLanguage(counter, repository) {
    counter[repository.language] = (counter[repository.language] || 0) + 1;
    return counter;
   }
- function createColors(array) {
+  function createColors(array) {
     let colors = [];
     for (let i = 0; i < array.length; i++) {
       const hue = Math.floor(Math.random()* 10);
@@ -65,6 +58,12 @@ function LanguageChart(props) {
     }
     return colors;
   }
+  
+  setTimeout(() => {
+    buildChart();
+  }, 1500);  
+}, [props.repositoryList]);
+
 
   
     return (
