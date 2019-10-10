@@ -22,12 +22,12 @@ describe('sidebar navigation behavior', () => {
       cy.get('[data-cy="sidebar"]').should('not.exist');
       cy.get('[data-cy="menuButton"]').click();
       cy.get('[data-cy="sidebar"]').should('be.visible');
-      cy.get('[data-cy="mobileCloseSidebarButton"]').click();
+      cy.get('[data-cy="closeSidebarButton"]').click();
       cy.get('[data-cy="sidebar"]').should('not.be.visible');
     });
   });
   context('Mobile view', () => {
-    before(() => {
+    beforeEach(() => {
       cy.visit('./');
       cy.viewport(411, 600);
     });
@@ -52,9 +52,13 @@ describe('sidebar navigation behavior', () => {
     });
     it('Menu button has an increased size', () => {
       cy.get('[data-cy="menuButton"]')
-        .should('have.css', )
-    });
+        .should('have.css', 'height')
+        .and('eq', '63.78px') // this value === 15.5vw. Cypress requires px values.
+        cy.get('[data-cy="menuButton"]')
+        .should('have.css', 'width')
+        .and('eq', '63.78px'); // this value === 15.5vw. Cypress requires px values.
   });
+});
   context('sidebar navLinks', () => {
     beforeEach(() => {
       cy.get('[data-cy="menuButton"]').click();
