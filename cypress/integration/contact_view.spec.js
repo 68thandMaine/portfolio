@@ -1,5 +1,3 @@
-// This allows testing of different data responses. Using to stub out fetch requests.
-// const deferred = require('./deferred');
 
 context('/contact view integration tests', () => {
   beforeEach(() => {

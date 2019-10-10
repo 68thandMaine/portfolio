@@ -17,8 +17,6 @@ function Contact(props) {
         showSuccessMessage();
     });
 
-    window.handleSendMessage = handleSendMessage
-
     async function handleSendMessage(message) {
        
         if (EmailService.filterSpam(message)) {

@@ -16,6 +16,7 @@
 }
 
 .sidebarLink {
+  transition: ease-in-out 500ms;
   display: block;
   font-family: Moon-Light;
   font-size: 3vw;
@@ -23,10 +24,6 @@
   line-height: 11vh;
   color: #C5C5C5;
   text-decoration: none;
-  -webkit-animation-name: shrink;
-          animation-name: shrink;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
 }
 .sidebarLink:hover {
   cursor: pointer;
@@ -34,8 +31,8 @@
   font-size: 3.5vw;
   -webkit-animation-name: enlarge;
           animation-name: enlarge;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 750s;
+          animation-duration: 750s;
   letter-spacing: 0.4vw;
   font-weight: bold;
 }

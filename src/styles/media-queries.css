@@ -16,14 +16,19 @@
     display: block;
     letter-spacing: 0.4vw;
     font-size: 20vw;
-    margin-top: 2vh;
-
+    margin-top: 10vh;
   }
   .mobileCloseButton {
     display: block;
   }
+  .menuButtonWrapper {
+    width: 15.5vw;
+    height: 15.5vw;
+  }
   .sidebarMenu {
     padding: 0;
+    position: relative;
+    bottom: 2vh;
   }
   
   .sidebar + .views {
@@ -37,7 +42,7 @@
     top: 37vh;
     width: 100%;
   }
-  .sidebarLinkWrapper {
+  .sidebarLink { 
     margin: 4.5vh auto;
     padding: 2vh 3vw;
     width: 40vw;
@@ -52,7 +57,9 @@
   .closeSidebarButton {
     display: none;
   }
-
+  .col {
+    font-size: 4vw;
+  }
 
   .route-container {
     margin: 0 1vw;
