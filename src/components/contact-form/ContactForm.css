@@ -1,7 +1,7 @@
 .contactForm-body {
   -webkit-animation: showForm 1s linear forwards;
           animation: showForm 1s linear forwards;
-  margin-top: 2vw;
+  margin-top: 12vw;
   margin-bottom: 9vw;
   padding: 1vw 0 3vw 0;
   display: -webkit-box;

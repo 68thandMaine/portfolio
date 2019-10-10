@@ -303,10 +303,7 @@
   .contact-wrapper {
     margin-top: 5vh;
   }
-  .pageHeaderWrapper h1 {
-    font-size: 20vw;
-    line-height: 12rem
-  }
+
   .introGroup h3{
     font-size: 6vw;
   }
@@ -318,6 +315,9 @@
   }
   .formAdvance {
     font-size: 6vw;
+  }
+  .contactForm-body {
+    margin-top: 50vw;
   }
   .contactFormLabel {
     font-size: 6vw;
@@ -332,10 +332,12 @@
     flex-flow: column nowrap;
     align-items: center;
   }
-  .advance, .goBack {
+  .advance, .goBack, .send {
     font-size: 6vw;
     margin: 1vw 0 1vw 0;
     animation: none;
   }
+
+
 
 }

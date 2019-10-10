@@ -1,15 +1,8 @@
-.pageHeaderWrapper {
-  margin:2vw 0 4vw;
+.formGreetingWrapper {
+  position: relative;
+  top:10vh;
+  margin: 0 auto;
 }
-.pageHeaderWrapper h1 {
-  font-size: 6vw;
-  margin: 0 10vw 0 10vw;
-}
-
-.contact-title {
- margin-bottom: 5vw;
-}
-
 .formWrapper {
   display: none;
 }
