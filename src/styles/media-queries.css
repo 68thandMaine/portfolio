@@ -337,7 +337,10 @@
     margin: 1vw 0 1vw 0;
     animation: none;
   }
-
+  .advance:active, .goBack:active, .send:active {
+    animation: none;
+    transition: none;
+  }
 
 
 }
