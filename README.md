@@ -4,7 +4,7 @@
 _Created by Chris Rudnicky._
 
 > Version: 1.0  
-> Last ReadMe Update: 09/16/19
+> Last ReadMe Update: 10/10/19
 ___
 
 This repository is for the project website and contains all the source code necessary for providing a complete clone of my portfolio.
@@ -38,11 +38,11 @@ ___
 
 ### II. Installation
 
-To install this application on your personal machine **you will need to have node installed** on your machine. Then use the following instructions to get started.
+To install this application on your personal machine **you will need to have node installed** on your machine. Then use the following instructions to get started. First open your command line, then:
 
 | Step | Command | Instruction |
 |---|---|---|
-| **1**| _e.g._ `$ cd documents/projects/` | Open the command line and navigate to the directory you wish to clone into. |
+| **1**| `$ cd documents/projects/` | Open the command line and navigate to the directory you wish to clone into. |
 | **2**| `$ git clone https://github.com/68thandMaine/portfolio.git && cd portfolio` | Clone down the repository and move the command line focus into the new directory. |
 |**3**| `$ npm install` | Install the project dependencies with NPM. |
 
@@ -75,14 +75,15 @@ This project uses a variety of exeternal libraries, fonts, and images all create
 
 ### V. Project Architecture
 
-The main directory has two folders that will be of interest to engineers:
+The main directory has three folders that will be of interest to engineers:
 
 1. /cypress
       - This directory contains the files necessary for creating and configuring integration tests using [Cypress.io](https://www.cypress.io/).
       - Note that a ```cypress.json``` file is also in the top level directory. This file contains global configurations for the testing suites.
 2. /src
       - This directory contains the meat of the project. I will explain more below.
-
+3. /.circleci
+      - This directory contains the `config.yml` file that CircleCI uses to setup and test my portfolio when pushed to Github.
 ___
 
 #### The /src directory
@@ -122,11 +123,11 @@ I built version 1 of my portfolio hastily, and as a way to reintroduce myself to
 
 Version 1 contains some integration test files, but no unit tests or a CI/CD pipeline. Before creating new feature it is critica that the integrity of my application is ensured. I will finish writing integration tests with Cypress and add unit Tests with Jasmine before investigating CI tools.
 
-    [ ] Write integration tests for the application views.
+    [X] Write integration tests for the application views.
 
     [ ] Write unit tests for the application funtions.
 
-    [ ] Create a CI/CD pipeline
+    [X] Create a CI/CD pipeline
 
 #### Features
 
@@ -166,7 +167,7 @@ There are currently no unit tests on my portfolio, but I am adding them as soon 
 
 #### CI/CD Pipeline
 
-I am using Jenkins and CircleCI to create a CI/CD pipeline. It does not exist, but will soon.
+I am using CircleCI to create a CI/CD pipeline. As I currently only have Cypress E2E tests, I am using the Cypress Orb to expose prebuilt commands and executors to spin up my tests.
 
 ___
 
