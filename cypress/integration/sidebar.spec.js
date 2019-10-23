@@ -41,6 +41,8 @@ describe('sidebar navigation behavior', () => {
       });
       cy.get('[data-cy="mobileCloseSidebarButton"]').click();
     });
+    
+   
     it('Menu items have borders and backgrounds to look like buttons', () => {
       cy.get('[data-cy="menuButton"]').click();
       cy.get('.sidebarLink').then((navLinks) => {
@@ -51,6 +53,8 @@ describe('sidebar navigation behavior', () => {
         }
       });
     });
+
+    
     it('Menu button has an increased size', () => {
       cy.get('[data-cy="menuButton"]')
         .should('have.css', 'height')

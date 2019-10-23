@@ -6,5 +6,6 @@
     "serviceID": "gmail",
     "templateID": "template_rZUsPXOt"
   },
-  "chromeWebSecurity": false
+  "chromeWebSecurity": false,
+  "projectId": "9mtfcc"
 }
