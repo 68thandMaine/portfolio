@@ -41,15 +41,20 @@ describe('sidebar navigation behavior', () => {
       });
       cy.get('[data-cy="mobileCloseSidebarButton"]').click();
     });
+    
+   
     it('Menu items have borders and backgrounds to look like buttons', () => {
       cy.get('[data-cy="menuButton"]').click();
       cy.get('.sidebarLink').then((navLinks) => {
         for(let i = 0; i<navLinks.length; i++) {
-          expect(navLinks[i]).to.have.css('border', '1px solid rgb(255, 255, 255)');
+          expect(navLinks[i]).to.have.css('border', '1px solid rgb(255, 255, 255)')
+          console.log(navLinks[i]);
           expect(navLinks[i]).to.have.css('background', 'rgba(58, 54, 54, 0.6) none repeat scroll 0% 0% / auto padding-box border-box');
         }
       });
     });
+
+    
     it('Menu button has an increased size', () => {
       cy.get('[data-cy="menuButton"]')
         .should('have.css', 'height')

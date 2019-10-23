@@ -46,7 +46,6 @@ function Projects(props) {
           {viewToShow()}
         </div>
         <div className='body-project-panel'>
-          {/* <button onClick={()=>{console.log(props.personalProjects)}}>hi</button> */}
           <Card 
             repositoryList={props.personalProjects}  
           />
