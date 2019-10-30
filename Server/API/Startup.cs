@@ -10,6 +10,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Services;
+using API.Extensions
+using Microsoft.AspNetCore.HttpOverrides;
 
 namespace API
 {
@@ -26,6 +29,8 @@ namespace API
         public void ConfigureServices(IServiceCollection services)
         {
             services.ConfigureCors();
+            services.ConfigureLoggerService();
+            services.ConfigureIISIntegration();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,6 +47,12 @@ namespace API
             }
 
             app.UseHttpsRedirection();
+            app.UseCors("CorsPolicy");
+            app.UseForwardedHeaders(new ForwardedHeaderOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.All
+            });
+            app.UseStaticFiles();
             app.UseMvc();
         }
     }
