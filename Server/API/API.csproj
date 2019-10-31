@@ -12,16 +12,13 @@
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="NLog.Config" Version="4.6.7" />
-    <PackageReference Include="MySql.Data" Version="8.0.18" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Services\Services.csproj" />
-    <ProjectReference Include="..\Backend\Backend.csproj">
-      <ReferenceSourceTarget></ReferenceSourceTarget>
-    </ProjectReference>
+    <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Extensions\" />
+    <ProjectReference Include="..\Services\Services.csproj" />
+    <ProjectReference Include="..\Repository\Repository.csproj" />
   </ItemGroup>
 </Project>
