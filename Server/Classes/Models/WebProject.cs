@@ -6,6 +6,7 @@ namespace Backend.Models
 {
     public class WebProject
     {
+        [Key]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "The project name field is required.")]
