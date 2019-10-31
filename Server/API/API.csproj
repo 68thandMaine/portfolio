@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Services\Services.csproj" />
+    <ProjectReference Include="..\Classes\Backend.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Extensions\" />
