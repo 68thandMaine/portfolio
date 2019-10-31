@@ -2,8 +2,10 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MySql.Data.MySqlClient;
 using Services;
 using Interfaces;
+using Classes;
 
 namespace API.Extensions
 {
@@ -31,6 +33,11 @@ namespace API.Extensions
             {
 
             });
+        }
+        public static void ConfigureMySqlContext(this IServiceCollection services, IConfiguration config)
+        {
+         services.Add(new ServiceDescriptor(typeof(RepositoryContext), new RepositoryContext(config.GetConnectionString("DefaultConnection"))));
+
         }
     }
 }

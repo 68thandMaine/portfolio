@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Services;
-using API.Extensions
+using API.Extensions;
 using Microsoft.AspNetCore.HttpOverrides;
 
 namespace API
@@ -48,10 +48,11 @@ namespace API
 
             app.UseHttpsRedirection();
             app.UseCors("CorsPolicy");
-            app.UseForwardedHeaders(new ForwardedHeaderOptions
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
             {
                 ForwardedHeaders = ForwardedHeaders.All
             });
+
             app.UseStaticFiles();
             app.UseMvc();
         }

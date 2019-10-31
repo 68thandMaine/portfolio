@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using Backend.Models;
 using Interfaces;
 
 namespace Repository
@@ -7,7 +9,7 @@ namespace Repository
     {
         public List<ProfileContent> GetProfileContent()
         {
-            
+            return null;
         }
     }
 }
