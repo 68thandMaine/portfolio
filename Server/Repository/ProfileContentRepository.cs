@@ -11,5 +11,17 @@ namespace Repository
         {
             return null;
         }
+        public ProfileContent GetContentById(int id)
+        {
+            return null;
+        }
+        public void CreateProfile(ProfileContent profileContent)
+        {
+            
+        }
+        public void UpdateProfile(ProfileContent profileContent)
+        {
+            
+        }
     }
 }
